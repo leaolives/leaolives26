@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leão Lives</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+    <style>
+        :root {
+            --azul-fortaleza: #00519E;
+            --vermelho-fortaleza: #E30613;
+            --branco: #FFFFFF;
+            --azul-escuro-header: #001B36;
+            --amarelo-alerta: #FFD700;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #001B36 0%, #00519E 100%);
+            color: var(--branco);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: var(--azul-escuro-header);
+            width: 100%;
+            padding: 12px 0;
+            border-bottom: 6px solid var(--vermelho-fortaleza);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            width: 95%;
+            max-width: 1200px;
+        }
+
+        .logo-header {
+            max-width: 90px;
+            height: auto;
+            transition: max-width 0.3s ease;
+        }
+
+        .subtitle {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            color: var(--branco);
+            letter-spacing: 1px;
+            background-color: var(--azul-fortaleza);
+            border: 2px solid var(--vermelho-fortaleza);
+            padding: 4px 12px; 
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .aviso-transmissao {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: var(--branco);
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-left: 5px solid var(--vermelho-fortaleza);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .player-container {
+            position: relative;
+            width: 100%;
+            max-height: 48vh; 
+            aspect-ratio: 16 / 9;
+            margin: 0 auto;
+            background: #000;
+            border: 4px solid var(--azul-fortaleza);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            flex-shrink: 1;
+        }
+
+        .player-container video, .player-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            outline: none;
+            display: none;
+        }
+
+        .controls {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .btn-player {
+            font-family: 'Oswald', sans-serif;
+            background-color: var(--vermelho-fortaleza);
+            color: white;
+            border: 2px solid transparent;
+            padding: 10px 30px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            flex: 1 1 auto;
+            max-width: 250px;
+        }
+
+        .btn-player:hover, .btn-player:focus {
+            background-color: #b3050f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+            outline: none;
+            border: 2px solid var(--amarelo-alerta);
+        }
+
+        .btn-player.active {
+            background-color: var(--azul-fortaleza);
+            border: 2px solid var(--branco);
+            box-shadow: 0 0 15px rgba(0, 81, 158, 0.6);
+        }
+
+        footer {
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ccc;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .social-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--branco);
+        }
+
+        .social-link {
+            color: var(--branco);
+            font-size: 1.6rem;
+            text-decoration: none;
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-link.twitter:hover {
+            color: #1DA1F2;
+            transform: scale(1.15) translateY(-2px);
+        }
+
+        .social-link.whatsapp:hover {
+            color: #25D366;
+            transform: scale(1.15) translateY(-2px);
+        }
+
+        .footer-text {
+            font-size: 0.8em;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            body { height: auto; min-height: 100vh; overflow-y: auto; }
+            .header-content { flex-direction: column; gap: 10px; }
+            .subtitle { font-size: 1rem; padding: 4px 10px; text-align: center; }
+            .aviso-transmissao { font-size: 0.9rem; padding: 10px 15px; }
+            .player-container { max-height: none; }
+            .controls { gap: 10px; }
+            .btn-player { flex-basis: 100%; max-width: 100%; padding: 15px; font-size: 1.2rem; }
+        }
+
+        @media (min-width: 1600px) {
+            .logo-header { max-width: 130px; }
+            .subtitle { font-size: 1.6rem; padding: 8px 18px; }
+            .aviso-transmissao { font-size: 1.2rem; padding: 15px 25px; margin-bottom: 20px; }
+            .player-container { max-height: 55vh; }
+            .btn-player { padding: 15px 40px; font-size: 1.4rem; max-width: 350px; border-radius: 12px; }
+            .social-container { font-size: 1.4rem; }
+            .social-link { font-size: 2rem; }
+            .footer-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="https://i.postimg.cc/wMPDPnmz/PNG-LEAO-LIVES.png" alt="Logo Fortaleza Esporte Clube" class="logo-header">
+        <div class="subtitle">Próxima transmissão: Fortaleza x Maguary 📅 Terça 24/02 ⏰ 21:30</div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="aviso-transmissao">
+        <i class="fa-regular fa-clock"></i> A transmissão se inicia minutos antes do jogo começar
+    </div>
+
+    <div class="player-container">
+        <video id="hls-player" controls preload="auto" playsinline></video>
+        <iframe id="iframe-player" src="" frameborder="0" allowfullscreen sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
+    </div>
+
+    <div class="controls">
+        <button id="btn1" class="btn-player active" onclick="changePlayer('aHR0cHM6Ly9hbWcwMDcxNi1nbG9iby1hbWcwMDcxNmMxLXRjbC1ici05NDk1LnBsYXlvdXRzLm5vdy5hbWFnaS50di8xMDgwcC1jYy9pbmRleC5tM3U4', this)">Player 1</button>
+        <button id="btn2" class="btn-player" onclick="changePlayer('aHR0cHM6Ly9vay5ydS92aWRlb2VtYmVkLzExODY5MTMzMzQ4Mzk4P25vY2hhdD0xJmF1dG9wbGF5PTE=', this)">Player 2</button>
+        <button class="btn-player" onclick="changePlayer('aHR0cHM6Ly9sYTE0aGQuY29tL3Zpdm8vY2FuYWxlcy5waHA/c3RyZWFtPXNwb3J0dg==', this)">Player 3</button>
+    </div>
+</div>
+
+<footer>
+    <div class="social-container">
+        <span>Siga o LL:</span>
+        <a href="https://x.com/leaolives_" target="_blank" class="social-link twitter" title="Twitter do Leão Lives">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="" target="_blank" class="social-link whatsapp" title="WhatsApp do Leão Lives">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function(e) {
+        if (e.keyCode == 123) return false;
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+    }
+
+    let hls; 
+
+    function changePlayer(encodedUrl, btn) {
+        const video = document.getElementById('hls-player');
+        const iframe = document.getElementById('iframe-player');
+        const url = atob(encodedUrl);
+
+        if (hls) {
+            hls.destroy();
+            hls = null;
+        }
+        video.pause();
+        iframe.src = ''; 
+
+        if (url.includes('.m3u8')) {
+            iframe.style.display = 'none';
+            video.style.display = 'block';
+
+            if (Hls.isSupported()) {
+                hls = new Hls();
+                hls.loadSource(url);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    video.play().catch(error => console.log(""));
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = url;
+                video.addEventListener('loadedmetadata', function() { video.play(); });
+            }
+        } else {
+            video.style.display = 'none';
+            iframe.style.display = 'block';
+            iframe.src = url;
+        }
+
+        const buttons = document.querySelectorAll('.btn-player');
+        buttons.forEach(b => b.classList.remove('active'));
+        if(btn) btn.classList.add('active');
+    }
+
+    window.onload = function() {
+        changePlayer('aHR0cHM6Ly9hbWcwMDcxNi1nbG9iby1hbWcwMDcxNmMxLXRjbC1ici05NDk1LnBsYXlvdXRzLm5vdy5hbWFnaS50di8xMDgwcC1jYy9pbmRleC5tM3U4', document.getElementById('btn1'));
+    };
+</script>
+
+</body>
+</html>
