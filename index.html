@@ -137,7 +137,14 @@
             height: 100%;
             border-radius: 8px;
             outline: none;
-            display: none;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.3s ease;
+        }
+
+        .player-container video.is-active, .player-container iframe.is-active {
+            opacity: 1;
+            z-index: 10;
         }
 
         .controls {
@@ -307,12 +314,13 @@
             hls.destroy();
             hls = null;
         }
+        
         video.pause();
-        iframe.src = ''; 
 
         if (url.includes('.m3u8')) {
-            iframe.style.display = 'none';
-            video.style.display = 'block';
+            iframe.classList.remove('is-active');
+            iframe.src = ''; 
+            video.classList.add('is-active');
 
             if (Hls.isSupported()) {
                 hls = new Hls();
@@ -326,8 +334,11 @@
                 video.addEventListener('loadedmetadata', function() { video.play(); });
             }
         } else {
-            video.style.display = 'none';
-            iframe.style.display = 'block';
+            video.classList.remove('is-active');
+            video.removeAttribute('src');
+            video.load();
+            
+            iframe.classList.add('is-active');
             iframe.src = url;
         }
 
