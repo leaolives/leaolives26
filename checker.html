@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checker Leão Lives</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dplayer@latest/dist/DPlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        html, body {
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            background-color: #0f0f13; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #ui-container {
+            padding: 30px; display: flex; flex-direction: column; align-items: center; gap: 30px;
+        }
+
+        .row {
+            display: flex; gap: 20px; width: 100%; max-width: 900px; flex-wrap: wrap;
+        }
+
+        .box {
+            background: #1c1c24; padding: 20px; border-radius: 8px; flex: 1;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: 1px solid #2a2a35;
+        }
+
+        h2 { margin-top: 0; font-size: 20px; color: #00e5ff; border-bottom: 1px solid #2a2a35; padding-bottom: 10px; }
+        label { font-size: 14px; margin-bottom: 5px; display: block; color: #aaa; }
+
+        input[type="text"], select, textarea {
+            width: 100%; padding: 12px; margin-bottom: 15px; font-size: 14px;
+            background: #0f0f13; color: #fff; border: 1px solid #333;
+            border-radius: 6px; box-sizing: border-box;
+        }
+
+        textarea { height: 80px; resize: none; font-family: monospace; color: #0f0; }
+
+        button {
+            padding: 12px 20px; font-size: 14px; font-weight: bold; background-color: #00e5ff;
+            color: #000; border: none; border-radius: 6px; cursor: pointer; transition: 0.3s;
+        }
+        button:hover { background-color: #00b3cc; }
+        
+        .btn-secondary { background-color: #444; color: #fff; }
+        .btn-secondary:hover { background-color: #555; }
+        
+        .btn-warning { background-color: #ffc107; color: #000; }
+        .btn-warning:hover { background-color: #e0a800; }
+
+        .checkbox-group { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; font-size: 14px; }
+        .checkbox-group input { width: 18px; height: 18px; }
+
+        #status-badge {
+            margin-top: 5px; margin-bottom: 15px; padding: 12px; border-radius: 6px;
+            font-size: 14px; font-weight: bold; display: none; text-align: center;
+        }
+        .status-valid { background-color: rgba(40, 167, 69, 0.2); border: 1px solid #28a745; color: #4ade80; }
+        .status-warning-time { background-color: rgba(255, 193, 7, 0.2); border: 1px solid #ffc107; color: #facc15; }
+        .status-expired { background-color: rgba(220, 53, 69, 0.2); border: 1px solid #dc3545; color: #f87171; }
+        .status-neutral { background-color: rgba(23, 162, 184, 0.2); border: 1px solid #17a2b8; color: #38bdf8; }
+
+        #player-container {
+            width: 100%; max-width: 900px; aspect-ratio: 16/9; background: #000;
+            margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.8); border-radius: 8px; overflow: hidden;
+        }
+
+        .modo-embed #ui-container { display: none !important; }
+        .modo-embed #player-container { max-width: 100%; height: 100vh; aspect-ratio: auto; border-radius: 0; }
+    </style>
+</head>
+<body>
+
+    <div id="ui-container">
+        
+        <div class="row">
+            <div class="box" style="flex: 1.5;">
+                <h2>1. Painel de Links & Iframes</h2>
+                
+                <label>Link do Vídeo (.m3u8, .mp4)</label>
+                <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                    <input type="text" id="videoUrl" placeholder="Cole o link da transmissão aqui..." style="margin-bottom: 0;">
+                    
+                    <button class="btn-warning" onclick="checarExpiracaoBtn()" style="white-space: nowrap;">
+                        <i class="fa-solid fa-clock"></i> Checar Tempo
+                    </button>
+                </div>
+                
+                <div id="status-badge"></div>
+
+                <label>Qual Player usar?</label>
+                <select id="playerEngine">
+                    <option value="clappr">Clappr (Recomendado)</option>
+                    <option value="dplayer">DPlayer (Estilo Anime/Filmes)</option>
+                    <option value="videojs">Video.js (Tradicional)</option>
+                </select>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="codificarBase64" checked>
+                    <label for="codificarBase64" style="margin:0; color:#fff;">Ocultar URL no Iframe (Criptografar em Base64)</label>
+                </div>
+
+                <button onclick="gerarEmbed()" style="width: 100%;"><i class="fa-solid fa-play"></i> Testar no Player & Gerar Iframe</button>
+
+                <div id="embedArea" style="display: none; margin-top: 20px;">
+                    <label>Código Iframe (Copie e cole no site):</label>
+                    <textarea id="embedCode" readonly onclick="this.select()"></textarea>
+                </div>
+            </div>
+
+            <div class="box" style="flex: 1;">
+                <h2>2. Encoder Base64 Manual</h2>
+                
+                <label>Texto ou Link</label>
+                <input type="text" id="b64-input" placeholder="Insira o texto aqui...">
+                
+                <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                    <button class="btn-secondary" onclick="converterBase64('encode')" style="flex:1;">Codificar</button>
+                    <button class="btn-secondary" onclick="converterBase64('decode')" style="flex:1;">Decodificar</button>
+                </div>
+
+                <label>Resultado</label>
+                <textarea id="b64-output" readonly onclick="this.select()"></textarea>
+            </div>
+        </div>
+
+        <div id="player-container"></div>
+    </div>
+
+    <script>
+        var playerInstance = null;
+
+        function checarExpiracaoBtn() {
+            var url = document.getElementById('videoUrl').value.trim();
+            if (!url) return alert("Por favor, cole um link primeiro para verificar o tempo.");
+            checarExpiracao(url);
+        }
+
+        function checarExpiracao(url) {
+            const badge = document.getElementById('status-badge');
+            badge.style.display = 'block';
+            badge.className = 'status-neutral';
+            badge.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Analisando link...';
+
+            const jwtRegex = /(eyJ[a-zA-Z0-9_-]+\.eyJ[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)/;
+            const match = url.match(jwtRegex);
+            
+            if (match) {
+                try {
+                    let base64Url = match[1].split('.')[1];
+                    let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                    
+                    while (base64.length % 4) {
+                        base64 += '=';
+                    }
+
+                    let jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+                        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                    }).join(''));
+                    let payload = JSON.parse(jsonPayload);
+                    
+                    if (payload && payload.exp) {
+                        return exibirStatus(payload.exp);
+                    }
+                } catch(e) {
+                    console.error(e);
+                }
+            }
+            
+            try {
+                const urlObj = new URL(url);
+                const expParam = urlObj.searchParams.get('exp') || urlObj.searchParams.get('expires');
+                if (expParam) {
+                    let expTime = parseInt(expParam);
+                    if (!isNaN(expTime)) {
+                        if (expTime > 1e12) expTime = Math.floor(expTime / 1000); 
+                        return exibirStatus(expTime);
+                    }
+                }
+            } catch(e) {}
+
+            badge.className = 'status-badge status-neutral';
+            badge.innerHTML = '<i class="fa-solid fa-link"></i> Link Fixo (Sem data de expiração detectada no código da URL)';
+        }
+
+        function exibirStatus(expTime) {
+            const badge = document.getElementById('status-badge');
+            const now = Math.floor(Date.now() / 1000);
+            const timeLeft = expTime - now;
+            const expDate = new Date(expTime * 1000);
+
+            if (timeLeft <= 0) {
+                badge.className = 'status-badge status-expired';
+                badge.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> ATENÇÃO: O Token EXPIROU em: ${expDate.toLocaleString('pt-BR')}`;
+            } else {
+                let hours = Math.floor(timeLeft / 3600);
+                let minutes = Math.floor((timeLeft % 3600) / 60);
+                badge.className = 'status-badge ' + (hours < 1 ? 'status-warning-time' : 'status-valid');
+                badge.innerHTML = `<i class="fa-solid fa-clock-rotate-left"></i> Link Válido! Expira em: ${hours}h ${minutes}m (${expDate.toLocaleTimeString('pt-BR')})`;
+            }
+        }
+
+        function converterBase64(acao) {
+            var input = document.getElementById('b64-input').value.trim();
+            var output = document.getElementById('b64-output');
+            if(!input) return alert("Digite algo para converter.");
+
+            try {
+                if (acao === 'encode') {
+                    output.value = btoa(input);
+                } else {
+                    output.value = atob(input);
+                }
+            } catch (e) {
+                alert("Erro: O texto inserido não é um Base64 válido.");
+            }
+        }
+
+        function gerarEmbed() {
+            var url = document.getElementById('videoUrl').value.trim();
+            var engine = document.getElementById('playerEngine').value;
+            var usarB64 = document.getElementById('codificarBase64').checked;
+
+            if (!url) return alert("Insira o link do vídeo.");
+
+            checarExpiracao(url);
+            iniciarPlayer(url, engine);
+
+            var finalUrl = url;
+            var param = "src";
+
+            if (usarB64) {
+                finalUrl = btoa(url);
+                param = "src64";
+            }
+
+            var urlBase = window.location.href.split('?')[0]; 
+            var urlIframe = urlBase + "?engine=" + engine + "&" + param + "=" + encodeURIComponent(finalUrl);
+            
+            var iframeCode = `<iframe src="${urlIframe}" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; encrypted-media"></iframe>`;
+            document.getElementById('embedArea').style.display = 'block';
+            document.getElementById('embedCode').value = iframeCode;
+        }
+
+        function iniciarPlayer(url, engine) {
+            var container = document.getElementById('player-container');
+            
+            if (playerInstance && typeof playerInstance.destroy === 'function') {
+                playerInstance.destroy();
+            } else if (playerInstance && typeof playerInstance.dispose === 'function') {
+                playerInstance.dispose();
+            }
+            container.innerHTML = '';
+            playerInstance = null;
+
+            if (engine === 'clappr') {
+                playerInstance = new Clappr.Player({
+                    source: url,
+                    parentId: "#player-container",
+                    autoPlay: true,
+                    width: '100%',
+                    height: '100%',
+                    shakaConfiguration: { preferredAudioLanguage: 'pt-BR' }
+                });
+            } else if (engine === 'dplayer') {
+                playerInstance = new DPlayer({
+                    container: container,
+                    autoplay: true,
+                    video: { url: url, type: url.includes('.m3u8') ? 'hls' : 'auto' }
+                });
+            } else if (engine === 'videojs') {
+                var videoTag = document.createElement('video');
+                videoTag.className = "video-js vjs-default-skin vjs-big-play-centered";
+                videoTag.setAttribute('controls', 'true');
+                videoTag.style.width = '100%';
+                videoTag.style.height = '100%';
+                container.appendChild(videoTag);
+
+                playerInstance = videojs(videoTag, { autoplay: true, sources: [{ src: url }] });
+            }
+        }
+
+        window.onload = function() {
+            var params = new URLSearchParams(window.location.search);
+            var videoSrc = params.get('src');
+            var videoSrc64 = params.get('src64');
+            var engine = params.get('engine') || 'clappr';
+
+            var urlFinalParaTocar = null;
+
+            if (videoSrc) {
+                urlFinalParaTocar = videoSrc;
+            } else if (videoSrc64) {
+                try {
+                    urlFinalParaTocar = atob(videoSrc64);
+                } catch(e) {}
+            }
+
+            if (urlFinalParaTocar) {
+                document.body.classList.add('modo-embed');
+                document.body.appendChild(document.getElementById('player-container'));
+                iniciarPlayer(urlFinalParaTocar, engine);
+            }
+        };
+    </script>
+</body>
+</html>
