@@ -60,6 +60,7 @@
             height: 100% !important;
             position: absolute; top: 0; left: 0;
             border: none; outline: none;
+            background: #000;
         }
 
         .controls { margin-top: 15px; display: flex; justify-content: center; gap: 15px; width: 100%; flex-wrap: wrap; }
@@ -97,8 +98,8 @@
     </div>
 
     <div class="controls">
-        <button id="btn1" class="btn-player active" onclick="changePlayer('aHR0cHM6Ly9saXZlLTAxLmVkZ2Utc21hcnQtY3VjLWNlLnZpZGVvLmdsb2JvLmNvbS9qL2V5SmhiR2NpT2lKU1V6VXhNaUlzSW10cFpDSTZJakVpTENKMGVYQWlPaUpLVjFRaWZRLmV5SmpiM1Z1ZEhKNVgyTnZaR1VpT2lKQ1VpSXNJbVJ2YldGcGJpSTZJbXhwZG1VdE1ERXVaV1JuWlMxemJXRnlkQzFqZFdNdFkyVXVkbWxrWlc4dVoyeHZZbTh1WTI5dElpd2laWGh3SWpveE56Y3pNREl4TVRRekxDSnBZWFFpT2pFM056STVPVGsxTkRNc0ltbHpjeUk2SW5Cc1lYbGlZV05yTFdGd2FTMXdjbTlrTFdkamNDSXNJbTkzYm1WeUlqb2lJaXdpY0dGMGFDSTZJaTlzYVhabEwyWW9ZazFwYmowek1UTTVPRFFwTDNSMmRtMWpaV1p2Y2pJdmNHeGhlV3hwYzNRdWJUTjFPQ0o5LlBlbWNZQm5qUDBQVGRnZmtxRGZyVDgzc2JtVUdMMVJVWHFLcW1pSm9jWlN6dmE4ZERjVXhpSGRFLU8wV01UZzktX1V0VnRkUXpTWUVrVnhyYmRreXdhZms3UHBPZlhkOVJvVk5KNmFXX3FxRl9wWEU4U1A2OTZUS0NzTS1QWVF0UU5PNDhMMzhoUlNMdkw2bDJwNkJIamwzRktWNDNzUEJCbzRtbHhTWWZjREVibkRGNUsxcFZVTUVIMEM0LTQ2TnBkdjJYUDlzamtXNURXMmdONXJXME9ScHFHZ3ZNLWQ0ZFAyd2I5ZlZkdUM2MHNpU1Z1M0tPNTNHVUZIMXFmYU44NFNNYnFBVmIwWkN4NHNpREI3bkVQUEJqSE1qWWxfdmlncXlMcUhkOEpEeExPSDBQOUFLMEFoYnpSTkNZVFpndUd1V2tESzFtYmsxTnpfMWYtc1BEdy9saXZlL2YoYk1pbj0zMTM5ODQpL3R2dm1jZWZvcjIvdHZ2bWNlZm9yMi1hdWRpb18xPTk2MDAwLXZpZGVvPTIyNjI5NzYubTN1OA==', 3, this)">Player 1</button>
-        <button class="btn-player" onclick="changePlayer('aHR0cHM6Ly9vay5ydS92aWRlb2VtYmVkLzEyNTYxOTg1MjQ4ODE0P25vY2hhdD0xJmF1dG9wbGF5PTEiIGZyYW1lYm9yZGVyPSIwIiBhbGxvdz0iYXV0b3BsYXk=', 0, this)">Player 2</button>
+        <button id="btn1" class="btn-player active" onclick="changePlayer('aHR0cHM6Ly9saXZlLTAxLmVkZ2Utc21hcnQtY3VjLWNlLnZpZGVvLmdsb2JvLmNvbS9qL2V5SmhiR2NpT2lKU1V6VXhNaUlzSW10cFpDSTZJakVpTENKMGVYQWlPaUpLVjFRaWZRLmV5SmpiM1Z1ZEhKNVgyTnZaR1VpT2lKQ1VpSXNJbVJ2YldGcGJpSTZJbXhwZG1VdE1ERXVaV1JuWlMxemJXRnlkQzFqZFdNdFkyVXVkbWxrWlc4dVoyeHZZbTh1WTI5dElpd2laWGh3SWpveE56Y3pNREl4TVRRekxDSnBZWFFpT2pFM056STVPVGsxTkRNc0ltbHpjeUk2SW5Cc1lYbGlZV05yTFdGd2FTMXdjbTlrTFdkamNDSXNJbTkzYm1ViUlqb2lJaXdpY0dGMGFDSTZJaTlzYVhabEwyWW9ZazFwYmowek1UTTVPRFFwTDNSMmRtMWpaV1p2Y2pJdmNHeGhlV3hwYzNRdWJUTjFPQ0o5LlBlbWNZQm5qUDBQVGRnZmtxRGZyVDgzc2JtVUdMMVJVWHFLcW1pSm9jWlN6dmE4ZERjVXhpSGRFLU8wV01UZzktX1V0VnRkUXpTWUVrVnhyYmRreXdhZms3UHBPZlhkOVJvVk5KNmFXX3FxRl9wWEU4U1A2OTZUS0NzTS1QWVF0UU5PNDhMMzhoUlNMdkw2bDJwNkJIamwzRktWNDNzUEJCbzRtbHhTWWZjREVibkRGNUsxcFZVTUVIMEM0LTQ2TnBkdjJYUDlzamtXNURXMmdONXJXME9ScHFHZ3ZNLWQ0ZFAyd2I5ZlZkdUM2MHNpU1Z1M0tPNTNHVUZIMXFmYU44NFNNYnFBVmIwWkN4NHNpREI3bkVQUEJqSE1qWWxfdmlncXlMcUhkOEpEeExPSDBQOUFLMEFoYnpSTkNZVFpndUd1V2tESzFtYmsxTnpfMWYtc1BEdy9saXZlL2YoYk1pbj0zMTM5ODQpL3R2dm1jZWZvcjIvdHZ2bWNlZm9yMi1hdWRpb18xPTk2MDAwLXZpZGVvPTIyNjI5NzYubTN1OA==', 1, this)">Player 1</button>
+        <button class="btn-player" onclick="changePlayer('aHR0cHM6Ly9vay5ydS92aWRlb2VtYmVkLzEyNTYxOTg1MjQ4ODE0P25vY2hhdD0xJmF1dG9wbGF5PTE=', 0, this)">Player 2</button>
         <button class="btn-player" onclick="changePlayer('aHR0cHM6Ly93d3cueW91dHViZS5jb20vZW1iZWQvWmlMZHNKV0V4RzQ/c2k9b0pPQVJYSThnQks3cldyYg==', 0, this)">Player 3</button>
     </div>
 </div>
@@ -135,7 +136,6 @@
         try {
             url = atob(encodedUrl);
         } catch(e) {
-            console.error("Link Base64 inválido.");
             return;
         }
         
@@ -154,20 +154,20 @@
         if(btn) btn.classList.add('active');
 
         if (tipoPlayer === 0) {
-            wrapper.innerHTML = `<iframe src="${url}" frameborder="0" allowfullscreen sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>`;
+            wrapper.innerHTML = `<iframe src="${url}" frameborder="0" allowfullscreen allow="autoplay; encrypted-media" sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>`;
         } 
         else if (tipoPlayer === 1) {
-            wrapper.innerHTML = `<video id="video-nativo" controls autoplay playsinline></video>`;
+            wrapper.innerHTML = `<video id="video-nativo" controls autoplay playsinline style="background:black"></video>`;
             const video = document.getElementById('video-nativo');
             
-            if (Hls.isSupported() && url.includes('.m3u8')) {
-                hlsInstance = new Hls();
+            if (Hls.isSupported()) {
+                hlsInstance = new Hls({ enableWorker: true });
                 hlsInstance.loadSource(url);
                 hlsInstance.attachMedia(video);
                 hlsInstance.on(Hls.Events.MANIFEST_PARSED, function() {
-                    video.play().catch(e => console.log("Erro autoplay"));
+                    video.play().catch(() => { video.muted = true; video.play(); });
                 });
-            } else {
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 video.src = url;
                 video.play();
             }
@@ -178,8 +178,7 @@
                 parentId: "#dinamic-player-wrapper",
                 autoPlay: true,
                 width: '100%',
-                height: '100%',
-                shakaConfiguration: { preferredAudioLanguage: 'pt-BR' }
+                height: '100%'
             });
         } 
         else if (tipoPlayer === 3) {
@@ -202,7 +201,7 @@
     }
 
     window.onload = function() {
-        changePlayer('aHR0cHM6Ly9saXZlLTAxLmVkZ2Utc21hcnQtY3VjLWNlLnZpZGVvLmdsb2JvLmNvbS9qL2V5SmhiR2NpT2lKU1V6VXhNaUlzSW10cFpDSTZJakVpTENKMGVYQWlPaUpLVjFRaWZRLmV5SmpiM1Z1ZEhKNVgyTnZaR1VpT2lKQ1VpSXNJbVJ2YldGcGJpSTZJbXhwZG1VdE1ERXVaV1JuWlMxemJXRnlkQzFqZFdNdFkyVXVkbWxrWlc4dVoyeHZZbTh1WTI5dElpd2laWGh3SWpveE56Y3pNREl4TVRRekxDSnBZWFFpT2pFM056STVPVGsxTkRNc0ltbHpjeUk2SW5Cc1lYbGlZV05yTFdGd2FTMXdjbTlrTFdkamNDSXNJbTkzYm1WeUlqb2lJaXdpY0dGMGFDSTZJaTlzYVhabEwyWW9ZazFwYmowek1UTTVPRFFwTDNSMmRtMWpaV1p2Y2pJdmNHeGhlV3hwYzNRdWJUTjFPQ0o5LlBlbWNZQm5qUDBQVGRnZmtxRGZyVDgzc2JtVUdMMVJVWHFLcW1pSm9jWlN6dmE4ZERjVXhpSGRFLU8wV01UZzktX1V0VnRkUXpTWUVrVnhyYmRreXdhZms3UHBPZlhkOVJvVk5KNmFXX3FxRl9wWEU4U1A2OTZUS0NzTS1QWVF0UU5PNDhMMzhoUlNMdkw2bDJwNkJIamwzRktWNDNzUEJCbzRtbHhTWWZjREVibkRGNUsxcFZVTUVIMEM0LTQ2TnBkdjJYUDlzamtXNURXMmdONXJXME9ScHFHZ3ZNLWQ0ZFAyd2I5ZlZkdUM2MHNpU1Z1M0tPNTNHVUZIMXFmYU44NFNNYnFBVmIwWkN4NHNpREI3bkVQUEJqSE1qWWxfdmlncXlMcUhkOEpEeExPSDBQOUFLMEFoYnpSTkNZVFpndUd1V2tESzFtYmsxTnpfMWYtc1BEdy9saXZlL2YoYk1pbj0zMTM5ODQpL3R2dm1jZWZvcjIvdHZ2bWNlZm9yMi1hdWRpb18xPTk2MDAwLXZpZGVvPTIyNjI5NzYubTN1OA==', 3, document.getElementById('btn1'));
+        changePlayer('aHR0cHM6Ly9saXZlLTAxLmVkZ2Utc21hcnQtY3VjLWNlLnZpZGVvLmdsb2JvLmNvbS9qL2V5SmhiR2NpT2lKU1V6VXhNaUlzSW10cFpDSTZJakVpTENKMGVYQWlPaUpLVjFRaWZRLmV5SmpiM1Z1ZEhKNVgyTnZaR1VpT2lKQ1VpSXNJbVJ2YldGcGJpSTZJbXhwZG1VdE1ERXVaV1JuWlMxemJXRnlkQzFqZFdNdTkyVXVkbWxrWlc4dVoyeHZZbTh1WTI5dElpd2laWGh3SWpveE56Y3pNREl4TVRRekxDSnBZWFFpT2pFM056STVPVGsxTkRNc0ltbHpjeUk2SW5Cc1lYbGlZV05yTFdGd2FTMXdjbTlrTFdkamNDSXNJbTkzYm1WUlUlqb2lJaXdpY0dGMGFDSTZJaTlzYVhabEwyWW9ZazFwYmowek1UTTVPRFFwTDNSMmRtMWpaV1p2Y2pJdmNHeGhlV3hwYzNRdWJUTjFPQ0o5LlBlbWNZQm5qUDBQVGRnZmtxRGZyVDgzc2JtVUdMMVJVWHFLcW1pSm9jWlN6dmE4ZERjVXhpSGRFLU8wV01UZzktX1V0VnRkUXpTWUVrVnhyYmRreXdhZms3UHBPZlhkOVJvVk5KNmFXX3FxRl9wWEU4U1A2OTZUS0NzTS1QWVF0UU5PNDhMMzhoUlNMdkw2bDJwNkJIamwzRktWNDNzUEJCbzRtbHhTWWZjREVibkRGNUsxcFZVTUVIMEM0LTQ2TnBkdjJYUDlzamtXNURXMmdONXJXME9ScHFHZ3ZNLWQ0ZFAyd2I5ZlZkdUM2MHNpU1Z1M0tPNTNHVUZIMXFmYU44NFNNYnFBVmIwWkN4NHNpREI3bkVQUEJqSE1qWWxfdmlncXlMcUhkOEpEeExPSDBQOUFLMEFoYnpSTkNZVFpndUd1V2tESzFtYmsxTnpfMWYtc1BEdy9saXZlL2YoYk1pbj0zMTM5ODQpL3R2dm1jZWZvcjIvdHZ2bWNlZm9yMi1hdWRpb18xPTk2MDAwLXZpZGVvPTIyNjI5NzYubTN1OA==', 1, document.getElementById('btn1'));
     };
 </script>
 
