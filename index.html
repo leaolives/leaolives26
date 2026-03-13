@@ -154,8 +154,16 @@
         if(btn) btn.classList.add('active');
 
         if (tipoPlayer === 0) {
-            wrapper.innerHTML = `<iframe src="${url}" frameborder="0" allowfullscreen allow="autoplay; encrypted-media" sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>`;
+
+        // se for o botão Player 1 não usa sandbox
+        if (btn && btn.id === "btn1") {
+        wrapper.innerHTML = `<iframe src="${url}" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>`;
         } 
+        else {
+        wrapper.innerHTML = `<iframe src="${url}" frameborder="0" allowfullscreen allow="autoplay; encrypted-media" sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>`;
+        }
+
+    } 
         else if (tipoPlayer === 1) {
             wrapper.innerHTML = `<video id="video-nativo" controls autoplay playsinline style="background:black"></video>`;
             const video = document.getElementById('video-nativo');
