@@ -9,11 +9,11 @@ const matches = {
       },
       {
         type: "iframe",
-        url: "https://w1.embedtv.live/primevideo2"
+        url: "https://w1.embedtv.live/primevideo3"
       },
       {
-        type: "hls",
-        url: "https://image-storage-31.imgcontent.xyz/live/barra-x-corinthians/index.m3u8"
+        type: "iframe",
+        url: "https://2embeddecanais.xyz/amazonprimevideo02/"
       }
     ]
   },
