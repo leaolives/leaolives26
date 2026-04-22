@@ -1,0 +1,396 @@
+/* Importando fontes modernas do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Kanit:wght@700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #05070c;
+  color: #fff;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+/* --- HEADER --- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(5, 7, 12, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-content {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+/* --- PAGES & HERO --- */
+.page { display: none; }
+.page.active { display: block; }
+
+.hero { padding: 28px 0 14px; }
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 18px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 42px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #aeb8c7;
+}
+
+.hero-box {
+  min-height: 180px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.015));
+  border: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hero-logo {
+  width: min(100%, 250px);
+  filter: drop-shadow(0 12px 22px rgba(0,0,0,0.32));
+}
+
+/* --- MATCHES GRID & CARDS --- */
+.matches-section { padding: 18px 0 42px; }
+
+.section-title {
+  font-family: 'Kanit', sans-serif;
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.match-card {
+  border-radius: 24px;
+  padding: 24px;
+  border: 1px solid rgba(255,255,255,0.07);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+#matchTitle {
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+#matchMeta {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #00e5ff; /* Ciano para combinar com a home */
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.match-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.fortaleza-card { background: linear-gradient(145deg, rgba(12, 24, 53, 0.98), rgba(16, 50, 112, 0.85)); }
+.ceara-card { background: linear-gradient(145deg, rgba(18, 18, 20, 0.98), rgba(42, 42, 47, 0.95)); }
+
+.teams-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.team-shield {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.6));
+  transition: transform 0.4s ease;
+}
+
+.match-card:hover .team-shield {
+  transform: scale(1.15) rotate(2deg);
+}
+
+.vs-badge {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.match-details {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 16px 20px;
+  border-radius: 20px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.match-date {
+  font-family: 'Kanit', sans-serif;
+  font-size: 14px;
+  color: #00e5ff;
+  margin-bottom: 2px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.match-time {
+  font-family: 'Kanit', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+/* --- BOTAO ASSISTIR NO CARD --- */
+.btn-watch-now {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #fff;
+  color: #000;
+  font-family: 'Kanit', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.match-card:hover .btn-watch-now {
+  background: #00e5ff;
+  transform: scale(1.02);
+}
+
+/* --- WATCH PAGE --- */
+.back-btn {
+  margin: 20px 0 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.watch-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 320px;
+  gap: 16px;
+  padding-bottom: 34px;
+}
+
+.player-area, .players-panel {
+  border-radius: 20px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 16px;
+}
+
+.players-panel h3 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.live-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #ff6b6b;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  background: #000;
+  border: none;
+}
+
+.player-btn {
+  width: 100%;
+  text-align: left;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.player-btn {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.player-btn span {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.player-btn small {
+    font-weight: 600;
+    color: #aeb8c7;
+}
+
+.active-player {
+  border-color: #00e5ff;
+  background: rgba(0, 229, 255, 0.1);
+}
+
+.active-player span { color: #00e5ff; }
+
+/* --- SOCIAL & FOOTER --- */
+.social-links { display: flex; gap: 10px; }
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.contact-watch-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+  font-family: 'Kanit', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.contact-watch-btn {
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+}
+
+.promo-banner {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.promo-banner img {
+  max-width: 450px;
+  width: 100%;
+  transition: transform 0.3s;
+}
+
+.promo-banner img:hover { transform: scale(1.03); }
+
+.hidden { display: none; }
+
+/* --- RESPONSIVO --- */
+@media (max-width: 980px) {
+  .hero-content, .watch-layout { grid-template-columns: 1fr; }
+  .header-content { flex-direction: column; padding: 15px 0; height: auto; }
+}
+
+@media (max-width: 640px) {
+  .team-shield { width: 75px; height: 75px; }
+  .match-time { font-size: 26px; }
+  .social-btn span { display: none; }
+  .hero-text h1 { font-size: 32px; }
+}
