@@ -4,12 +4,12 @@ const matches = {
     meta: "22/04 • 20:30",
     players: [
       {
-        type: "iframe",
-        url: "https://2embeddecanais.xyz/amazonprimevideo02/"
+        type: "hls",
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/primevideo3/__index.m3u8?cc=y&sv=118&nu3zAQc9HC3GbwJq=1776899756-kRqqPpFlX9ruzYh%2F4KIDXe29LbVzlQZPX0dgZtMQ85Y%3D"
       },
       {
-        type: "hls",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/primevideo2/__index.m3u8?cc=y&sv=152&nu3zAQc9HC3GbwJq=1776892511-2p%2FO5yfeUkDvD%2FGMni4xP1gAX24hCQpam5hLrnYty4I%3D"
+        type: "iframe",
+        url: "https://2embeddecanais.xyz/amazonprimevideo02/"
       },
       {
         type: "iframe",
