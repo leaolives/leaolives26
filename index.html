@@ -52,24 +52,7 @@
           <h2 class="section-title">Próximas transmissões</h2>
 
           <div class="matches-grid">
-  <div class="match-card fortaleza-card" onclick="openMatch('fortaleza')">
-    <div class="teams-display">
-      <img src="https://logodetimes.com/times/fortaleza/logo-fortaleza-256.png" alt="Fortaleza" class="team-shield" />
-      <span class="vs-badge">VS</span>
-      <img src="https://logodetimes.com/times/crb/logo-crb-256.png" alt="CRB" class="team-shield" />
-    </div>
-
-    <div class="match-details">
-      <p class="match-date">QUARTA • 22/04</p>
-      <p class="match-time">20:30</p>
-    </div>
-
-    <div class="card-action">
-      <button class="btn-watch-now">
-        <i class="fa-solid fa-play"></i> ASSISTIR
-      </button>
-    </div>
-  </div>
+  
 
   <div class="match-card ceara-card" onclick="openMatch('ceara')">
     <div class="teams-display">
@@ -81,6 +64,25 @@
     <div class="match-details">
       <p class="match-date">QUINTA • 23/04</p>
       <p class="match-time">19:00</p>
+    </div>
+
+    <div class="card-action">
+      <button class="btn-watch-now">
+        <i class="fa-solid fa-play"></i> ASSISTIR
+      </button>
+    </div>
+  </div>
+
+  <div class="match-card fortaleza-card" onclick="openMatch('fortaleza')">
+    <div class="teams-display">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Oper%C3%A1rio_Ferrovi%C3%A1rio_EC_%28no_stars%29.png" alt="Fortaleza" class="team-shield" />
+      <span class="vs-badge">VS</span>
+      <img src="https://logodetimes.com/times/fortaleza/logo-fortaleza-256.png" alt="CRB" class="team-shield" />
+    </div>
+
+    <div class="match-details">
+      <p class="match-date">DOMINGO • 26/04</p>
+      <p class="match-time">18:00</p>
     </div>
 
     <div class="card-action">
@@ -111,8 +113,8 @@
           <div class="player-area">
             <div class="watch-top">
               <span class="live-badge">A live se inicia 30 min antes do jogo começar.</span>
-              <h2 id="matchTitle">Fortaleza x CRB</h2>
-              <p id="matchMeta">22/04 • 20:30</p>
+              <h2 id="matchTitle">Operario x Fortaleza</h2>
+              <p id="matchMeta">26/04 • 18:00</p>
             </div>
 
             <div class="video-container">
@@ -140,22 +142,27 @@
 
             <button class="player-btn active-player" onclick="changePlayer(this, 1)" type="button">
               <span>Player 1</span>
-              <small>Principal</small>
+              <small></small>
             </button>
 
             <button class="player-btn" onclick="changePlayer(this, 2)" type="button">
               <span>Player 2</span>
-              <small>Alternativo</small>
+              <small></small>
             </button>
 
             <button class="player-btn" onclick="changePlayer(this, 3)" type="button">
               <span>Player 3</span>
-              <small>Alternativo</small>
+              <small></small>
             </button>
 
             <a href="https://whatsapp.com/channel/0029Vb7J4UEFnSzGO7ZTZD1h" target="_blank" class="contact-watch-btn">
               <i class="fa-brands fa-whatsapp"></i>
               <span>Grupo no WhatsApp</span>
+            </a>
+
+            <a href="https://www.instagram.com/futlivece/" target="_blank" class="contact-watch-btn instagram-btn">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Siga no Instagram</span>
             </a>
           </aside>
         </div>
