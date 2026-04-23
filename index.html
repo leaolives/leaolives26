@@ -17,8 +17,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   />
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ1XEW3FZ3"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ1XEW3FZ3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -26,6 +25,7 @@
 
   gtag('config', 'G-XZ1XEW3FZ3');
 </script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
 </head>
 <body>
   <header class="header">
@@ -143,6 +143,8 @@
             </div>
 
             <div class="video-container">
+              <div id="player" class="video-frame hidden"></div>
+
               <iframe
                 id="videoFrame"
                 class="video-frame hidden"
@@ -206,7 +208,6 @@
     </section>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <script src="script.js"></script>
 </body>
 </html>

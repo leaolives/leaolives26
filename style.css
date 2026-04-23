@@ -487,3 +487,16 @@ button {
   .social-btn span { display: none; }
   .hero-text h1 { font-size: 32px; }
 }
+
+#player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Garante que o vídeo interno do Clappr respeite o arredondamento */
+#player [data-player] {
+  border-radius: 16px !important;
+}
