@@ -202,5 +202,21 @@
   </main>
 
   <script src="script.js"></script>
+  <script>
+  // Este código deleta qualquer Service Worker ativo e limpa o cache
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      for(let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+  // Limpa o cache de arquivos para garantir a nova versão
+  if ('caches' in window) {
+    caches.keys().then(function(names) {
+      for (let name of names) caches.delete(name);
+    });
+  }
+  </script>
 </body>
 </html>
