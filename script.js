@@ -26,12 +26,12 @@ const matches = {
         url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/sportv1/__index.m3u8?cc=y&sv=52&nu3zAQc9HC3GbwJq=1776970144-XveofNEpAM5C9h4GnJ1IZ5XCNucL01wU%2FK209UztYNY%3D"
       },
       {
-        type: "iframe",
-        url: "https://1.embeddecanais.com/sportv/"
+        type: "hls",
+        url: "https://dlnmh9ip6v2xc9xx.cloudfontes.net/sportv.m3u8"
       },
       {
         type: "iframe",
-        url: "https://w1.embedtv.live/sportv"
+        url: "https://3embeddecanais.xyz/sportv/"
       }
     ]
   }
