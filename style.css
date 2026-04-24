@@ -113,6 +113,14 @@ button {
   text-transform: uppercase;
 }
 
+.section-title {
+    text-align: center;      /* Centraliza o texto */
+    margin-bottom: 10px;     /* Dá um espaço maior para os cards abaixo */
+    font-size: 30px;         /* Ajuste o tamanho se achar necessário */
+    width: 100%;             /* Garante que ocupe a largura toda para centralizar */
+    display: block;
+}
+
 .matches-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -499,4 +507,61 @@ button {
 /* Garante que o vídeo interno do Clappr respeite o arredondamento */
 #player [data-player] {
   border-radius: 16px !important;
+}
+
+/* Container da Tabela */
+.table-container {
+    margin-top: 20px;
+    background: #1a1d23;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #2d323a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Evita que o widget escape das bordas arredondadas */
+}
+
+/* Garante que o iframe seja responsivo */
+.table-container iframe {
+    max-width: 100% !important;
+    border-radius: 8px;
+}
+
+/* Ajuste para o texto de crédito do Sofascore */
+.table-container div {
+    color: #888 !important;
+    margin-top: 10px;
+}
+
+.table-container a {
+    color: #3498db !important;
+    transition: 0.3s;
+}
+
+.table-container a:hover {
+    color: #2980b9 !important;
+}
+
+/* Estilos específicos para Celular (telas até 768px) */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 8px; /* Espaço entre os botões */
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .social-btn {
+        padding: 10px 12px; /* Aumenta a área de toque */
+        font-size: 14px;    /* Aumenta o texto */
+    }
+
+    .social-btn i {
+        font-size: 18px;    /* Aumenta o ícone (Instagram, Whats, Tabela) */
+        margin-right: 5px;
+    }
+    
+    /* Se você quiser que os botões ocupem mais espaço */
+    .social-btn span {
+        display: inline; /* Garante que o texto apareça no celular */
+    }
 }

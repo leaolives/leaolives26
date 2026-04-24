@@ -1,3 +1,4 @@
+// --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
     title: "Operario x Fortaleza",
@@ -22,6 +23,8 @@ const matches = {
 let currentMatch = "fortaleza";
 let clapprPlayer = null;
 
+// --- 2. FUNÇÕES DO PLAYER ---
+
 function isM3U8(url) {
   return /\.m3u8($|\?)/i.test(url);
 }
@@ -32,24 +35,42 @@ function destroyPlayer() {
     clapprPlayer = null;
   }
   const ifContainer = document.getElementById("iframeContainer");
-  if (ifContainer) {
-    ifContainer.innerHTML = ""; // Limpa qualquer iframe injetado anteriormente
-  }
+  if (ifContainer) ifContainer.innerHTML = "";
 }
 
 function loadPlayer(source) {
   const clapprContainer = document.getElementById("player");
   const iframeContainer = document.getElementById("iframeContainer");
+  const dnsWarning = document.querySelector(".dns-warning"); 
   
   destroyPlayer();
   
-  // Esconde o container do Clappr por padrão
-  clapprContainer.classList.add("hidden");
+  if (clapprContainer) clapprContainer.classList.add("hidden");
 
   const playerType = source.type || (isM3U8(source.url) ? "hls" : "iframe");
 
+  // Identifica links que abrem pop-ups (Exceções)
+  const url = source.url.toLowerCase();
+  const isEx = url.includes("esportesembed.com") || url.includes("sporturbo.com");
+
+  // Atualiza o quadro de aviso dependendo do link
+  if (dnsWarning) {
+    if (isEx) {
+        // Mensagem para links com anúncios (Exceções)
+        dnsWarning.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="color: #ff4444;"></i>
+        <p><strong>Aviso:</strong> Este player pode abrir anúncios externos. Se uma aba abrir, <strong>feche</strong> e volte para cá para assistir.</p>`;
+        dnsWarning.style.borderColor = "#ff4444";
+    } else {
+        // MENSAGEM OPÇÃO 3 para links estáveis (HLS/DNS)
+        dnsWarning.innerHTML = `<i class="fa-solid fa-shield-halved" style="color: #ffa500;"></i>
+        <p><strong>Sinal bloqueado?</strong> Algumas operadoras impedem o carregamento do player. Recomendamos o uso do <strong>DNS 1.1.1.1</strong> para garantir sua conexão e estabilidade. 
+        <a href="https://one.one.one.one/" target="_blank">Baixar agora para Celular ou PC</a></p>`;
+        dnsWarning.style.borderColor = "rgba(255, 165, 0, 0.3)";
+    }
+  }
+
   if (playerType === "hls") {
-    clapprContainer.classList.remove("hidden");
+    if (clapprContainer) clapprContainer.classList.remove("hidden");
     clapprPlayer = new Clappr.Player({
       source: source.url,
       parentId: "#player",
@@ -57,26 +78,19 @@ function loadPlayer(source) {
       height: "100%",
       autoPlay: true,
       mimeType: "application/x-mpegURL",
-      hlsjsConfig: {
-        enableWorker: true
-      }
+      hlsjsConfig: { enableWorker: true }
     });
-  } else {
-    // Criação dinâmica do iframe para evitar conflitos de sandbox
+  } else if (iframeContainer) {
     const iframe = document.createElement("iframe");
     iframe.id = "videoFrame";
     iframe.className = "video-frame";
     
-    const url = source.url.toLowerCase();
-    const isException = url.includes("esportesembed.com") || url.includes("sporturbo.com");
-
-    if (!isException) {
-      iframe.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation");
+    // Aplica sandbox apenas se NÃO for exceção (para permitir que o vídeo rode nessas fontes)
+    if (!isEx) {
+        iframe.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-presentation");
     }
     
     iframe.setAttribute("allowfullscreen", "true");
-    iframe.setAttribute("webkitallowfullscreen", "true");
-    iframe.setAttribute("mozallowfullscreen", "true");
     iframe.setAttribute("allow", "autoplay; fullscreen; picture-in-picture; encrypted-media; clipboard-write");
     iframe.setAttribute("frameborder", "0");
     
@@ -85,36 +99,32 @@ function loadPlayer(source) {
   }
 }
 
+// --- 3. NAVEGAÇÃO ---
+
 function openMatch(team) {
   currentMatch = team;
   const match = matches[team];
-  document.getElementById("matchTitle").textContent = match.title;
-  document.getElementById("matchMeta").textContent = match.meta;
+  
+  const titleElem = document.getElementById("matchTitle");
+  const metaElem = document.getElementById("matchMeta");
+
+  if (titleElem) titleElem.textContent = match.title;
+  if (metaElem) metaElem.textContent = match.meta;
   
   loadPlayer(match.players[0]);
 
+  // Atualiza botões de player para o primeiro por padrão
   document.querySelectorAll(".player-btn").forEach((btn, index) => {
     btn.classList.remove("active-player");
     if (index === 0) btn.classList.add("active-player");
   });
 
-  document.getElementById("homePage").classList.remove("active");
-  document.getElementById("watchPage").classList.add("active");
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // Gerencia visibilidade das seções (útil para o index.html)
+  const home = document.getElementById("homePage");
+  const watch = document.getElementById("watchPage");
+  if (home) home.classList.remove("active");
+  if (watch) watch.classList.add("active");
 
-  if (typeof gtag === 'function') {
-    gtag('event', 'page_view', {
-      page_title: 'Assistindo: ' + team,
-      page_location: window.location.href + '#' + team
-    });
-  }
-}
-
-function goHome() {
-  destroyPlayer();
-  document.getElementById("watchPage").classList.remove("active");
-  document.getElementById("homePage").classList.add("active");
-  if (document.body.classList.contains('cinema-active')) toggleCinema();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -125,24 +135,12 @@ function changePlayer(button, playerIndex) {
   button.classList.add("active-player");
 }
 
-function toggleCinema() {
-  document.body.classList.toggle('cinema-active');
-  const btn = document.getElementById('cinemaModeBtn');
-  if (btn) {
-    btn.innerHTML = document.body.classList.contains('cinema-active') ? 
-      '<i class="fa-solid fa-xmark"></i> Sair do Cinema' : 
-      '<i class="fa-solid fa-film"></i> Modo Cinema';
-  }
+function goToIndex() {
+    window.location.href = "index.html";
 }
 
-function vote(option) {
-  const optionsDiv = document.querySelector('.poll-options');
-  const resultDiv = document.getElementById('pollResult');
-  if (optionsDiv) optionsDiv.classList.add('hidden');
-  if (resultDiv) resultDiv.classList.remove('hidden');
-}
+// --- 4. SEGURANÇA CONTRA INSPEÇÃO ---
 
-// Bloqueios de segurança
 document.addEventListener('contextmenu', event => event.preventDefault());
 
 document.onkeydown = function(e) {

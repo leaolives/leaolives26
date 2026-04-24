@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="https://i.imgur.com/GfxZJSo.png" type="image/png" />
-  <title>FutliveCE</title>
+  <title>FutLive CE</title>
   
-  <link rel="stylesheet" href="style.css?v=1">
+  <link rel="stylesheet" href="style.css">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   
@@ -23,8 +23,14 @@
 <body>
   <header class="header">
     <div class="container header-content">
-      <a href="#" class="brand" onclick="goHome(); return false;">
+      <a href="index.html" class="brand">
         <img src="logo.png" alt="FutliveCE" class="logo" />
+      </a>
+      
+      <div class="social-links">
+      <a href="tabela.html" class="social-btn tabela">
+        <i class="fa-solid fa-table-list"></i>
+        <span>Tabela Série B</span>
       </a>
 
       <div class="social-links">
@@ -59,7 +65,8 @@
           <h2 class="section-title">Próximas transmissões</h2>
 
           <div class="matches-grid">
-            <div class="match-card ceara-card" onclick="openMatch('ceara')">
+            
+            <a href="ceara.html" class="match-card ceara-card" style="text-decoration: none;">
               <div class="teams-display">
                 <img src="https://logodetimes.com/times/ceara/logo-ceara-256.png" alt="Ceará" class="team-shield" />
                 <span class="vs-badge">VS</span>
@@ -74,9 +81,9 @@
                   <i class="fa-solid fa-play"></i> ASSISTIR
                 </button>
               </div>
-            </div>
-            <!-- ALTERE A VERSAO DO DEPLOY NO COMEÇO E NO FINAL -->
-            <div class="match-card fortaleza-card" onclick="openMatch('fortaleza')">
+            </a>
+
+            <a href="fortaleza.html" class="match-card fortaleza-card" style="text-decoration: none;">
               <div class="teams-display">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Oper%C3%A1rio_Ferrovi%C3%A1rio_EC_%28no_stars%29.png" alt="Operário" class="team-shield" />
                 <span class="vs-badge">VS</span>
@@ -91,7 +98,8 @@
                   <i class="fa-solid fa-play"></i> ASSISTIR
                 </button>
               </div>
-            </div>
+            </a>
+
           </div>
 
           <div class="promo-banner">
@@ -103,70 +111,12 @@
       </section>
     </section>
 
-    <section id="watchPage" class="page">
-      <div class="container">
-        <button class="back-btn" onclick="goHome()" type="button">← Voltar</button>
+    </main>
 
-        <div class="watch-layout">
-          <div class="player-area">
-            <div class="watch-top">
-              <span class="live-badge">A live se inicia 30 min antes do jogo começar.</span>
-              <h2 id="matchTitle">Operario x Fortaleza</h2>
-              <p id="matchMeta">26/04 • 18:00</p>
-            </div>
-            <div class="dns-warning">
-              <i class="fa-solid fa-lock-open"></i>
-              <p>
-                <strong>Atenção:</strong> Se o jogo não abrir, sua operadora pode estar bloqueando o player. 
-                Use o <strong>DNS 1.1.1.1</strong> para contornar o bloqueio.
-                <a href="https://one.one.one.one/" target="_blank">Baixar App 1.1.1.1</a>
-              </p>
-            </div>
-
-            <div class="video-container">
-              <div id="player" class="video-frame hidden"></div>
-              <div id="iframeContainer"></div>
-            </div>
-          </div>
-
-          <aside class="players-panel">
-            <h3>Players</h3>
-            <button class="player-btn active-player" onclick="changePlayer(this, 1)" type="button">
-              <span>Player 1</span>
-              <small></small>
-            </button>
-            <button class="player-btn" onclick="changePlayer(this, 2)" type="button">
-              <span>Player 2</span>
-              <small></small>
-            </button>
-            <button class="player-btn" onclick="changePlayer(this, 3)" type="button">
-              <span>Player 3</span>
-              <small></small>
-            </button>
-
-            <a href="https://whatsapp.com/channel/0029Vb7J4UEFnSzGO7ZTZD1h" target="_blank" class="contact-watch-btn">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>Grupo no WhatsApp</span>
-            </a>
-            <a href="https://www.instagram.com/futlivece/" target="_blank" class="contact-watch-btn instagram-btn">
-              <i class="fa-brands fa-instagram"></i>
-              <span>Siga no Instagram</span>
-            </a>
-          </aside>
-        </div>
-
-        <div class="promo-banner watch-banner">
-          <a href="https://wa.me/5585998348426?text=Ol%C3%A1%2C%20vim%20atraves%20do%20site." target="_blank">
-            <img src="banner.png" alt="Teste IPTV grátis" />
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="script.js?v=1"></script>
+  <script src="script.js"></script>
 
   <script>
+    // Limpeza de cache para garantir que os novos links funcionem
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then(function(registrations) {
         for(let registration of registrations) {

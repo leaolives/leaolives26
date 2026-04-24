@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://i.imgur.com/GfxZJSo.png" type="image/png" />
+  <title>FutliveCE - Fortaleza ao Vivo</title>
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ1XEW3FZ3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XZ1XEW3FZ3');
+  </script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="FutliveCE" class="logo" />
+      </a>
+
+      <div class="social-links">
+      <a href="tabela.html" class="social-btn tabela">
+        <i class="fa-solid fa-table-list"></i>
+        <span>Tabela Série B</span>
+      </a>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/futlivece/" target="_blank" class="social-btn instagram">
+          <i class="fa-brands fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+        <a href="https://whatsapp.com/channel/0029Vb7J4UEFnSzGO7ZTZD1h" target="_blank" class="social-btn whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="homePage" class="page">
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <h1>FUTLIVE CE</h1>
+            <p>Transmissão de jogos do Fortaleza EC e Ceará SC.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="watchPage" class="page active">
+      <div class="container">
+        <button class="back-btn" onclick="goToIndex()" type="button">← Voltar para o Início</button>
+
+        <div class="watch-layout">
+          <div class="player-area">
+            <div class="watch-top">
+              <span class="live-badge">A live se inicia 30 min antes do jogo começar.</span>
+              <h2 id="matchTitle">Carregando jogo do Laion...</h2>
+              <p id="matchMeta">Aguarde um instante</p>
+            </div>
+            
+            <div class="dns-warning">
+              <i class="fa-solid fa-lock-open"></i>
+              <p>
+                <strong>Atenção:</strong> Se o jogo não abrir, sua operadora pode estar bloqueando o player. 
+                Use o <strong>DNS 1.1.1.1</strong> para contornar o bloqueio.
+                <a href="https://one.one.one.one/" target="_blank">Baixar App 1.1.1.1</a>
+              </p>
+            </div>
+
+            <div class="video-container">
+              <div id="player" class="video-frame hidden"></div>
+              <div id="iframeContainer"></div>
+            </div>
+          </div>
+
+          <aside class="players-panel">
+            <h3>Players</h3>
+            <button class="player-btn active-player" onclick="changePlayer(this, 1)" type="button">
+              <span>Player 1</span>
+              <small></small>
+            </button>
+            <button class="player-btn" onclick="changePlayer(this, 2)" type="button">
+              <span>Player 2</span>
+              <small></small>
+            </button>
+            <button class="player-btn" onclick="changePlayer(this, 3)" type="button">
+              <span>Player 3</span>
+              <small></small>
+            </button>
+
+            <a href="https://whatsapp.com/channel/0029Vb7J4UEFnSzGO7ZTZD1h" target="_blank" class="contact-watch-btn">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Grupo no WhatsApp</span>
+            </a>
+            <a href="https://www.instagram.com/futlivece/" target="_blank" class="contact-watch-btn instagram-btn">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Siga no Instagram</span>
+            </a>
+          </aside>
+        </div>
+
+        <div class="promo-banner watch-banner">
+          <a href="https://wa.me/5585998348426?text=Ol%C3%A1%2C%20vim%20atraves%20do%20site." target="_blank">
+            <img src="banner.png" alt="Teste IPTV grátis" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Carrega o jogo do Fortaleza automaticamente
+    window.onload = function() {
+        if (typeof openMatch === "function") {
+            openMatch('fortaleza');
+        }
+    };
+
+    // Redireciona para a home real
+    function goToIndex() {
+        window.location.href = "index.html";
+    }
+
+    // Limpeza de cache obrigatória
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for(let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+    if ('caches' in window) {
+      caches.keys().then(function(names) {
+        for (let name of names) caches.delete(name);
+      });
+    }
+  </script>
+</body>
+</html>
