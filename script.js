@@ -9,8 +9,8 @@ const matches = {
     ]
   },
   ceara: {
-    title: "Atlético MG x Ceará",
-    meta: "23/04 • 20:30",
+    title: "Ceará x Vila Nova",
+    meta: "26/04 • 18:00",
     players: [
       { type: "hls", url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/sportv1/__index.m3u8?cc=y&sv=66&nu3zAQc9HC3GbwJq=1776980407-HgzlRUrW%2BLfk9x7vTIIUJzCdsOB8ekaISWq0elkpqY4%3D" },
       { type: "hls", url: "https://dlnmh9ip6v2xc9xx.cloudfontes.net/sportv.m3u8" },
@@ -31,21 +31,25 @@ function destroyPlayer() {
     clapprPlayer.destroy();
     clapprPlayer = null;
   }
-  const iframe = document.getElementById("videoFrame");
-  if (iframe) iframe.remove();
+  const ifContainer = document.getElementById("iframeContainer");
+  if (ifContainer) {
+    ifContainer.innerHTML = ""; // Limpa qualquer iframe injetado anteriormente
+  }
 }
 
 function loadPlayer(source) {
-  const container = document.getElementById("player");
+  const clapprContainer = document.getElementById("player");
   const iframeContainer = document.getElementById("iframeContainer");
   
   destroyPlayer();
-  container.classList.add("hidden");
+  
+  // Esconde o container do Clappr por padrão
+  clapprContainer.classList.add("hidden");
 
   const playerType = source.type || (isM3U8(source.url) ? "hls" : "iframe");
 
   if (playerType === "hls") {
-    container.classList.remove("hidden");
+    clapprContainer.classList.remove("hidden");
     clapprPlayer = new Clappr.Player({
       source: source.url,
       parentId: "#player",
@@ -53,9 +57,12 @@ function loadPlayer(source) {
       height: "100%",
       autoPlay: true,
       mimeType: "application/x-mpegURL",
-      hlsjsConfig: { enableWorker: true }
+      hlsjsConfig: {
+        enableWorker: true
+      }
     });
   } else {
+    // Criação dinâmica do iframe para evitar conflitos de sandbox
     const iframe = document.createElement("iframe");
     iframe.id = "videoFrame";
     iframe.className = "video-frame";
@@ -95,10 +102,12 @@ function openMatch(team) {
   document.getElementById("watchPage").classList.add("active");
   window.scrollTo({ top: 0, behavior: "smooth" });
 
-  gtag('event', 'page_view', {
-    page_title: 'Assistindo: ' + team,
-    page_location: window.location.href + '#' + team
-  });
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view', {
+      page_title: 'Assistindo: ' + team,
+      page_location: window.location.href + '#' + team
+    });
+  }
 }
 
 function goHome() {
@@ -119,16 +128,21 @@ function changePlayer(button, playerIndex) {
 function toggleCinema() {
   document.body.classList.toggle('cinema-active');
   const btn = document.getElementById('cinemaModeBtn');
-  btn.innerHTML = document.body.classList.contains('cinema-active') ? 
-    '<i class="fa-solid fa-xmark"></i> Sair do Cinema' : 
-    '<i class="fa-solid fa-film"></i> Modo Cinema';
+  if (btn) {
+    btn.innerHTML = document.body.classList.contains('cinema-active') ? 
+      '<i class="fa-solid fa-xmark"></i> Sair do Cinema' : 
+      '<i class="fa-solid fa-film"></i> Modo Cinema';
+  }
 }
 
 function vote(option) {
-  document.querySelector('.poll-options').classList.add('hidden');
-  document.getElementById('pollResult').classList.remove('hidden');
+  const optionsDiv = document.querySelector('.poll-options');
+  const resultDiv = document.getElementById('pollResult');
+  if (optionsDiv) optionsDiv.classList.add('hidden');
+  if (resultDiv) resultDiv.classList.remove('hidden');
 }
 
+// Bloqueios de segurança
 document.addEventListener('contextmenu', event => event.preventDefault());
 
 document.onkeydown = function(e) {
