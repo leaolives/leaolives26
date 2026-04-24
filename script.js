@@ -63,7 +63,7 @@ function loadPlayer(source) {
     } else {
         // MENSAGEM OPÇÃO 3 para links estáveis (HLS/DNS)
         dnsWarning.innerHTML = `<i class="fa-solid fa-shield-halved" style="color: #ffa500;"></i>
-        <p><strong>Sinal bloqueado?</strong> Algumas operadoras impedem o carregamento do player. Recomendamos o uso do <strong>DNS 1.1.1.1</strong> para garantir sua conexão e estabilidade. 
+        <p><strong>Atenção:</strong> Se o jogo nao abrir, sua operadora pode estar bloqueando o player. Use o <strong>App DNS 1.1.1.1</strong> para contornar o bloqueio. 
         <a href="https://one.one.one.one/" target="_blank">Baixar agora para Celular ou PC</a></p>`;
         dnsWarning.style.borderColor = "rgba(255, 165, 0, 0.3)";
     }
