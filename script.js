@@ -4,18 +4,18 @@ const matches = {
     title: "Operario x Fortaleza",
     meta: "26/04 • 18:00",
     players: [
-      { type: "hls", url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/primevideo3/__index.m3u8?cc=y&sv=118&nu3zAQc9HC3GbwJq=1776899756-kRqqPpFlX9ruzYh%2F4KIDXe29LbVzlQZPX0dgZtMQ85Y%3D" },
-      { type: "iframe", url: "https://sporturbo.com/player/canais/ampv-sportv" },
-      { type: "iframe", url: "https://esportesembed.com/casa-pia-x-braga-2" }
+      { type: "iframe", url: "https://embedflix.mom/tv/player.php?id=rede-tv" },
+      { type: "iframe", url: "https://3embeddecanais.xyz/redetv/" },
+      { type: "iframe", url: "https://esportesembed.com/operario-x-fortaleza-1" }
     ]
   },
   ceara: {
     title: "Ceará x Vila Nova",
     meta: "26/04 • 18:00",
     players: [
-      { type: "hls", url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/sportv1/__index.m3u8?cc=y&sv=66&nu3zAQc9HC3GbwJq=1776980407-HgzlRUrW%2BLfk9x7vTIIUJzCdsOB8ekaISWq0elkpqY4%3D" },
-      { type: "hls", url: "https://dlnmh9ip6v2xc9xx.cloudfontes.net/sportv.m3u8" },
-      { type: "iframe", url: "https://3embeddecanais.xyz/sportv/" }
+      { type: "hls", url: "https://d1muf25xa04so8hp25t.cloudfronte.lat/stream/ozoo2/c4946d2a9611fb8d62d1c2f64afa699e/xsports.m3u8" },
+      { type: "hls", url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/espn/__index.m3u8?cc=y&sv=127&nu3zAQc9HC3GbwJq=1777128217-2NcSdPktdfK0K2acpWNEro7dKW1F6PevI%2BWROANopt8%3D" },
+      { type: "iframe", url: "https://embedflix.mom/tv/player.php?id=espn" }
     ]
   }
 };
