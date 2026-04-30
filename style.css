@@ -155,14 +155,14 @@ button {
 }
 
 .fortaleza-card .vs-badge {
-  background: #ff3333;
-  color: #fff;
+  background: #ffffff;
+  color: #0051ff;
   border: none;
 }
 
 .fortaleza-card .btn-watch-now {
   background: #fff;
-  color: #0a1a3d;
+  color: #0051ff;
 }
 
 .fortaleza-card:hover {
@@ -336,7 +336,7 @@ button {
 
 .players-panel h3 {
     font-family: 'Kanit', sans-serif;
-    font-size: 26px;
+    font-size: 2px;
     text-transform: uppercase;
     margin-bottom: 15px;
     color: #fff;
