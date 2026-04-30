@@ -541,43 +541,61 @@ button {
     color: #2980b9 !important;
 }
 
-/* Estilos específicos para Celular (telas até 768px) */
+/* MENU / HEADER NO CELULAR */
 @media (max-width: 768px) {
-    .social-links {
-        gap: 8px; /* Espaço entre os botões */
-        width: 100%;
-        justify-content: center;
-        margin-top: 10px;
-    }
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0 14px;
+    gap: 14px;
+    min-height: auto;
+  }
 
-    .social-btn {
-        padding: 10px 12px; /* Aumenta a área de toque */
-        font-size: 14px;    /* Aumenta o texto */
-    }
+  .logo {
+    height: 52px;
+    margin: 0 auto;
+  }
 
-    .social-btn i {
-        font-size: 18px;    /* Aumenta o ícone (Instagram, Whats, Tabela) */
-        margin-right: 5px;
-    }
-    
-    /* Se você quiser que os botões ocupem mais espaço */
-    .social-btn span {
-        display: inline; /* Garante que o texto apareça no celular */
-    }
+  .social-links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .social-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 8px;
+    border-radius: 14px;
+    font-size: 14px;
+  }
+
+  .social-btn i {
+    font-size: 17px;
+    margin-right: 0;
+  }
+
+  .social-btn span {
+    display: inline;
+  }
 }
 
+/* TEXTO CENTRAL ABAIXO DOS CARDS */
 .intro-bottom {
-  padding: 5px 0 20px;
+  padding: 8px 0 24px;
   text-align: center;
 }
 
 .intro-bottom h1 {
   font-family: 'Kanit', sans-serif;
-  font-size: 30px;
+  font-size: 34px;
+  line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 0px;
+  margin-bottom: 4px;
   letter-spacing: -1px;
-
   background: linear-gradient(to right, #ffffff, #00e5ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -588,14 +606,25 @@ button {
   color: #aeb8c7;
 }
 
-/* mobile */
 @media (max-width: 640px) {
+  .matches-section {
+    padding-bottom: 18px;
+  }
+
+  .section-title {
+    font-size: 34px;
+    line-height: 1.05;
+  }
+
+  .intro-bottom {
+    padding: 0 0 24px;
+  }
+
   .intro-bottom h1 {
     font-size: 32px;
   }
 
   .intro-bottom p {
-    font-size: 10px;
+    font-size: 13px;
   }
 }
-
