@@ -268,7 +268,7 @@ button {
   border-radius: 14px;
   border: none;
   font-family: 'Kanit', sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 800;
   display: flex;
   align-items: center;
@@ -323,8 +323,20 @@ button {
 }
 
 .players-panel h3 {
+  text-align: center;
+  width: 100%;
+}
+
+.players-panel h3 {
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.players-panel h3 {
     font-family: 'Kanit', sans-serif;
-    font-size: 22px;
+    font-size: 26px;
     text-transform: uppercase;
     margin-bottom: 15px;
     color: #fff;
@@ -626,5 +638,33 @@ button {
 
   .intro-bottom p {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0 10px;
+    gap: 10px;
+  }
+
+  .logo {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .social-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .social-btn {
+    flex: 1;
+    max-width: 140px;
+    justify-content: center;
   }
 }
