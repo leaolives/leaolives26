@@ -1,21 +1,21 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Fortaleza x Sport",
-    meta: "29/04 • 21:30",
+    title: "Fortaleza x Goias",
+    meta: "02/05 • 20:30",
     players: [
-      { type: "iframe", url: "https://www.youtube.com/embed/PoXrobHfUmI?si=v9oTkhu-B6BH504I" },
-      { type: "iframe", url: "https://geo.dailymotion.com/player.html?video=x8u8n0m" },
-      { type: "iframe", url: "https://esportesembed.com/operario-ferroviario-x-fortaleza-1" }
+      { type: "hls", url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/espn/__index.m3u8?cc=y&sv=153&nu3zAQc9HC3GbwJq=1777560847-aJhU%2FnHrzldwkdFVtEi55VLjRZXjmKAlbr5UfNmAekw%3D" },
+      { type: "hls", url: "https://dlnmh9ip6v2xc9xx.cloudfontes.net/espn.m3u8" },
+      { type: "hls", url: "https://8fde6352d6f359c31bcbedb0d918bf01.cloudfronte.lat/zzzstream/espn.m3u8" }
     ]
   },
   ceara: {
-    title: "Maranhão x Ceará",
-    meta: "29/04 • 21:30",
+    title: "Sport x Ceará",
+    meta: "03/05 • 18:00",
     players: [
-      { type: "iframe", url: "https://www.youtube.com/embed/T5mBfOWAPXU?si=G2urK_ttBj5GEvS1" },
-      { type: "iframe", url: "https://www.youtube.com/embed/T5mBfOWAPXU?si=G2urK_ttBj5GEvS1" },
-      { type: "iframe", url: "https://esportesembed.com/ceara-x-vila-nova-2" }
+      { type: "hls", url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/espn/__index.m3u8?cc=y&sv=153&nu3zAQc9HC3GbwJq=1777560847-aJhU%2FnHrzldwkdFVtEi55VLjRZXjmKAlbr5UfNmAekw%3D" },
+      { type: "hls", url: "https://dlnmh9ip6v2xc9xx.cloudfontes.net/espn.m3u8" },
+      { type: "hls", url: "https://8fde6352d6f359c31bcbedb0d918bf01.cloudfronte.lat/zzzstream/espn.m3u8" }
     ]
   }
 };
