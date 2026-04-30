@@ -565,3 +565,37 @@ button {
         display: inline; /* Garante que o texto apareça no celular */
     }
 }
+
+.intro-bottom {
+  padding: 5px 0 20px;
+  text-align: center;
+}
+
+.intro-bottom h1 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  letter-spacing: -1px;
+
+  background: linear-gradient(to right, #ffffff, #00e5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-bottom p {
+  font-size: 14px;
+  color: #aeb8c7;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+  .intro-bottom h1 {
+    font-size: 32px;
+  }
+
+  .intro-bottom p {
+    font-size: 10px;
+  }
+}
+
