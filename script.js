@@ -6,18 +6,18 @@ const matches = {
     players: [
       {
         type: "hls",
-        engine: "dplayer",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/espn/__index.m3u8?cc=y&sv=153&nu3zAQc9HC3GbwJq=1777560847-aJhU%2FnHrzldwkdFVtEi55VLjRZXjmKAlbr5UfNmAekw%3D"
+        engine: "clappr",
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/disneyplus1/__index.m3u8?cc=y&sv=198&nu3zAQc9HC3GbwJq=1777727929-fQKIsBdhLOq0QmAd0cjvQ19KCDXgxp56a2iRsFJtc3s%3D"
       },
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://dlnmh9ip6v2xc9xx.cloudfontes.net/espn.m3u8"
+        url: "https://esportesembed.com/fortaleza-x-goias-1"
       },
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://8fde6352d6f359c31bcbedb0d918bf01.cloudfronte.lat/zzzstream/espn.m3u8"
+        url: "https://4embeddecanais.xyz/disneyplus/"
       }
     ]
   },
