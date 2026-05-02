@@ -7,7 +7,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://4embeddecanais.xyz/disneyplus03/.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/disneyplus1/__index.m3u8?cc=y&sv=195&nu3zAQc9HC3GbwJq=1777761473-etskdhUJdPUkShgxGL5YAKAls%2FUCj0Kk%2ByQQMs%2Bez18%3D"
+        url: "https://4embeddecanais.xyz/disneyplus03/"
       },
       {
         type: "iframe",
