@@ -12,12 +12,12 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://4embeddecanais.xyz/disneyplus03/"
+        url: "https://esportesembed.com/fortaleza-x-goias-1"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.com/fortaleza-x-goias-1"
+        url: "https://4embeddecanais.xyz/disneyplus03/"
       }
     ]
   },
