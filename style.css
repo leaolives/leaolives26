@@ -677,6 +677,7 @@ button {
 
 /* SMART TV / TELAS GRANDES */
 @media (min-width: 1600px) {
+
   .container {
     width: min(1500px, 88%);
   }
@@ -795,26 +796,37 @@ button {
     font-size: 18px;
   }
 
+  /* PLAYER TV CORRIGIDO */
+
   .video-container {
-    min-height: 620px;
+    width: 100%;
   }
 
   #player,
   #dplayer,
+  #nativeVideo,
   #iframeContainer,
   .video-frame {
-    min-height: 620px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    min-height: unset !important;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #000;
   }
 
   #dplayer,
   #dplayer .dplayer,
   #dplayer video,
   #player,
-  #player video {
+  #player video,
+  #nativeVideo {
     width: 100% !important;
-    height: 100% !important;
-    min-height: 620px !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
     object-fit: contain !important;
     display: block !important;
   }
+
 }

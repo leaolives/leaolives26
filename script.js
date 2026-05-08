@@ -68,6 +68,14 @@ function destroyPlayer() {
   const iframeContainer = document.getElementById("iframeContainer");
   const clapprContainer = document.getElementById("player");
   const dplayerContainer = document.getElementById("dplayer");
+  const nativeVideo = document.getElementById("nativeVideo");
+
+if (nativeVideo) {
+  nativeVideo.pause();
+  nativeVideo.removeAttribute("src");
+  nativeVideo.load();
+  nativeVideo.classList.add("hidden");
+}
 
   if (iframeContainer) iframeContainer.innerHTML = "";
   if (clapprContainer) clapprContainer.classList.add("hidden");
@@ -203,18 +211,35 @@ function loadPlayer(source) {
   const playerType = source.type || (isM3U8(source.url) ? "hls" : "iframe");
 
   if (playerType === "hls") {
-    const engine = source.engine || "clappr";
+  let engine = source.engine || "clappr";
 
-    if (engine === "dplayer") {
-      loadHlsWithDPlayer(source);
-    } else {
-      loadHlsWithClappr(source);
-    }
-
-    return;
+  // Na Smart TV, força player nativo para evitar tela preta
+  if (isSmartTV()) {
+    engine = "native";
   }
 
+  if (engine === "native") {
+    loadNativeHls(source);
+  } else if (engine === "dplayer") {
+    loadHlsWithDPlayer(source);
+  } else {
+    loadHlsWithClappr(source);
+  }
+
+  return;
+}
+
   loadIframe(source);
+}
+
+function loadNativeHls(source) {
+  const nativeVideo = document.getElementById("nativeVideo");
+  if (!nativeVideo) return;
+
+  nativeVideo.classList.remove("hidden");
+  nativeVideo.src = source.url;
+  nativeVideo.load();
+  nativeVideo.play().catch(() => {});
 }
 
 // --- 3. NAVEGAÇÃO ---
@@ -283,3 +308,22 @@ document.onkeydown = function (e) {
     return false;
   }
 };
+
+function isSmartTV() {
+  const ua = navigator.userAgent.toLowerCase();
+
+  return (
+    ua.includes("smart-tv") ||
+    ua.includes("smarttv") ||
+    ua.includes("tizen") ||
+    ua.includes("webos") ||
+    ua.includes("netcast") ||
+    ua.includes("appletv") ||
+    ua.includes("hbbtv") ||
+    ua.includes("bravia") ||
+    ua.includes("viera") ||
+    ua.includes("hisense") ||
+    ua.includes("vidaa") ||
+    ua.includes("aftt")
+  );
+}

@@ -77,9 +77,19 @@
                     
             <div class="video-container">
               <div id="player" class="video-frame hidden"></div>
-              <div id="dplayer" class="video-frame hidden"></div>
-              <div id="iframeContainer"></div>
-            </div>
+
+            <div id="dplayer" class="video-frame hidden"></div>
+
+            <video
+            id="nativeVideo"
+            class="video-frame hidden"
+            controls
+            autoplay
+            playsinline>
+          </video>
+
+          <div id="iframeContainer"></div>
+          </div>
           </div>
 
           <aside class="players-panel">
