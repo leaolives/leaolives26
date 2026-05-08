@@ -13,8 +13,9 @@ html {
 
 body {
   background: #0a0d14;
-  background-image: radial-gradient(circle at top right, rgba(0, 229, 255, 0.03), transparent),
-                    radial-gradient(circle at bottom left, rgba(255, 51, 51, 0.02), transparent);
+  background-image:
+    radial-gradient(circle at top right, rgba(0, 229, 255, 0.03), transparent),
+    radial-gradient(circle at bottom left, rgba(255, 51, 51, 0.02), transparent);
   color: #fff;
   min-height: 100vh;
 }
@@ -33,6 +34,7 @@ button {
   margin: 0 auto;
 }
 
+/* HEADER */
 .header {
   position: sticky;
   top: 0;
@@ -57,10 +59,19 @@ button {
   display: block;
 }
 
-.page { display: none; }
-.page.active { display: block; }
+/* PÁGINAS */
+.page {
+  display: none;
+}
 
-.hero { padding: 28px 0 14px; }
+.page.active {
+  display: block;
+}
+
+/* HERO */
+.hero {
+  padding: 28px 0 14px;
+}
 
 .hero-content {
   display: grid;
@@ -96,7 +107,9 @@ button {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 229, 255, 0.05);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(0, 229, 255, 0.05);
 }
 
 .hero-logo {
@@ -104,21 +117,19 @@ button {
   filter: drop-shadow(0 12px 22px rgba(0,0,0,0.32));
 }
 
-.matches-section { padding: 18px 0 42px; }
-
-.section-title {
-  font-family: 'Kanit', sans-serif;
-  font-size: 26px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
+/* TRANSMISSÕES */
+.matches-section {
+  padding: 18px 0 42px;
 }
 
 .section-title {
-    text-align: center;      /* Centraliza o texto */
-    margin-bottom: 10px;     /* Dá um espaço maior para os cards abaixo */
-    font-size: 30px;         /* Ajuste o tamanho se achar necessário */
-    width: 100%;             /* Garante que ocupe a largura toda para centralizar */
-    display: block;
+  font-family: 'Kanit', sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
 }
 
 .matches-grid {
@@ -278,23 +289,24 @@ button {
   transition: all 0.3s ease;
 }
 
+/* TELA DO PLAYER */
 #matchTitle {
-    font-family: 'Kanit', sans-serif;
-    font-size: 32px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: -0.5px;
-    margin-bottom: 4px;
-    color: #fff;
+  font-family: 'Kanit', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+  color: #fff;
 }
 
 #matchMeta {
-    font-family: 'Kanit', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffffff;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 
 .back-btn {
@@ -315,7 +327,8 @@ button {
   padding-bottom: 34px;
 }
 
-.player-area, .players-panel {
+.player-area,
+.players-panel {
   border-radius: 20px;
   background: rgba(255,255,255,0.02);
   border: 1px solid rgba(255,255,255,0.06);
@@ -325,48 +338,55 @@ button {
 .players-panel h3 {
   text-align: center;
   width: 100%;
-}
-
-.players-panel h3 {
-  text-align: center;
   font-family: 'Kanit', sans-serif;
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-.players-panel h3 {
-    font-family: 'Kanit', sans-serif;
-    font-size:25px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #fff;
 }
 
 .live-badge {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 8px;
-    background: rgba(239, 68, 68, 0.1);
-    border: 1px solid rgba(239, 68, 68, 0.2);
-    color: #ff6b6b;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 15px;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #ff6b6b;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
 }
 
-.video-frame {
+/* PLAYERS */
+.video-container {
+  width: 100%;
+}
+
+.video-frame,
+#player,
+#dplayer {
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 16px;
+  overflow: hidden;
   background: #000;
   border: none;
 }
 
+#player [data-player] {
+  border-radius: 16px !important;
+}
+
+#dplayer .dplayer {
+  width: 100%;
+  height: 100%;
+}
+
 .player-btn {
   width: 100%;
-  text-align: center; 
+  text-align: center;
   padding: 14px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.03);
@@ -399,9 +419,15 @@ button {
   background: rgba(0, 229, 255, 0.1);
 }
 
-.active-player span { color: #00e5ff; }
+.active-player span {
+  color: #00e5ff;
+}
 
-.social-links { display: flex; gap: 10px; }
+/* BOTÕES SOCIAIS */
+.social-links {
+  display: flex;
+  gap: 10px;
+}
 
 .social-btn {
   display: flex;
@@ -442,6 +468,7 @@ button {
   filter: brightness(1.1);
 }
 
+/* AVISO DNS */
 .dns-warning {
   background: rgba(255, 165, 0, 0.1);
   border: 1px solid rgba(255, 165, 0, 0.3);
@@ -454,13 +481,6 @@ button {
   text-align: center;
   flex-direction: column;
   gap: 8px;
-}
-
-@media (min-width: 641px) {
-  .dns-warning {
-    flex-direction: row;
-    gap: 12px;
-  }
 }
 
 .dns-warning i {
@@ -481,6 +501,14 @@ button {
   text-decoration: underline;
 }
 
+@media (min-width: 641px) {
+  .dns-warning {
+    flex-direction: row;
+    gap: 12px;
+  }
+}
+
+/* BANNER */
 .promo-banner {
   margin-top: 40px;
   text-align: center;
@@ -492,107 +520,38 @@ button {
   transition: transform 0.3s;
 }
 
-.promo-banner img:hover { transform: scale(1.03); }
-
-.hidden { display: none; }
-
-@media (max-width: 980px) {
-  .hero-content, .watch-layout { grid-template-columns: 1fr; }
-  .header-content { flex-direction: column; padding: 15px 0; height: auto; }
+.promo-banner img:hover {
+  transform: scale(1.03);
 }
 
-@media (max-width: 640px) {
-  .team-shield { width: 75px; height: 75px; }
-  .match-time { font-size: 26px; }
-  .social-btn span { display: none; }
-  .hero-text h1 { font-size: 32px; }
-}
-
-#player {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #000;
-}
-
-/* Garante que o vídeo interno do Clappr respeite o arredondamento */
-#player [data-player] {
-  border-radius: 16px !important;
-}
-
-/* Container da Tabela */
+/* TABELA */
 .table-container {
-    margin-top: 20px;
-    background: #1a1d23;
-    padding: 15px;
-    border-radius: 12px;
-    border: 1px solid #2d323a;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    overflow: hidden; /* Evita que o widget escape das bordas arredondadas */
+  margin-top: 20px;
+  background: #1a1d23;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #2d323a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
-/* Garante que o iframe seja responsivo */
 .table-container iframe {
-    max-width: 100% !important;
-    border-radius: 8px;
+  max-width: 100% !important;
+  border-radius: 8px;
 }
 
-/* Ajuste para o texto de crédito do Sofascore */
 .table-container div {
-    color: #888 !important;
-    margin-top: 10px;
+  color: #888 !important;
+  margin-top: 10px;
 }
 
 .table-container a {
-    color: #3498db !important;
-    transition: 0.3s;
+  color: #3498db !important;
+  transition: 0.3s;
 }
 
 .table-container a:hover {
-    color: #2980b9 !important;
-}
-
-/* MENU / HEADER NO CELULAR */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 0 14px;
-    gap: 14px;
-    min-height: auto;
-  }
-
-  .logo {
-    height: 52px;
-    margin: 0 auto;
-  }
-
-  .social-links {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 0;
-  }
-
-  .social-btn {
-    width: 100%;
-    justify-content: center;
-    padding: 11px 8px;
-    border-radius: 14px;
-    font-size: 14px;
-  }
-
-  .social-btn i {
-    font-size: 17px;
-    margin-right: 0;
-  }
-
-  .social-btn span {
-    display: inline;
-  }
+  color: #2980b9 !important;
 }
 
 /* TEXTO CENTRAL ABAIXO DOS CARDS */
@@ -618,7 +577,82 @@ button {
   color: #aeb8c7;
 }
 
+.hidden {
+  display: none;
+}
+
+/* RESPONSIVO TABLET */
+@media (max-width: 980px) {
+  .hero-content,
+  .watch-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .header-content {
+    flex-direction: column;
+    padding: 15px 0;
+    height: auto;
+  }
+}
+
+/* MENU / HEADER NO CELULAR */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0 10px;
+    gap: 10px;
+    min-height: auto;
+  }
+
+  .logo {
+    height: 52px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .social-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .social-btn {
+    flex: 1;
+    max-width: 140px;
+    justify-content: center;
+    padding: 11px 8px;
+    border-radius: 14px;
+    font-size: 14px;
+  }
+
+  .social-btn i {
+    font-size: 17px;
+    margin-right: 0;
+  }
+
+  .social-btn span {
+    display: inline;
+  }
+}
+
+/* CELULAR */
 @media (max-width: 640px) {
+  .team-shield {
+    width: 75px;
+    height: 75px;
+  }
+
+  .match-time {
+    font-size: 26px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
   .matches-section {
     padding-bottom: 18px;
   }
@@ -639,47 +673,6 @@ button {
   .intro-bottom p {
     font-size: 13px;
   }
-}
-
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 0 10px;
-    gap: 10px;
-  }
-
-  .logo {
-    margin: 0 auto;
-    display: block;
-  }
-
-  .social-links {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .social-btn {
-    flex: 1;
-    max-width: 140px;
-    justify-content: center;
-  }
-}
-
-#dplayer {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #000;
-}
-
-#dplayer .dplayer {
-  width: 100%;
-  height: 100%;
 }
 
 /* SMART TV / TELAS GRANDES */
@@ -747,9 +740,7 @@ button {
   .intro-bottom p {
     font-size: 20px;
   }
-}
 
-@media (min-width: 1600px) {
   .watch-layout {
     grid-template-columns: 1.6fr 420px;
     gap: 28px;
@@ -802,5 +793,28 @@ button {
 
   .dns-warning p {
     font-size: 18px;
+  }
+
+  .video-container {
+    min-height: 620px;
+  }
+
+  #player,
+  #dplayer,
+  #iframeContainer,
+  .video-frame {
+    min-height: 620px;
+  }
+
+  #dplayer,
+  #dplayer .dplayer,
+  #dplayer video,
+  #player,
+  #player video {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 620px !important;
+    object-fit: contain !important;
+    display: block !important;
   }
 }

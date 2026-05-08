@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Confiança x Fortaleza",
-    meta: "07/05 • 19:30",
+    title: "Avai x Fortaleza",
+    meta: "10/05 • 18:30",
     players: [
       {
         type: "iframe",
@@ -27,18 +27,18 @@ const matches = {
     meta: "09/05 • 19:00",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/mBY8EcO4vhM?si=8jSDTtt8lguERwxy"
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/espn/__index.m3u8?cc=y&sv=4&nu3zAQc9HC3GbwJq=1778250958-TY%2B%2FwtAK4K5XaKs9jIO8aRpboaXPWKYyBeO3zEMBNeE%3D"
+      },
+      {
+        type: "hls",
+        engine: "clappr",
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/xsports/__index.m3u8?cc=y&sv=192&nu3zAQc9HC3GbwJq=1778251082-cgaEFJwCJLsxHydqthwHEgN%2FpvbSRKlExM2pmdpF3yI%3D"
       },
       {
         type: "iframe",
-        engine: "dplayer",
-        url: "https://www.youtube.com/embed/mBY8EcO4vhM?si=8jSDTtt8lguERwxy"
-      },
-      {
-        type: "iframe",
-        url: "https://www.youtube.com/embed/mBY8EcO4vhM?si=8jSDTtt8lguERwxy"
+        url: "https://5embeddecanais.xyz/espn/"
       }
     ]
   }
@@ -135,14 +135,33 @@ function loadHlsWithDPlayer(source) {
       url: source.url,
       type: "customHls",
       customType: {
-        customHls: function (video, player) {
-          const hls = new Hls();
-          hls.loadSource(video.src);
-          hls.attachMedia(video);
+        customHls: function (video) {
+          if (Hls.isSupported()) {
+            const hls = new Hls({
+              enableWorker: false,
+              lowLatencyMode: false
+            });
+
+            hls.loadSource(video.src);
+            hls.attachMedia(video);
+          } else {
+            video.src = source.url;
+          }
         }
       }
     }
   });
+
+  setTimeout(() => {
+    const video = dplayerContainer.querySelector("video");
+    if (video) {
+      video.style.width = "100%";
+      video.style.height = "100%";
+      video.style.objectFit = "contain";
+      video.style.display = "block";
+      video.play().catch(() => {});
+    }
+  }, 800);
 }
 
 function loadIframe(source) {
