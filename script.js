@@ -23,8 +23,8 @@ const matches = {
   },
 
   ceara: {
-    title: "Ceará x Atletico GO",
-    meta: "09/05 • 19:00",
+    title: "Ceará x Atletico MG",
+    meta: "13/05 • 21:30",
     players: [
       {
         type: "hls",
