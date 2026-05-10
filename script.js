@@ -7,12 +7,12 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.com/avai-x-fortaleza-1"
+        url: "https://5embeddecanais.xyz/disneyplus/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://5embeddecanais.xyz/disneyplus03/"
+        url: "https://esportesembed.com/avai-x-fortaleza-1"
       },
       {
         type: "hls",
