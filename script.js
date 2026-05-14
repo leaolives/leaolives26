@@ -5,19 +5,19 @@ const matches = {
     meta: "14/05 • 20:00",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
+        url: "https://esportesembed.com/crb-x-fortaleza-1"
+      },
+      {
+        type: "hls",
+        engine: "dplayer",
         url: "https://5d3f545a14f5660de89f13890881daa4.cloudflaire.lat/assets/themes/embedtv_09844088e71cc2873d82f1fd8e24463d/style.css"
       },
       {
         type: "iframe",
         engine: "clappr",
         url: "https://v4.sportssonline.click/channels/bra/br4.php"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://esportesembed.com/crb-x-fortaleza-1"
       }
     ]
   },
