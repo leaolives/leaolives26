@@ -7,24 +7,24 @@ const matches = {
       {
         type: "hls",
         engine: "clappr",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/disneyplus1/__index.m3u8?cc=y&sv=208&nu3zAQc9HC3GbwJq=1778422765-EPGkuFSb5pV6wDGXeLbyZyjIYJ7iPBwW%2BLpEsF9SlW4%3D"
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/primevideo3/__index.m3u8?cc=y&sv=173&nu3zAQc9HC3GbwJq=1778770325-EISzSdIs3n2NwddO1KwQKdPQ9yRFwSn1csS2FSdvcZo%3D"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.com/avai-x-fortaleza-1"
+        url: "https://6embeddecanais.xyz/amazonprimevideo03/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://5embeddecanais.xyz/disneyplus/"
+        url: "https://v3.sportssonline.click/channels/bra/br4.php"
       }
     ]
   },
 
   ceara: {
-    title: "Ceará x Atletico MG",
-    meta: "13/05 • 21:30",
+    title: "Ceará x Fortaleza",
+    meta: "17/05 • 18:30",
     players: [
       {
         type: "hls",
