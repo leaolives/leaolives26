@@ -5,9 +5,9 @@ const matches = {
     meta: "17/05 • 18:30",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/disneyplus1/__index.m3u8?cc=y&sv=31&nu3zAQc9HC3GbwJq=1778984007-HsDuVj2OC334kbB6b7wAIz0rFXqHwIR2WIR9W3%2BNK04%3D"
+        url: "<iframe src="https://esportesembed.com/ceara-x-fortaleza-1"
       },
       {
         type: "iframe",
@@ -15,9 +15,9 @@ const matches = {
         url: "https://6embeddecanais.xyz/disneyplus/"
       },
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://esportesembed.com/ceara-x-fortaleza-1"
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/disneyplus1/__index.m3u8?cc=y&sv=31&nu3zAQc9HC3GbwJq=1778984007-HsDuVj2OC334kbB6b7wAIz0rFXqHwIR2WIR9W3%2BNK04%3D"
       }
     ]
   },
@@ -27,9 +27,9 @@ const matches = {
     meta: "17/05 • 18:30",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/disneyplus1/__index.m3u8?cc=y&sv=31&nu3zAQc9HC3GbwJq=1778984007-HsDuVj2OC334kbB6b7wAIz0rFXqHwIR2WIR9W3%2BNK04%3D"
+        url: "https://esportesembed.com/ceara-x-fortaleza-1"
       },
       {
         type: "iframe",
@@ -37,8 +37,9 @@ const matches = {
         url: "https://6embeddecanais.xyz/disneyplus/"
       },
       {
-        type: "iframe",
-        url: "https://esportesembed.com/ceara-x-fortaleza-1"
+        type: "hls",
+        engine: "clappr",
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/disneyplus1/__index.m3u8?cc=y&sv=31&nu3zAQc9HC3GbwJq=1778984007-HsDuVj2OC334kbB6b7wAIz0rFXqHwIR2WIR9W3%2BNK04%3D"
       }
     ]
   }
