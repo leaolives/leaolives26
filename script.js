@@ -5,19 +5,19 @@ const matches = {
     meta: "17/05 • 18:30",
     players: [
       {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://esportesembed.com/crb-x-fortaleza-1"
-      },
-      {
         type: "hls",
-        engine: "dplayer",
-        url: "https://5d3f545a14f5660de89f13890881daa4.cloudflaire.lat/assets/themes/embedtv_09844088e71cc2873d82f1fd8e24463d/style.css"
+        engine: "clappr",
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/disneyplus1/__index.m3u8?cc=y&sv=31&nu3zAQc9HC3GbwJq=1778984007-HsDuVj2OC334kbB6b7wAIz0rFXqHwIR2WIR9W3%2BNK04%3D"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://v4.sportssonline.click/channels/bra/br4.php"
+        url: "https://6embeddecanais.xyz/disneyplus/"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://esportesembed.com/ceara-x-fortaleza-1"
       }
     ]
   },
@@ -29,16 +29,16 @@ const matches = {
       {
         type: "hls",
         engine: "clappr",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/sportv1/__index.m3u8?cc=y&sv=187&nu3zAQc9HC3GbwJq=1778629346-Qn%2BrNPFSF3szzAazximaZX%2Bmu5F%2Fo4J0Sj%2B%2BhPnQ3No%3D"
-      },
-      {
-        type: "hls",
-        engine: "clappr",
-        url: "https://d1muf25xa05so8hp12v.cloudflaire.lat/assets/themes/ozoo_dcc41e174eb83f535c9f3fc8aeae151a/style.css"
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/disneyplus1/__index.m3u8?cc=y&sv=31&nu3zAQc9HC3GbwJq=1778984007-HsDuVj2OC334kbB6b7wAIz0rFXqHwIR2WIR9W3%2BNK04%3D"
       },
       {
         type: "iframe",
-        url: "https://5embeddecanais.xyz/sportv/"
+        engine: "clappr",
+        url: "https://6embeddecanais.xyz/disneyplus/"
+      },
+      {
+        type: "iframe",
+        url: "https://esportesembed.com/ceara-x-fortaleza-1"
       }
     ]
   }
