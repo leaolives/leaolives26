@@ -7,7 +7,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "<iframe src="https://esportesembed.com/ceara-x-fortaleza-1"
+        url: "https://esportesembed.com/ceara-x-fortaleza-1"
       },
       {
         type: "iframe",
