@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Ceará x Fortaleza",
-    meta: "17/05 • 18:30",
+    title: "Fortaleza x Sport",
+    meta: "20/05 • 21:00",
     players: [
       {
         type: "hls",
@@ -23,8 +23,8 @@ const matches = {
   },
 
   ceara: {
-    title: "Ceará x Fortaleza",
-    meta: "17/05 • 18:30",
+    title: "Novorizontino x Ceará",
+    meta: "23/05 • 16:00",
     players: [
       {
         type: "hls",
