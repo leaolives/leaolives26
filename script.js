@@ -7,12 +7,12 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.com/ceara-x-fortaleza-1"
+        url: "https://www.youtube.com/embed/_JDPCud0slg?si=TIBP6nLiKCwHcFJn"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://6embeddecanais.xyz/disneyplus/"
+        url: "https://www.youtube.com/embed/ofSvd9i0Imk?si=qe1RZ6EQCOfjNuKI"
       },
       {
         type: "hls",
