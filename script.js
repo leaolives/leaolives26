@@ -5,19 +5,19 @@ const matches = {
     meta: "23/05 • 18:30",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/_JDPCud0slg?si=TIBP6nLiKCwHcFJn"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://www.youtube.com/embed/ofSvd9i0Imk?si=qe1RZ6EQCOfjNuKI"
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/espn/__index.m3u8?cc=y&sv=197&nu3zAQc9HC3GbwJq=1779549945-bVT%2FwARkBQyvgDZezqm0xu0NtM6ZjQ6fUT6jqHVZoGs%3D"
       },
       {
         type: "hls",
         engine: "clappr",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/disneyplus1/__index.m3u8?cc=y&sv=31&nu3zAQc9HC3GbwJq=1778984007-HsDuVj2OC334kbB6b7wAIz0rFXqHwIR2WIR9W3%2BNK04%3D"
+        url: "https://d1muf25xa05so8hp23v.cloudflaire.lat/assets/themes/ozoo_cb15a0a75429e4981498ff307c374d09/style.css"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://7embeddecanais.xyz/espn/"
       }
     ]
   },
@@ -27,19 +27,19 @@ const matches = {
     meta: "23/05 • 16:00",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://esportesembed.com/ceara-x-fortaleza-1"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://6embeddecanais.xyz/disneyplus/"
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/espn4/__index.m3u8?cc=y&sv=114&nu3zAQc9HC3GbwJq=1779549774-JrEQ2ln5SHEQ3RzKi1%2FYJnU1pMt%2BAyYE9V41vKYgCsc%3D"
       },
       {
         type: "hls",
         engine: "clappr",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/disneyplus1/__index.m3u8?cc=y&sv=31&nu3zAQc9HC3GbwJq=1778984007-HsDuVj2OC334kbB6b7wAIz0rFXqHwIR2WIR9W3%2BNK04%3D"
+        url: "https://cdnvipwaytv.multtv.tv.br:4443/O4cBTQqP-vjZY96EsjJURQ/1779722605/bpk-tv/REDETV/default/REDETV-audio_165282_und=164800-video=3300000.m3u8?md5=O4cBTQqP-vjZY96EsjJURQ&expires=1779722605"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://7embeddecanais.xyz/espn4/"
       }
     ]
   }
