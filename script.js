@@ -7,17 +7,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.com/fortaleza-x-londrina-1"
-      },
-      {
-        type: "hls",
-        engine: "clappr",
-        url: "https://d1muf25xa05so8hp23v.cloudflaire.lat/assets/themes/ozoo_cb15a0a75429e4981498ff307c374d09/style.css"
+        url: "https://www.youtube.com/embed/mrk5yjhZtGI?si=gH7R8Ww3DAH5nP_z"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://7embeddecanais.xyz/espn/"
+        url: "https://www.youtube.com/embed/US6C3Bn9RIw?si=S1YdQjmI7nrV9Fdu"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://www.youtube.com/embed/mrk5yjhZtGI?si=gH7R8Ww3DAH5nP_z"
       }
     ]
   },
