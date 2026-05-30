@@ -7,17 +7,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/mrk5yjhZtGI?si=gH7R8Ww3DAH5nP_z"
+        url: "https://esportesembed.com/athletic-x-fortaleza-1"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/US6C3Bn9RIw?si=S1YdQjmI7nrV9Fdu"
+        url: "https://8embeddecanais.xyz/disneyplus/"
       },
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/mrk5yjhZtGI?si=gH7R8Ww3DAH5nP_z"
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/disneyplus1/__index.m3u8?cc=y&sv=40&nu3zAQc9HC3GbwJq=1780142363-g57P6T6awOCj1P5hlTNGY8zG1Tmf5J0JwNFqDxBIojg%3D"
       }
     ]
   },
@@ -96,8 +96,9 @@ function updateWarning(source) {
 
   if (isEx) {
     dnsWarning.innerHTML = `
-      <i class="fa-solid fa-circle-exclamation" style="color: #ff4444;"></i>
-      <p><strong>Aviso:</strong> Este player pode abrir anúncios externos. Se uma aba abrir, <strong>feche</strong> e volte para cá para assistir.</p>
+      <i class="fa-solid fa-shield-halved" style="color: #ffa500;"></i>
+      <p><strong>Atenção:</strong> Se o jogo não abrir, sua operadora pode estar bloqueando o player de video. Use o <strong>App DNS 1.1.1.1</strong> para contornar o bloqueio.
+      <a href="https://one.one.one.one/" target="_blank">Baixar agora para Celular ou PC</a></p>
     `;
     dnsWarning.style.borderColor = "#ff4444";
   } else {
