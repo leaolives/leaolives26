@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Athletic x Fortaleza",
-    meta: "30/05 • 18:00",
+    title: "Fortaleza x Vitória",
+    meta: "02/06 • 21:00",
     players: [
       {
         type: "iframe",
@@ -29,17 +29,17 @@ const matches = {
       {
         type: "hls",
         engine: "clappr",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/espn4/__index.m3u8?cc=y&sv=114&nu3zAQc9HC3GbwJq=1779549774-JrEQ2ln5SHEQ3RzKi1%2FYJnU1pMt%2BAyYE9V41vKYgCsc%3D"
-      },
-      {
-        type: "hls",
-        engine: "clappr",
-        url: "https://cdnvipwaytv.multtv.tv.br:4443/O4cBTQqP-vjZY96EsjJURQ/1779722605/bpk-tv/REDETV/default/REDETV-audio_165282_und=164800-video=3300000.m3u8?md5=O4cBTQqP-vjZY96EsjJURQ&expires=1779722605"
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/xsports/__index.m3u8?cc=y&sv=89&nu3zAQc9HC3GbwJq=1780225155-PtT%2FDybxUwN6I2KxOBcPbBvG73Q7EPHNmKLp289bh2k%3D"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://7embeddecanais.xyz/espn4/"
+        url: "https://www.youtube.com/embed/7pU2eKBR7CE?si=EwDZZshf1SN5LiDg"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://8embeddecanais.xyz/xsports/"
       }
     ]
   }
