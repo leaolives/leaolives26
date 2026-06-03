@@ -2,7 +2,7 @@
 const matches = {
   fortaleza: {
     title: "Fortaleza x Vitória",
-    meta: "02/06 • 21:00",
+    meta: "06/06 • 16:00",
     players: [
       {
         type: "iframe",
