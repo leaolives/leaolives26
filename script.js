@@ -7,7 +7,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/pybsSCqUbpQ?si=g-8E6Ssl79dmNyCF"
+        url: "https://superflixapi.fit/eventos/franca-x-irlanda-do-norte"
       },
       {
         type: "iframe",
@@ -92,7 +92,16 @@ function updateWarning(source) {
   if (!dnsWarning || !source || !source.url) return;
 
   const url = source.url.toLowerCase();
-  const isEx = url.includes("esportesembed.com") || url.includes("sporturbo.com");
+
+  const trustedDomains = [
+    "esportesembed.com",
+    "sporturbo.com",
+    "superflixapi.fit"
+  ];
+
+  const isEx = trustedDomains.some(domain =>
+    url.includes(domain)
+  );
 
   if (isEx) {
     dnsWarning.innerHTML = `
@@ -179,13 +188,24 @@ function loadIframe(source) {
   if (!iframeContainer) return;
 
   const url = source.url.toLowerCase();
-  const isEx = url.includes("esportesembed.com") || url.includes("sporturbo.com");
+
+  // Sites que não devem receber sandbox
+  const trustedDomains = [
+    "esportesembed.com",
+    "sporturbo.com",
+    "superflixapi.fit"
+  ];
+
+  const isTrusted = trustedDomains.some(domain =>
+    url.includes(domain)
+  );
 
   const iframe = document.createElement("iframe");
   iframe.id = "videoFrame";
   iframe.className = "video-frame";
 
-  if (!isEx) {
+  // Sandbox apenas para domínios não confiáveis
+  if (!isTrusted) {
     iframe.setAttribute(
       "sandbox",
       "allow-scripts allow-same-origin allow-forms allow-presentation"
