@@ -7,7 +7,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://superflixapi.fit/eventos/franca-x-irlanda-do-norte"
+        url: "https://v1.rde.lat/e/franca-x-irlanda-do-norte?channel=sportv"
       },
       {
         type: "iframe",
@@ -96,7 +96,7 @@ function updateWarning(source) {
   const trustedDomains = [
     "esportesembed.com",
     "sporturbo.com",
-    "superflixapi.fit"
+    "v1.rde.lat"
   ];
 
   const isEx = trustedDomains.some(domain =>
@@ -193,7 +193,7 @@ function loadIframe(source) {
   const trustedDomains = [
     "esportesembed.com",
     "sporturbo.com",
-    "superflixapi.fit"
+    "v1.rde.lat"
   ];
 
   const isTrusted = trustedDomains.some(domain =>
