@@ -5,19 +5,19 @@ const matches = {
     meta: "09/06 • 19:00",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://v1.rde.lat/e/franca-x-irlanda-do-norte?channel=sportv"
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/sportv1/__index.m3u8?cc=y&sv=100&nu3zAQc9HC3GbwJq=1781019415-uyyA0TMfUYcOPO0SdH8sk7xCF3CFZ1XdjBcgJTXWr3k%3D"
+      },
+      {
+        type: "hls",
+        engine: "clappr",
+        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/premiereclubes/__index.m3u8?cc=y&sv=104&nu3zAQc9HC3GbwJq=1781019450-8vz1tt%2BnS3jSvm38LtXBWIe9QJXWFkrmv3Uqh%2FjkgDU%3D"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/pybsSCqUbpQ?si=g-8E6Ssl79dmNyCF"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://www.youtube.com/embed/pybsSCqUbpQ?si=g-8E6Ssl79dmNyCF"
+        url: "https://10embeddecanais.xyz/sportv/"
       }
     ]
   },
