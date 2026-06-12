@@ -23,8 +23,8 @@ const matches = {
   },
 
   ceara: {
-    title: "Ceará x Avai",
-    meta: "10/06 • 20:00",
+    title: "Criciuma x Ceará",
+    meta: "15/06 • 21:00",
     players: [
       {
         type: "hls",
