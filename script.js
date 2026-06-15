@@ -29,17 +29,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://us-west-1-media.live.fc2.com/a/stream/20396058/52/playlist?c=1PS1uzTsGNJAnRydp9dqY&d=0XGtBffjRcAwSWif_C1q3M7I0Wn0-zqtSRYftTOc8GvjYgW1MCK4dc2aoUO_YAJkVb7Z56F-oU3bZlWrn9il50a-54DJIAFR7eIUmbxp7gY3bsV0N_biTOFRxzCXJ2Mo"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
         url: "https://esportesembed.com/criciuma-x-ceara-1"
       },
       {
         type: "iframe",
         engine: "clappr",
         url: "https://belgas.tv/embed2.html?channel=canal2"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://11embeddecanais.xyz/disneyplus02/"
       }
     ]
   }
