@@ -27,19 +27,19 @@ const matches = {
     meta: "15/06 • 21:00",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/xsports/__index.m3u8?cc=y&sv=139&nu3zAQc9HC3GbwJq=1781120096-7%2BYhdnflUQCWJe0fr3eFO5AqytgxY6AxH1NT3UoKUN0%3D"
+        url: "https://us-west-1-media.live.fc2.com/a/stream/20396058/52/playlist?c=1PS1uzTsGNJAnRydp9dqY&d=0XGtBffjRcAwSWif_C1q3M7I0Wn0-zqtSRYftTOc8GvjYgW1MCK4dc2aoUO_YAJkVb7Z56F-oU3bZlWrn9il50a-54DJIAFR7eIUmbxp7gY3bsV0N_biTOFRxzCXJ2Mo"
       },
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/espn/__index.m3u8?cc=y&sv=109&nu3zAQc9HC3GbwJq=1781120156-GoqCDtrulkuQ6ilhSnwd180xZVo2pyYG1vI8WJ%2FPtwk%3D"
+        url: "https://esportesembed.com/criciuma-x-ceara-1"
       },
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://d1muf25xa06so8hp10v.cloudflaire.lat/assets/themes/ozoo_e8b920d892e6b63a048cd8e3527a611e/style.css"
+        url: "https://belgas.tv/embed2.html?channel=canal2"
       }
     ]
   }
@@ -96,7 +96,7 @@ function updateWarning(source) {
   const trustedDomains = [
     "esportesembed.com",
     "sporturbo.com",
-    "v1.rde.lat"
+    "v2.rde.lat"
   ];
 
   const isEx = trustedDomains.some(domain =>
@@ -193,7 +193,7 @@ function loadIframe(source) {
   const trustedDomains = [
     "esportesembed.com",
     "sporturbo.com",
-    "v1.rde.lat"
+    "v2.rde.lat"
   ];
 
   const isTrusted = trustedDomains.some(domain =>
