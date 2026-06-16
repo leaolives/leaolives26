@@ -7,24 +7,24 @@ const matches = {
       {
         type: "hls",
         engine: "clappr",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/sportv1/__index.m3u8?cc=y&sv=100&nu3zAQc9HC3GbwJq=1781019415-uyyA0TMfUYcOPO0SdH8sk7xCF3CFZ1XdjBcgJTXWr3k%3D"
-      },
-      {
-        type: "hls",
-        engine: "clappr",
-        url: "https://xn---22--11--33--88--75---------b25zjfpkmbt1n9g9zza94e.xn----------------g34l3fkcn6n2hmd3acobj33ac2a7a8lufomma7cf2b1sh.xn---1l1--5o4dxb.xn--pck.xn--zck.xn--0ck.xn--pck.xn--yck.xn-----0b4asja8cbew2b4b0gd0edbjm2jpa1b1e9zva7a0347s4da2797e7qri.xn--1ck2e1b/docs/premiereclubes/__index.m3u8?cc=y&sv=104&nu3zAQc9HC3GbwJq=1781019450-8vz1tt%2BnS3jSvm38LtXBWIe9QJXWFkrmv3Uqh%2FjkgDU%3D"
+        url: "https://d1muf25xa06so8hp16v.cloudflaire.lat/assets/themes/ozoo_038b49d800768e1035a61114aec5c919/style.css"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://10embeddecanais.xyz/sportv/"
+        url: "https://belgas.tv/embed2.html?channel=canal2"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://11embeddecanais.xyz/espn/"
       }
     ]
   },
 
   ceara: {
-    title: "Criciuma x Ceará",
-    meta: "15/06 • 21:00",
+    title: "Ceará x Botafogo SP",
+    meta: "20/06 • 19:00",
     players: [
       {
         type: "iframe",
