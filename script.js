@@ -29,17 +29,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.com/criciuma-x-ceara-1"
+        url: "https://belgas.tv/embed2.html?channel=futlivece"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://belgas.tv/embed2.html?channel=canal2"
+        url: "https://v3.rde.lat/e/ceara-x-botafogosp?channel=disneyplus1"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://11embeddecanais.xyz/disneyplus02/"
+        url: "https://esportesembed.com/ceara-x-botafogo-sp-1"
       }
     ]
   }
@@ -96,7 +96,7 @@ function updateWarning(source) {
   const trustedDomains = [
     "esportesembed.com",
     "sporturbo.com",
-    "v2.rde.lat"
+    "v3.rde.lat"
   ];
 
   const isEx = trustedDomains.some(domain =>
@@ -193,7 +193,7 @@ function loadIframe(source) {
   const trustedDomains = [
     "esportesembed.com",
     "sporturbo.com",
-    "v2.rde.lat"
+    "v3.rde.lat"
   ];
 
   const isTrusted = trustedDomains.some(domain =>
