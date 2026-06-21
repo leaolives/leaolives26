@@ -7,24 +7,24 @@ const matches = {
       {
         type: "hls",
         engine: "clappr",
-        url: "https://d1muf25xa06so8hp16v.cloudflaire.lat/assets/themes/ozoo_038b49d800768e1035a61114aec5c919/style.css"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://belgas.tv/embed2.html?channel=canal2"
+        url: "https://d1muf25xa06so8hp21v.cloudflaire.lat/assets/themes/ozoo_038b49d800768e1035a61114aec5c919/style.css"
       },
       {
         type: "iframe",
         engine: "clappr",
         url: "https://11embeddecanais.xyz/espn/"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://esportesembed.com/crb-x-fortaleza-1"
       }
     ]
   },
 
   ceara: {
-    title: "Ceará x Botafogo SP",
-    meta: "20/06 • 19:00",
+    title: "Juventude x Ceará",
+    meta: "28/06 • 11:00",
     players: [
       {
         type: "iframe",
