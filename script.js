@@ -1,45 +1,45 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "CRB x Fortaleza",
-    meta: "21/06 • 16:00",
+    title: "Fortaleza x Sport",
+    meta: "28/06 • 18:30",
     players: [
       {
         type: "hls",
         engine: "clappr",
-        url: "https://d1muf25xa06so8hp21v.cloudflaire.lat/assets/themes/ozoo_038b49d800768e1035a61114aec5c919/style.css"
+        url: "https://d1muf25xa06so8hp28v.croudfront.lat/pepel/28d5916f11bdfb75575a8c70188d89f2/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://11embeddecanais.xyz/espn/"
+        url: "https://12embeddecanais.xyz/espn/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.com/crb-x-fortaleza-1"
+        url: "https://belgas.tv/embed2.html?channel=canal2"
       }
     ]
   },
 
   ceara: {
     title: "Juventude x Ceará",
-    meta: "28/06 • 11:00",
+    meta: "28/06 • 16:00",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://belgas.tv/embed2.html?channel=futlivece"
+        url: "https://d1muf25xa06so8hp28v.croudfront.lat/pepel/28d5916f11bdfb75575a8c70188d89f2/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://v3.rde.lat/e/ceara-x-botafogosp?channel=disneyplus1"
+        url: "https://12embeddecanais.xyz/espn/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.com/ceara-x-botafogo-sp-1"
+        url: "https://belgas.tv/embed2.html?channel=canal2"
       }
     ]
   }
