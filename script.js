@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Fortaleza x Sport",
-    meta: "28/06 • 18:30",
+    title: "Fortaleza x Ponte Preta",
+    meta: "02/07 • 21:00",
     players: [
       {
         type: "hls",
@@ -23,8 +23,8 @@ const matches = {
   },
 
   ceara: {
-    title: "Juventude x Ceará",
-    meta: "28/06 • 16:00",
+    title: "Goias x Ceará",
+    meta: "04/07 • 21:00",
     players: [
       {
         type: "hls",
