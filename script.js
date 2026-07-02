@@ -5,19 +5,19 @@ const matches = {
     meta: "02/07 • 21:00",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://d1muf25xa06so8hp28v.croudfront.lat/pepel/28d5916f11bdfb75575a8c70188d89f2/file.txt"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal3"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://12embeddecanais.xyz/espn/"
+        url: "https://esportesembed.com/fortaleza-x-ponte-preta-1"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://belgas.tv/embed2.html?channel=canal2"
+        url: "https://12embeddecanais.xyz/disneyplus/"
       }
     ]
   },
@@ -96,7 +96,8 @@ function updateWarning(source) {
   const trustedDomains = [
     "esportesembed.com",
     "sporturbo.com",
-    "v3.rde.lat"
+    "v3.rde.lat",
+    "links.temporariofutemais.com"
   ];
 
   const isEx = trustedDomains.some(domain =>
@@ -193,7 +194,8 @@ function loadIframe(source) {
   const trustedDomains = [
     "esportesembed.com",
     "sporturbo.com",
-    "v3.rde.lat"
+    "v3.rde.lat",
+    "links.temporariofutemais.com"
   ];
 
   const isTrusted = trustedDomains.some(domain =>
