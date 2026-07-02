@@ -7,7 +7,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal3"
+        url: "https://belgas.tv/embed2.html?channel=futlivece"
       },
       {
         type: "iframe",
