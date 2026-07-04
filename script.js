@@ -1,13 +1,13 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Fortaleza x Ponte Preta",
-    meta: "02/07 • 21:00",
+    title: "Atlético Go x Fortaleza",
+    meta: "12/07 • 18:00",
     players: [
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://belgas.tv/embed2.html?channel=futlivece"
+        url: "https://belgas.tv/embed2.html?channel=canal2"
       },
       {
         type: "iframe",
@@ -27,14 +27,14 @@ const matches = {
     meta: "04/07 • 21:00",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://d1muf25xa06so8hp28v.croudfront.lat/pepel/28d5916f11bdfb75575a8c70188d89f2/file.txt"
+        url: "https://12embeddecanais.xyz/xsports/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://12embeddecanais.xyz/espn/"
+        url: "https://12embeddecanais.xyz/espn4/"
       },
       {
         type: "iframe",
