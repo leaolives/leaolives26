@@ -23,8 +23,8 @@ const matches = {
   },
 
   ceara: {
-    title: "Goias x Ceará",
-    meta: "04/07 • 21:00",
+    title: "Ceará x Athletic",
+    meta: "13/07 • 20:30",
     players: [
       {
         type: "iframe",
