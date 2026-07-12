@@ -7,17 +7,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://belgas.tv/embed2.html?channel=canal2"
+        url: "https://belgas.tv/embed2.html?channel=futlivece"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.com/fortaleza-x-ponte-preta-1"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal1"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://12embeddecanais.xyz/disneyplus/"
+        url: "https://13embeddecanais.xyz/disneyplus/"
       }
     ]
   },
@@ -96,7 +96,7 @@ function updateWarning(source) {
   const trustedDomains = [
     "esportesembed.com",
     "sporturbo.com",
-    "v3.rde.lat",
+    "v5.rde.lat",
     "links.temporariofutemais.com"
   ];
 
@@ -194,7 +194,7 @@ function loadIframe(source) {
   const trustedDomains = [
     "esportesembed.com",
     "sporturbo.com",
-    "v3.rde.lat",
+    "v5.rde.lat",
     "links.temporariofutemais.com"
   ];
 
