@@ -7,12 +7,12 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal1"
+        url: "https://13embeddecanais.xyz/disneyplus/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://13embeddecanais.xyz/disneyplus/"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal1"
       },
       {
         type: "iframe",
