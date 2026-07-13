@@ -7,7 +7,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://belgas.tv/embed2.html?channel=futlivece"
+        url: "https://13embeddecanais.xyz/disneyplus/"
       },
       {
         type: "iframe",
@@ -17,7 +17,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://13embeddecanais.xyz/disneyplus/"
+        url: "https://esportesembed.com/atletico-go-x-fortaleza-1"
       }
     ]
   },
