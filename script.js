@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Atlético Go x Fortaleza",
-    meta: "12/07 • 18:00",
+    title: "Fortaleza x Novorizontino",
+    meta: "17/07 • 21:00",
     players: [
       {
         type: "iframe",
@@ -27,19 +27,19 @@ const matches = {
     meta: "13/07 • 20:30",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://12embeddecanais.xyz/xsports/"
+        url: "https://d1muf25xa07so8hp13v.playercdn.xyz/pepel/021ddb254aa907e0eff4667640fc85b4/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://12embeddecanais.xyz/espn4/"
+        url: "https://13embeddecanais.xyz/espn/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://belgas.tv/embed2.html?channel=canal2"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
       }
     ]
   }
