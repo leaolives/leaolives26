@@ -23,13 +23,13 @@ const matches = {
   },
 
   ceara: {
-    title: "Ceará x Athletic",
-    meta: "13/07 • 20:30",
+    title: "América Mg x Ceará",
+    meta: "17/07 • 19:00",
     players: [
       {
         type: "hls",
         engine: "clappr",
-        url: "https://d1muf25xa07so8hp13v.playercdn.xyz/pepel/021ddb254aa907e0eff4667640fc85b4/file.txt"
+        url: "https://dd7e7155d1afef048ef73ab1b0168341.superdinamico.com/embed.php?c=futlivece"
       },
       {
         type: "iframe",
@@ -97,6 +97,7 @@ function updateWarning(source) {
     "esportesembed.com",
     "sporturbo.com",
     "v5.rde.lat",
+    "https://dd7e7155d1afef048ef73ab1b0168341.superdinamico.com/embed.php",
     "links.temporariofutemais.com"
   ];
 
@@ -195,6 +196,7 @@ function loadIframe(source) {
     "esportesembed.com",
     "sporturbo.com",
     "v5.rde.lat",
+    "https://dd7e7155d1afef048ef73ab1b0168341.superdinamico.com/embed.php",
     "links.temporariofutemais.com"
   ];
 
