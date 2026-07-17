@@ -5,31 +5,9 @@ const matches = {
     meta: "17/07 • 21:00",
     players: [
       {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://13embeddecanais.xyz/disneyplus/"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal1"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://esportesembed.com/atletico-go-x-fortaleza-1"
-      }
-    ]
-  },
-
-  ceara: {
-    title: "América Mg x Ceará",
-    meta: "17/07 • 19:00",
-    players: [
-      {
         type: "hls",
         engine: "clappr",
-        url: "https://dd7e7155d1afef048ef73ab1b0168341.superdinamico.com/embed.php?c=futlivece"
+        url: "https://d1muf25xa07so8hp17v.playercdn.xyz/pepel/e926defbffeb41f02907d0081589d832/file.txt"
       },
       {
         type: "iframe",
@@ -39,7 +17,29 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal5"
+      }
+    ]
+  },
+
+  ceara: {
+    title: "América Mg x Ceará",
+    meta: "17/07 • 19:00",
+    players: [
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://links.temporariofutemais.com/prime.php?c=canal4"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://esportesembed.net/america-mg-x-ceara-1"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://13embeddecanais.xyz/disneyplus/"
       }
     ]
   }
@@ -94,10 +94,9 @@ function updateWarning(source) {
   const url = source.url.toLowerCase();
 
   const trustedDomains = [
-    "esportesembed.com",
+    "esportesembed.net",
     "sporturbo.com",
     "v5.rde.lat",
-    "https://dd7e7155d1afef048ef73ab1b0168341.superdinamico.com/embed.php",
     "links.temporariofutemais.com"
   ];
 
@@ -193,10 +192,9 @@ function loadIframe(source) {
 
   // Sites que não devem receber sandbox
   const trustedDomains = [
-    "esportesembed.com",
+    "esportesembed.net",
     "sporturbo.com",
     "v5.rde.lat",
-    "https://dd7e7155d1afef048ef73ab1b0168341.superdinamico.com/embed.php",
     "links.temporariofutemais.com"
   ];
 
