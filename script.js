@@ -34,12 +34,12 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.net/america-mg-x-ceara-1"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal4"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal4"
+        url: "https://esportesembed.net/america-mg-x-ceara-1"
       }
     ]
   }
