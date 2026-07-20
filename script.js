@@ -5,19 +5,19 @@ const matches = {
     meta: "21/07 • 21:35",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://d1muf25xa07so8hp17v.playercdn.xyz/pepel/e926defbffeb41f02907d0081589d832/file.txt"
+        url: "https://1607embcanais.xyz/espn4/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://13embeddecanais.xyz/espn/"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal5"
+        url: "https://redetoons.cards/embed/canais/fgr8Iz5kQtR"
       }
     ]
   },
@@ -71,19 +71,24 @@ function destroyPlayer() {
   const dplayerContainer = document.getElementById("dplayer");
   const nativeVideo = document.getElementById("nativeVideo");
 
-if (nativeVideo) {
-  nativeVideo.pause();
-  nativeVideo.removeAttribute("src");
-  nativeVideo.load();
-  nativeVideo.classList.add("hidden");
-}
+  if (nativeVideo) {
+    nativeVideo.pause();
+    nativeVideo.removeAttribute("src");
+    nativeVideo.load();
+    nativeVideo.classList.add("hidden");
+  }
 
-  if (iframeContainer) iframeContainer.innerHTML = "";
   if (clapprContainer) clapprContainer.classList.add("hidden");
 
   if (dplayerContainer) {
     dplayerContainer.classList.add("hidden");
     dplayerContainer.innerHTML = "";
+  }
+
+  // CORREÇÃO: Limpar e ocultar o contêiner do Iframe
+  if (iframeContainer) {
+    iframeContainer.innerHTML = "";
+    iframeContainer.classList.add("hidden");
   }
 }
 
@@ -188,6 +193,9 @@ function loadIframe(source) {
   const iframeContainer = document.getElementById("iframeContainer");
   if (!iframeContainer) return;
 
+  // CORREÇÃO: Mostrar o contêiner do Iframe antes de injetar o vídeo
+  iframeContainer.classList.remove("hidden");
+
   const url = source.url.toLowerCase();
 
   // Sites que não devem receber sandbox
@@ -235,23 +243,23 @@ function loadPlayer(source) {
   const playerType = source.type || (isM3U8(source.url) ? "hls" : "iframe");
 
   if (playerType === "hls") {
-  let engine = source.engine || "clappr";
+    let engine = source.engine || "clappr";
 
-  // Na Smart TV, força player nativo para evitar tela preta
-  if (isSmartTV()) {
-    engine = "native";
+    // Na Smart TV, força player nativo para evitar tela preta
+    if (isSmartTV()) {
+      engine = "native";
+    }
+
+    if (engine === "native") {
+      loadNativeHls(source);
+    } else if (engine === "dplayer") {
+      loadHlsWithDPlayer(source);
+    } else {
+      loadHlsWithClappr(source);
+    }
+
+    return;
   }
-
-  if (engine === "native") {
-    loadNativeHls(source);
-  } else if (engine === "dplayer") {
-    loadHlsWithDPlayer(source);
-  } else {
-    loadHlsWithClappr(source);
-  }
-
-  return;
-}
 
   loadIframe(source);
 }
