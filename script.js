@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Vila Nova x Fortaleza",
-    meta: "21/07 • 21:35",
+    title: "Fortaleza x Botafogo SP",
+    meta: "28/07 • 21:35",
     players: [
       {
         type: "iframe",
@@ -29,17 +29,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://13embeddecanais.xyz/disneyplus/"
+        url: "https://1607embcanais.xyz/xsports/"
+      },
+      {
+        type: "hls",
+        engine: "clappr",
+        url: "https://6211080fa89981f66b1a0c9d55c61d0f.cazetv.shop/embedtv/bf161d2d4e94a5f7c3143934bfa9e7cb/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal4"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://esportesembed.net/america-mg-x-ceara-1"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal3"
       }
     ]
   }
