@@ -23,8 +23,8 @@ const matches = {
   },
 
   ceara: {
-    title: "Ceará x CRB",
-    meta: "22/07 • 19:30",
+    title: "São Bernardo x Ceará",
+    meta: "26/07 • 16:00",
     players: [
       {
         type: "iframe",
