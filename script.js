@@ -27,19 +27,19 @@ const matches = {
     meta: "26/07 • 16:00",
     players: [
       {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://1607embcanais.xyz/xsports/"
-      },
-      {
         type: "hls",
         engine: "clappr",
-        url: "https://6211080fa89981f66b1a0c9d55c61d0f.cazetv.shop/embedtv/bf161d2d4e94a5f7c3143934bfa9e7cb/file.txt"
+        url: "https://53c6de78244e9f528eb3e1cda69699bb.cazetv.shop/embedtv/3e9d32a6b242b3e8ccda51e7ae64cfff/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal3"
+        url: "https://1707embcanais.xyz/premiere6/"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://links.temporariofutemais.com/prime.php?c=canal4"
       }
     ]
   }
