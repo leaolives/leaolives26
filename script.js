@@ -7,24 +7,24 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.net/vila-nova-x-fortaleza-1"
+        url: "https://1707embcanais.xyz/espn4/"
+      },
+      {
+        type: "hls",
+        engine: "clappr",
+        url: "https://765d5fb115a9f6a3e0b23b80a5b2e4c4.cazetv.shop/embedtv/489bce81cb495d0efed2a2df47df5f11/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://redetoons.cards/embed/canais/fgr8Iz5kQtR"
+        url: "https://1707embcanais.xyz/redetv/"
       }
     ]
   },
 
   ceara: {
-    title: "São Bernardo x Ceará",
-    meta: "26/07 • 16:00",
+    title: "Ceará x Ponte Preta",
+    meta: "07/08 • 20:30",
     players: [
       {
         type: "hls",
