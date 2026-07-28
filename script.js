@@ -7,17 +7,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1707embcanais.xyz/espn4/"
-      },
-      {
-        type: "hls",
-        engine: "clappr",
-        url: "https://765d5fb115a9f6a3e0b23b80a5b2e4c4.cazetv.shop/embedtv/489bce81cb495d0efed2a2df47df5f11/file.txt"
+        url: "https://1707embcanais.xyz/redetv/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1707embcanais.xyz/redetv/"
+        url: "https://esportesembed.net/fortaleza-x-botafogo-sp-1"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
       }
     ]
   },
