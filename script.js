@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Fortaleza x Botafogo SP",
-    meta: "28/07 • 21:35",
+    title: "Palmeiras x Fortaleza",
+    meta: "02/08 • 16:00",
     players: [
       {
         type: "iframe",
