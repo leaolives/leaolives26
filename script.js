@@ -5,19 +5,19 @@ const matches = {
     meta: "02/08 • 16:00",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://1707embcanais.xyz/redetv/"
+        url: "https://a9dd14d824822d6d78d0fe3e55dbd7fb.cazetv.shop/embedtv/2f938854ed22053e5500ce826efbe540/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.net/fortaleza-x-botafogo-sp-1"
+        url: "https://3007.cdnembedcanais.xyz/sportv/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal1"
       }
     ]
   },
