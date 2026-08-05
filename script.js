@@ -7,17 +7,17 @@ const matches = {
       {
         type: "hls",
         engine: "clappr",
-        url: "https://a9dd14d824822d6d78d0fe3e55dbd7fb.cazetv.shop/embedtv/2f938854ed22053e5500ce826efbe540/file.txt"
+        url: "https://71aad7fe0cb15be5ebab385c2a6434fe.cazetv.shop/embedtv/f91bf988c5847dd7fa95adbde24438f3/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://3007.cdnembedcanais.xyz/sportv/"
+        url: "https://3007.cdnembedcanais.xyz/sportv2/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal1"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal4"
       }
     ]
   },
