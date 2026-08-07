@@ -29,12 +29,12 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
+        url: "https://3007.cdnembedcanais.xyz/disneyplus/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://3007.cdnembedcanais.xyz/disneyplus/"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
       },
       {
         type: "iframe",
