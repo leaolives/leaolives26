@@ -27,14 +27,14 @@ const matches = {
     meta: "07/08 • 20:30",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://3007.cdnembedcanais.xyz/disneyplus/"
+        url: "https://4135a6f12bd7b1007140f6c4deec37dc.cazetv.shop/embedtv/9e4e1195d1c4be551cc517a86bc877ee/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
+        url: "https://3007.cdnembedcanais.xyz/disneyplus/"
       },
       {
         type: "iframe",
