@@ -29,17 +29,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
+        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
         url: "https://3007.cdnembedcanais.xyz/disneyplus/"
       },
       {
         type: "iframe",
         engine: "clappr",
         url: "https://esportesembed.net/ceara-x-ponte-preta-1"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://wristpray.net/e/11m0vd7byuu8p"
       }
     ]
   }
