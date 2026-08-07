@@ -27,19 +27,19 @@ const matches = {
     meta: "07/08 • 20:30",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://53c6de78244e9f528eb3e1cda69699bb.cazetv.shop/embedtv/3e9d32a6b242b3e8ccda51e7ae64cfff/file.txt"
+        url: "https://3007.cdnembedcanais.xyz/disneyplus/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1707embcanais.xyz/premiere6/"
+        url: "https://esportesembed.net/ceara-x-ponte-preta-1"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal4"
+        url: "https://wristpray.net/e/11m0vd7byuu8p"
       }
     ]
   }
