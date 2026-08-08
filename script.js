@@ -5,26 +5,26 @@ const matches = {
     meta: "09/08 • 18:00",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://71aad7fe0cb15be5ebab385c2a6434fe.cazetv.shop/embedtv/f91bf988c5847dd7fa95adbde24438f3/file.txt"
+        url: "https://3007.cdnembedcanais.xyz/redetv/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://3007.cdnembedcanais.xyz/sportv2/"
+        url: "https://www.youtube.com/embed/xvC-z42MpAc?si=CZY-itjuBMuajUc3"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal4"
+        url: "https://rdcanais.net/redetv"
       }
     ]
   },
 
   ceara: {
-    title: "Ceará x Ponte Preta",
-    meta: "07/08 • 20:30",
+    title: "Ceará x Cuiaba",
+    meta: "15/08 • 18:30",
     players: [
       {
         type: "hls",
