@@ -102,6 +102,7 @@ function updateWarning(source) {
     "esportesembed.net",
     "sporturbo.com",
     "v5.rde.lat",
+    "rdcanais.net",
     "links.temporariofutemais.com"
   ];
 
@@ -203,6 +204,7 @@ function loadIframe(source) {
     "esportesembed.net",
     "sporturbo.com",
     "v5.rde.lat",
+    "rdcanais.net",
     "links.temporariofutemais.com"
   ];
 
