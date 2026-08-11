@@ -10,14 +10,14 @@ const matches = {
         url: "https://3007.cdnembedcanais.xyz/redetv/"
       },
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/xvC-z42MpAc?si=CZY-itjuBMuajUc3"
+        url: "https://live-hz-12.livepush.io/live/emde17KwRnzC6wRH/chunks.m3u8"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://rdcanais.net/redetv"
+        url: "https://ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
       }
     ]
   },
