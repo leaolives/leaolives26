@@ -24,7 +24,7 @@ const matches = {
 
   ceara: {
     title: "Ceará x Cuiaba",
-    meta: "15/08 • 18:30",
+    meta: "15/08 • 16:00",
     players: [
       {
         type: "hls",
