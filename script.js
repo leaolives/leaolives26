@@ -5,19 +5,19 @@ const matches = {
     meta: "15/08 • 18:30",
     players: [
       {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://3007.cdnembedcanais.xyz/redetv/"
-      },
-      {
         type: "hls",
         engine: "clappr",
-        url: "https://live-hz-12.livepush.io/live/emde17KwRnzC6wRH/chunks.m3u8"
+        url: "https://ebd6d2f5d60ff9afaeda1a81fc53e2d0.s21-cloudfront-net.lat/embedtv/4c729314035d9f66d17e5108cd38c87c/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
+        url: "https://www.youtube.com/embed/7BXXw_h75cA?si=Ir7IDVTD7cnwCd73"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://1108.cdnembedcanais.xyz/xsports/"
       }
     ]
   },
@@ -27,19 +27,19 @@ const matches = {
     meta: "15/08 • 16:00",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://4135a6f12bd7b1007140f6c4deec37dc.cazetv.shop/embedtv/9e4e1195d1c4be551cc517a86bc877ee/file.txt"
+        url: "https://1108.cdnembedcanais.xyz/disneyplus03/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://3007.cdnembedcanais.xyz/disneyplus/"
+        url: "https://esportesembed.net/ceara-x-cuiaba-1"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.net/ceara-x-ponte-preta-1"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal1"
       }
     ]
   }
