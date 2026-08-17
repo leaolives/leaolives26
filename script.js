@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Juventude x Fortaleza",
-    meta: "15/08 • 18:30",
+    title: "Fortaleza x São Bernardo",
+    meta: "19/08 • 19:30",
     players: [
       {
         type: "hls",
@@ -23,8 +23,8 @@ const matches = {
   },
 
   ceara: {
-    title: "Ceará x Cuiaba",
-    meta: "15/08 • 16:00",
+    title: "Nautico x Ceará",
+    meta: "18/08 • 21:30",
     players: [
       {
         type: "iframe",
