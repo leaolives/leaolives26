@@ -27,19 +27,19 @@ const matches = {
     meta: "18/08 • 21:30",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://1108.cdnembedcanais.xyz/disneyplus03/"
+        url: "https://65699726a3c601b9f31bf04019c8593c.s21-cloudfront-net.lat/embedtv/9ce708908d974de51cf6e5bf2ac9fdb3/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.net/ceara-x-cuiaba-1"
+        url: "https://1108.cdnembedcanais.xyz/premiereclubes/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal1"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
       }
     ]
   }
