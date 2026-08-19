@@ -5,26 +5,26 @@ const matches = {
     meta: "19/08 • 19:30",
     players: [
       {
-        type: "hls",
-        engine: "clappr",
-        url: "https://ebd6d2f5d60ff9afaeda1a81fc53e2d0.s21-cloudfront-net.lat/embedtv/4c729314035d9f66d17e5108cd38c87c/file.txt"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://www.youtube.com/embed/7BXXw_h75cA?si=Ir7IDVTD7cnwCd73"
-      },
-      {
         type: "iframe",
         engine: "clappr",
         url: "https://1108.cdnembedcanais.xyz/xsports/"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://www.youtube.com/embed/lXyVex70qEY?si=tp4-HJiBK_ZlAVtJ"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://links.temporariofutemais.com/prime.php?c=canal4"
       }
     ]
   },
 
   ceara: {
-    title: "Nautico x Ceará",
-    meta: "18/08 • 21:30",
+    title: "Ceará x Londrina",
+    meta: "22/08 • 18:00",
     players: [
       {
         type: "hls",
