@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Fortaleza x São Bernardo",
-    meta: "19/08 • 19:30",
+    title: "Criciuma x Fortaleza",
+    meta: "23/08 • 18:30",
     players: [
       {
         type: "iframe",
