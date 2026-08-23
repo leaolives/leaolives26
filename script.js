@@ -27,14 +27,14 @@ const matches = {
     meta: "30/08 • 18:30",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://65699726a3c601b9f31bf04019c8593c.s21-cloudfront-net.lat/embedtv/9ce708908d974de51cf6e5bf2ac9fdb3/file.txt"
+        url: "https://1108.cdnembedcanais.xyz/espn/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1108.cdnembedcanais.xyz/premiereclubes/"
+        url: "https://1108.cdnembedcanais.xyz/espn/"
       },
       {
         type: "iframe",
