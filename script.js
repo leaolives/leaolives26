@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Criciuma x Fortaleza",
-    meta: "23/08 • 18:30",
+    title: "Fortaleza x Operário",
+    meta: "31/08 • 19:30",
     players: [
       {
         type: "hls",
