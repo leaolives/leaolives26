@@ -27,19 +27,19 @@ const matches = {
     meta: "30/08 • 18:30",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://1108.cdnembedcanais.xyz/espn/"
+        url: "https://c02f9de3c2f3040751818aacc7f60b74.s21-cloudfront-net.lat/embedtv/8eab15d32f934a8fbbb13dfa16e6c945/file.txt"
+      },
+      {
+        type: "hls",
+        engine: "clappr",
+        url: "https://c02f9de3c2f3040751818aacc7f60b74.s21-cloudfront-net.lat/embedtv/26f35f8bf3837f36bad27c9e86d2803a/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1108.cdnembedcanais.xyz/espn/"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
+        url: "https://2608.cdnembedcanais.xyz/espn/"
       }
     ]
   }
