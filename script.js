@@ -7,24 +7,24 @@ const matches = {
       {
         type: "hls",
         engine: "clappr",
-        url: "https://e58aea67b01fa747687f038dfde066f6.s21-cloudfront-net.lat/embedtv/92798d1deea320a9eeeb636bb73f21c1/file.txt"
+        url: "https://bbe9047444895de971dcc65fe7f9504f.s21-cloudfront-net.lat/embedtv/26f35f8bf3837f36bad27c9e86d2803a/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1108.cdnembedcanais.xyz/xsports/"
+        url: "https://2608.cdnembedcanais.xyz/espn/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/qntal_DNxMU?si=C4hlwnL0yoTLO3dR"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
       }
     ]
   },
 
   ceara: {
-    title: "Vila Nova x Ceará",
-    meta: "30/08 • 18:30",
+    title: "Ceará x Sport",
+    meta: "05/09 • 18:30",
     players: [
       {
         type: "hls",
