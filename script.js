@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Fortaleza x Operário",
-    meta: "31/08 • 19:30",
+    title: "Goiás x Fortaleza",
+    meta: "05/09 • 16:00",
     players: [
       {
         type: "hls",
