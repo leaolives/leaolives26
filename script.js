@@ -17,7 +17,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.net/goias-x-fortaleza-1"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
       }
     ]
   },
@@ -39,7 +39,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.net/ceara-x-sport-recife-1"
+        url: "//ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
       }
     ]
   }
