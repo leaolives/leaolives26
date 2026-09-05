@@ -5,19 +5,19 @@ const matches = {
     meta: "05/09 • 16:00",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://bbe9047444895de971dcc65fe7f9504f.s21-cloudfront-net.lat/embedtv/26f35f8bf3837f36bad27c9e86d2803a/file.txt"
+        url: "https://www.youtube.com/embed/g4uAlbBgr60?si=3IUMO-n2U77WSzAj"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2608.cdnembedcanais.xyz/espn/"
+        url: "https://2608.cdnembedcanais.xyz/redetv/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
+        url: "https://esportesembed.net/goias-x-fortaleza-1"
       }
     ]
   },
@@ -27,19 +27,19 @@ const matches = {
     meta: "05/09 • 18:30",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://c02f9de3c2f3040751818aacc7f60b74.s21-cloudfront-net.lat/embedtv/8eab15d32f934a8fbbb13dfa16e6c945/file.txt"
-      },
-      {
-        type: "hls",
-        engine: "clappr",
-        url: "https://c02f9de3c2f3040751818aacc7f60b74.s21-cloudfront-net.lat/embedtv/26f35f8bf3837f36bad27c9e86d2803a/file.txt"
+        url: "https://2608.cdnembedcanais.xyz/disneyplus/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2608.cdnembedcanais.xyz/espn/"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal3"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://esportesembed.net/ceara-x-sport-recife-1"
       }
     ]
   }
