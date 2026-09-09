@@ -5,19 +5,19 @@ const matches = {
     meta: "09/09 • 19:30",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/g4uAlbBgr60?si=3IUMO-n2U77WSzAj"
+        url: "https://31b3b31a1c2f8a370206f111127c0dbd.s21-cloudfront-net.lat/embedtv/746a7af418231ce3e64bd2d6c4d19abb/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2608.cdnembedcanais.xyz/redetv/"
+        url: "https://2608.cdnembedcanais.xyz/espn4/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal3"
       }
     ]
   },
@@ -29,17 +29,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2608.cdnembedcanais.xyz/disneyplus/"
+        url: "https://www.youtube.com/embed/d6qdRL3IfvY?si=Y5obAsmTJo3y7RMc"
+      },
+      {
+        type: "hls",
+        engine: "clappr",
+        url: "https://31b3b31a1c2f8a370206f111127c0dbd.s21-cloudfront-net.lat/embedtv/f5fe5a94fe4e2d4dd88d2e21e20d2ca1/file.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal3"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "//ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
+        url: "https://2608.cdnembedcanais.xyz/xsports/"
       }
     ]
   }
