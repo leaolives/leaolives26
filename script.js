@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Fortaleza x Avai",
-    meta: "09/09 • 19:30",
+    title: "Londrina x Fortaleza",
+    meta: "20/09 • 18:30",
     players: [
       {
         type: "hls",
@@ -23,8 +23,8 @@ const matches = {
   },
 
   ceara: {
-    title: "Atlético GO x Ceará",
-    meta: "09/09 • 21:30",
+    title: "Fortaleza x Ceará",
+    meta: "13/09 • 18:30",
     players: [
       {
         type: "iframe",
