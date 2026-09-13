@@ -5,14 +5,14 @@ const matches = {
     meta: "20/09 • 18:30",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://31b3b31a1c2f8a370206f111127c0dbd.s21-cloudfront-net.lat/embedtv/746a7af418231ce3e64bd2d6c4d19abb/file.txt"
+        url: "https://1009.cdnembedcanais.xyz/disneyplus03/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2608.cdnembedcanais.xyz/espn4/"
+        url: "https://1009.cdnembedcanais.xyz/disneyplus02/"
       },
       {
         type: "iframe",
@@ -29,17 +29,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/d6qdRL3IfvY?si=Y5obAsmTJo3y7RMc"
-      },
-      {
-        type: "hls",
-        engine: "clappr",
-        url: "https://31b3b31a1c2f8a370206f111127c0dbd.s21-cloudfront-net.lat/embedtv/f5fe5a94fe4e2d4dd88d2e21e20d2ca1/file.txt"
+        url: "https://1009.cdnembedcanais.xyz/disneyplus/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2608.cdnembedcanais.xyz/xsports/"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal3"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
+        url: "https://esportesembed.net/fortaleza-x-ceara-1"
       }
     ]
   }
