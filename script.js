@@ -34,7 +34,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal3"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
       },
       {
         type: "iframe",
