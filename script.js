@@ -23,8 +23,8 @@ const matches = {
   },
 
   ceara: {
-    title: "Fortaleza x Ceará",
-    meta: "13/09 • 18:30",
+    title: "Ceará x Novorizontino",
+    meta: "18/09 • 20:30",
     players: [
       {
         type: "iframe",
