@@ -29,7 +29,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1009.cdnembedcanais.xyz/disneyplus/"
+        url: "https://1709.cdnembedcanais.xyz/disneyplus/"
       },
       {
         type: "iframe",
@@ -39,7 +39,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.net/fortaleza-x-ceara-1"
+        url: "https://ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
       }
     ]
   }
