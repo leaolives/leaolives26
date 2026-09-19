@@ -7,24 +7,24 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1009.cdnembedcanais.xyz/disneyplus03/"
+        url: "https://1709.cdnembedcanais.xyz/xsports/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1009.cdnembedcanais.xyz/disneyplus02/"
+        url: "https://1709.cdnembedcanais.xyz/espn/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal3"
+        url: "https://www.youtube.com/embed/rw-iDVnaXVE?si=Mu2riKSLDhMfwUcm"
       }
     ]
   },
 
   ceara: {
-    title: "Ceará x Novorizontino",
-    meta: "18/09 • 20:30",
+    title: "Operário x Ceará",
+    meta: "26/09 • 16:30",
     players: [
       {
         type: "iframe",
