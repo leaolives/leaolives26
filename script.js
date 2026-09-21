@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Londrina x Fortaleza",
-    meta: "20/09 • 18:30",
+    title: "Fortaleza x Athletic",
+    meta: "27/09 • 18:30",
     players: [
       {
         type: "iframe",
