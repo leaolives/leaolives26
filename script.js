@@ -29,17 +29,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
+        url: "https://www.youtube.com/embed/yisdCpy18Rk?si=-nwRPQX8TNy9d-uv"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1709.cdnembedcanais.xyz/disneyplus03/"
+        url: "https://1709.cdnembedcanais.xyz/redetv/"
       },
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
+        url: "https://tv01.zas.media:1936/redetvparana/redetvparana/chunklist_w967510659.m3u8"
       }
     ]
   }
