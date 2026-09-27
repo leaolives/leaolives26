@@ -12,19 +12,19 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1709.cdnembedcanais.xyz/espn/"
+        url: "https://www.youtube.com/embed/PS-sWYgBUM8?si=HsrPBSt6v6Is5bBX"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/rw-iDVnaXVE?si=Mu2riKSLDhMfwUcm"
+        url: "https://1709.cdnembedcanais.xyz/xsports/"
       }
     ]
   },
 
   ceara: {
-    title: "Operário x Ceará",
-    meta: "26/09 • 16:30",
+    title: "Avai x Ceará",
+    meta: "03/10 • 11:00",
     players: [
       {
         type: "iframe",
