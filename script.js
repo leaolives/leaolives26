@@ -5,19 +5,19 @@ const matches = {
     meta: "02/10 • 21:35",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://1709.cdnembedcanais.xyz/xsports/"
+        url: "https://52d080a3e172c33fd6886a37e7.s23-cloudfront-net.lat/8e8e8b142192ea65/espn.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/PS-sWYgBUM8?si=HsrPBSt6v6Is5bBX"
+        url: "https://www.youtube.com/embed/dEeJc7ymAIY?si=GfOi8GLDwNeqJ4Pr"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1709.cdnembedcanais.xyz/xsports/"
+        url: "https://1709.cdnembedcanais.xyz/espn/"
       }
     ]
   },
@@ -29,12 +29,12 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/yisdCpy18Rk?si=-nwRPQX8TNy9d-uv"
+        url: "https://1709.cdnembedcanais.xyz/disneyplus/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1709.cdnembedcanais.xyz/redetv/"
+        url: "https://1709.cdnembedcanais.xyz/disneyplus/"
       },
       {
         type: "hls",
