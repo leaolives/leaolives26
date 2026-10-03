@@ -37,7 +37,7 @@ const matches = {
         url: "https://1709.cdnembedcanais.xyz/disneyplus/"
       },
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
         url: "https://links.temporariofutemais.com/prime.php?c=canal2"
       }
