@@ -29,7 +29,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1709.cdnembedcanais.xyz/disneyplus/"
+        url: "https//ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
       },
       {
         type: "iframe",
@@ -39,7 +39,7 @@ const matches = {
       {
         type: "hls",
         engine: "clappr",
-        url: "https://tv01.zas.media:1936/redetvparana/redetvparana/chunklist_w967510659.m3u8"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
       }
     ]
   }
