@@ -29,7 +29,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https//ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
+        url: "https://ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
       },
       {
         type: "iframe",
