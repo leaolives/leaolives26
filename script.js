@@ -23,8 +23,8 @@ const matches = {
   },
 
   ceara: {
-    title: "Avai x Ceará",
-    meta: "03/10 • 11:00",
+    title: "Ceará x Criciuma",
+    meta: "08/10 • 19:30",
     players: [
       {
         type: "iframe",
