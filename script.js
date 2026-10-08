@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "America MG x Fortaleza",
-    meta: "07/10 • 20:30",
+    title: "Fortaleza x CRB",
+    meta: "12/10 • 16:00",
     players: [
       {
         type: "hls",
@@ -27,19 +27,19 @@ const matches = {
     meta: "08/10 • 19:30",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
+        url: "https://ff31a6aa978368a0d5990e1c2ecc1fc2.s23-cloudfront-net.lat/8e8e8b142192ea65/xsports.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1709.cdnembedcanais.xyz/disneyplus/"
+        url: "https://1709.cdnembedcanais.xyz/xsports/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
+        url: "https://www.youtube.com/embed/zN53ScC-xJc?si=y9RHtdaPlobs8xGA"
       }
     ]
   }
