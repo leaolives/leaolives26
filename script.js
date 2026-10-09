@@ -23,8 +23,8 @@ const matches = {
   },
 
   ceara: {
-    title: "Ceará x Criciuma",
-    meta: "08/10 • 19:30",
+    title: "Botafogo SP x Ceará",
+    meta: "12/10 • 21:00",
     players: [
       {
         type: "hls",
