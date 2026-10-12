@@ -5,19 +5,19 @@ const matches = {
     meta: "12/10 • 16:00",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://10f18b75904684c545285cfa0d4bd93f.s23-cloudfront-net.lat/8e8e8b142192ea65/espn.txt"
+        url: "https://1210.playerembcanais.com/disneyplus/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1709.cdnembedcanais.xyz/espn"
+        url: "https://esportesembed.org/fortaleza-x-crb-1"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1709.cdnembedcanais.xyz/espn/"
+        url: "https://esportesembed.org/fortaleza-x-crb-2"
       }
     ]
   },
@@ -29,17 +29,17 @@ const matches = {
       {
         type: "hls",
         engine: "clappr",
-        url: "https://ff31a6aa978368a0d5990e1c2ecc1fc2.s23-cloudfront-net.lat/8e8e8b142192ea65/xsports.txt"
+        url: "https://40bbd8a95d080fec59c9dbaa31e4f533.s24-cloudfront-net.lat/stream/8ed9b77963011a47d14a0d79ff497d33/xsports.m3u8"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1709.cdnembedcanais.xyz/xsports/"
+        url: "https://1210.playerembcanais.com/xsports/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/zN53ScC-xJc?si=y9RHtdaPlobs8xGA"
+        url: "https://www.youtube.com/embed/kSOI1xVWc70?si=I3oIO_m9PYqehstQ"
       }
     ]
   }
@@ -99,7 +99,7 @@ function updateWarning(source) {
   const url = source.url.toLowerCase();
 
   const trustedDomains = [
-    "esportesembed.net",
+    "esportesembed.org",
     "sporturbo.com",
     "v5.rde.lat",
     "rdcanais.net",
@@ -201,7 +201,7 @@ function loadIframe(source) {
 
   // Sites que não devem receber sandbox
   const trustedDomains = [
-    "esportesembed.net",
+    "esportesembed.org",
     "sporturbo.com",
     "v5.rde.lat",
     "rdcanais.net",
