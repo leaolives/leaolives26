@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Fortaleza x CRB",
-    meta: "12/10 • 16:00",
+    title: "Sport x Fortaleza",
+    meta: "16/10 • 20:30",
     players: [
       {
         type: "iframe",
@@ -23,8 +23,8 @@ const matches = {
   },
 
   ceara: {
-    title: "Botafogo SP x Ceará",
-    meta: "12/10 • 21:00",
+    title: "Ceará x Juventude",
+    meta: "17/10 • 16:30",
     players: [
       {
         type: "hls",
