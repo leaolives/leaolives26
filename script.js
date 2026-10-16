@@ -12,12 +12,12 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1210.playerembcanais.com/disneyplus/"
+        url: "https://1210.playerembcanais.com/disneyplus07/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.org/sport-recife-x-fortaleza-1"
+        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
       }
     ]
   },
