@@ -7,17 +7,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
+        url: "https://ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
+      },
+      {
+        type: "iframe",
+        engine: "clappr",
         url: "https://1210.playerembcanais.com/disneyplus/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.org/fortaleza-x-crb-1"
-      },
-      {
-        type: "iframe",
-        engine: "clappr",
-        url: "https://esportesembed.org/fortaleza-x-crb-2"
+        url: "https://esportesembed.org/sport-recife-x-fortaleza-1"
       }
     ]
   },
