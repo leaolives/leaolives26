@@ -27,19 +27,19 @@ const matches = {
     meta: "17/10 • 16:30",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://40bbd8a95d080fec59c9dbaa31e4f533.s24-cloudfront-net.lat/stream/8ed9b77963011a47d14a0d79ff497d33/xsports.m3u8"
+        url: "https://1210.playerembcanais.com/espn/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1210.playerembcanais.com/xsports/"
+        url: "https://1210.playerembcanais.com/redetv/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/kSOI1xVWc70?si=I3oIO_m9PYqehstQ"
+        url: "https://youtube.com/embed/xThY-JLsF7c?is=EJSChZ4-MOK_kVs1"
       }
     ]
   }
