@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Sport x Fortaleza",
-    meta: "16/10 • 20:30",
+    title: "Ponte Preta x Fortaleza",
+    meta: "24/10 • 18:30",
     players: [
       {
         type: "iframe",
@@ -27,14 +27,14 @@ const matches = {
     meta: "17/10 • 16:30",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://1210.playerembcanais.com/espn/"
+        url: "https://86eb89e9b94c94323705944a729cf618.s25-cloudfront-net.lat/stream/e7fea5588e67dea17ab6e5da5678d896/error.txt"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1210.playerembcanais.com/redetv/"
+        url: "https://1210.playerembcanais.com/espn/"
       },
       {
         type: "iframe",
