@@ -7,17 +7,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
+        url: "https://ww0.embedtv.cc/espn"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1210.playerembcanais.com/disneyplus07/"
+        url: "https://2210.playerembcanais.com/espn/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://links.temporariofutemais.com/prime.php?c=canal2"
+        url: "https://ww0.embedtv.cc/espn"
       }
     ]
   },
