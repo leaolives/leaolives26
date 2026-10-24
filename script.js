@@ -5,9 +5,9 @@ const matches = {
     meta: "24/10 • 18:30",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://2210.playerembcanais.com/espn/"
+        url: "https://cc7236b4a15f49019dede45097586a02.s25-cloudfront-net.lat/stream/e7fea5588e67dea17ab6e5da5678d896/error.txt/"
       },
       {
         type: "iframe",
@@ -17,7 +17,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://ww0.embedtv.cc/espn"
+        url: "https://esportesembed.org/ponte-preta-x-fortaleza-1"
       }
     ]
   },
