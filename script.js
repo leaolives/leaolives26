@@ -7,7 +7,7 @@ const matches = {
       {
         type: "hls",
         engine: "clappr",
-        url: "https://cc7236b4a15f49019dede45097586a02.s25-cloudfront-net.lat/stream/e7fea5588e67dea17ab6e5da5678d896/error.txt/"
+        url: "https://cc7236b4a15f49019dede45097586a02.s25-cloudfront-net.lat/stream/e7fea5588e67dea17ab6e5da5678d896/error.m3u8"
       },
       {
         type: "iframe",
