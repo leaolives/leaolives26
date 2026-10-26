@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Ponte Preta x Fortaleza",
-    meta: "24/10 • 18:30",
+    title: "Fortaleza x Atlético GO",
+    meta: "02/11 • 16:00",
     players: [
       {
         type: "hls",
