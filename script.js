@@ -23,7 +23,7 @@ const matches = {
   },
 
   ceara: {
-    title: "Ceará x Goias",
+    title: "Ceará x Goiás",
     meta: "27/10 • 20:00",
     players: [
       {

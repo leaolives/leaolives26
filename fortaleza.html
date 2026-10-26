@@ -1,21 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="https://i.imgur.com/GfxZJSo.png" type="image/png" />
-  <title>FutliveCE - Fortaleza ao Vivo</title>
-  
-  <link rel="stylesheet" href="style.css">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
+  <title>Fortaleza ao Vivo</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css" />
-  
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ1XEW3FZ3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
     gtag('config', 'G-XZ1XEW3FZ3');
   </script>
@@ -23,9 +25,10 @@
   <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
-  <script src="script.js"></script>
 </head>
-<body>
+
+<body class="team-fortaleza">
+
   <header class="header">
     <div class="container header-content">
       <a href="index.html" class="brand">
@@ -33,17 +36,21 @@
       </a>
 
       <div class="social-links">
-      <a href="tabela.html" class="social-btn tabela">
-        <i class="fa-solid fa-table-list"></i>
-        <span>Tabela</span>
-      </a>
+        <a href="tabela.html" class="social-btn tabela">
+          <i class="fa-solid fa-table-list"></i>
+          <span>Tabela</span>
+        </a>
 
-      <div class="social-links">
-        <a href="https://www.instagram.com/futlivece/" target="_blank" class="social-btn instagram">
+        <a href="https://www.instagram.com/futlivece/"
+           target="_blank" rel="noopener noreferrer"
+           class="social-btn instagram">
           <i class="fa-brands fa-instagram"></i>
           <span>Instagram</span>
         </a>
-        <a href="https://whatsapp.com/channel/0029Vb7J4UEFnSzGO7ZTZD1h" target="_blank" class="social-btn whatsapp">
+
+        <a href="https://whatsapp.com/channel/0029Vb7J4UEFnSzGO7ZTZD1h"
+           target="_blank" rel="noopener noreferrer"
+           class="social-btn whatsapp">
           <i class="fa-brands fa-whatsapp"></i>
           <span>Grupo</span>
         </a>
@@ -52,80 +59,116 @@
   </header>
 
   <main>
-    <section id="homePage" class="page">
-      <section class="hero">
-        <div class="container hero-content">
-          <div class="hero-text">
-            <h1>FUTLIVE CE</h1>
-            <p>Transmissão de jogos do Fortaleza EC e Ceará SC.</p>
-          </div>
-        </div>
-      </section>
-    </section>
+    <section id="homePage" class="page"></section>
 
     <section id="watchPage" class="page active">
       <div class="container">
-        <button class="back-btn" onclick="goToIndex()" type="button">← Voltar para o Início</button>
+
+        <button class="back-btn" onclick="goToIndex()" type="button">
+          ← Voltar
+        </button>
 
         <div class="watch-layout">
+
+          <!-- Informações e vídeo -->
           <div class="player-area">
+
             <div class="watch-top">
-              <span class="live-badge">A live se inicia 30 min antes do jogo começar.</span>
-              <h2 id="matchTitle">Carregando jogo do Laion...</h2>
+              <h2 id="matchTitle">Carregando jogo...</h2>
               <p id="matchMeta">Aguarde um instante</p>
             </div>
 
-            <div class="dns-warning">
-              <i class="fa-solid fa-lock-open"></i>
-              <p>
-                <strong>Atenção:</strong> Se o jogo não abrir, sua operadora pode estar bloqueando o player. 
-                Use o <strong>DNS 1.1.1.1</strong> para contornar o bloqueio.
-                <a href="https://one.one.one.one/" target="_blank">Baixar App 1.1.1.1</a>
-              </p>
-            </div>
-                    
             <div class="video-container">
               <div id="player" class="video-frame hidden"></div>
+              <div id="dplayer" class="video-frame hidden"></div>
 
-            <div id="dplayer" class="video-frame hidden"></div>
+              <video
+                id="nativeVideo"
+                class="video-frame hidden"
+                controls
+                autoplay
+                playsinline>
+              </video>
 
-            <video
-            id="nativeVideo"
-            class="video-frame hidden"
-            controls
-            autoplay
-            playsinline>
-          </video>
-
-          <div id="iframeContainer"></div>
+              <div id="iframeContainer"></div>
+            </div>
           </div>
-          </div>
 
+          <!-- Canais e redes sociais -->
           <aside class="players-panel">
-            <h3>↓ Canais ↓</h3>
-            <button class="player-btn active-player" onclick="changePlayer(this, 1)" type="button">
-              <span>Canal 1</span>
-              <small></small>
-            </button>
-            <button class="player-btn" onclick="changePlayer(this, 2)" type="button">
-              <span>Canal 2</span>
-              <small></small>
-            </button>
-            <button class="player-btn" onclick="changePlayer(this, 3)" type="button">
-              <span>Canal 3</span>
-              <small></small>
-            </button>
 
-            <a href="https://whatsapp.com/channel/0029Vb7J4UEFnSzGO7ZTZD1h" target="_blank" class="contact-watch-btn">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>Grupo no WhatsApp</span>
-            </a>
-            <a href="https://www.instagram.com/futlivece/" target="_blank" class="contact-watch-btn instagram-btn">
-              <i class="fa-brands fa-instagram"></i>
-              <span>Siga no Instagram</span>
-            </a>
+            <h3>Canais</h3>
+
+            <div class="channels-grid">
+
+              <button
+                class="player-btn active-player"
+                onclick="changePlayer(this, 1)"
+                type="button">
+                <span>Canal 1</span>
+                <small></small>
+              </button>
+
+              <button
+                class="player-btn"
+                onclick="changePlayer(this, 2)"
+                type="button">
+                <span>Canal 2</span>
+                <small></small>
+              </button>
+
+              <button
+                class="player-btn"
+                onclick="changePlayer(this, 3)"
+                type="button">
+                <span>Canal 3</span>
+                <small></small>
+              </button>
+
+            </div>
+
+            <div class="contact-links">
+
+              <a
+                href="https://whatsapp.com/channel/0029Vb7J4UEFnSzGO7ZTZD1h"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-watch-btn">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Grupo no WhatsApp</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/futlivece/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-watch-btn instagram-btn">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+
+            </div>
           </aside>
-          
+
+          <!-- Aviso abaixo do player e dos canais -->
+          <div class="dns-warning">
+            <i class="fa-solid fa-lock-open"></i>
+
+            <p>
+              <strong>Atenção:</strong>
+              Se o jogo não abrir, sua operadora pode estar bloqueando
+              o player. Use o <strong>DNS 1.1.1.1</strong> para tentar
+              contornar o bloqueio.
+
+              <a
+                href="https://one.one.one.one/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Baixar App 1.1.1.1
+              </a>
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -134,31 +177,32 @@
   <script src="script.js"></script>
 
   <script>
-    // Carrega o jogo do Fortaleza automaticamente
     window.onload = function() {
-        if (typeof openMatch === "function") {
-            openMatch('fortaleza');
-        }
+      if (typeof openMatch === "function") {
+        openMatch("fortaleza");
+      }
     };
 
-    // Redireciona para a home real
     function goToIndex() {
-        window.location.href = "index.html";
+      window.location.href = "index.html";
     }
 
-    // Limpeza de cache obrigatória
-    if ('serviceWorker' in navigator) {
+    if ("serviceWorker" in navigator) {
       navigator.serviceWorker.getRegistrations().then(function(registrations) {
-        for(let registration of registrations) {
+        for (const registration of registrations) {
           registration.unregister();
         }
       });
     }
-    if ('caches' in window) {
+
+    if ("caches" in window) {
       caches.keys().then(function(names) {
-        for (let name of names) caches.delete(name);
+        for (const name of names) {
+          caches.delete(name);
+        }
       });
     }
   </script>
+
 </body>
 </html>

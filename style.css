@@ -1,10 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Kanit:wght@700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================================
+   FUTLIVE CE
+   Ceará: preto e branco
+   Fortaleza: azul e vermelho
+   ========================================================== */
+
+:root {
+  --bg: #0c111b;
+  --panel: #141b27;
+  --panel-2: #1c2635;
+  --line: #303b4c;
+  --text: #f5f7fb;
+  --muted: #9ba7b8;
+
+  --blue: #1760b5;
+  --red: #e32636;
+  --white: #ffffff;
+  --black: #08090c;
+
+  --fortaleza: linear-gradient(
+    180deg,
+    #1760b5 0%,
+    #1760b5 50%,
+    #e32636 50%,
+    #e32636 100%
+  );
+
+  --ceara: repeating-linear-gradient(
+    180deg,
+    #ffffff 0 10px,
+    #08090c 10px 20px
+  );
+
+  --band:
+    repeating-linear-gradient(
+      180deg,
+      #1760b5 0 3px,
+      #e32636 3px 6px
+    ) left / 50% 100% no-repeat,
+    repeating-linear-gradient(
+      180deg,
+      #ffffff 0 3px,
+      #08090c 3px 6px
+    ) right / 50% 100% no-repeat;
+
+  --display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --body: 'Barlow', system-ui, sans-serif;
+}
+
+/* ===== Base ===== */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
 }
 
 html {
@@ -12,41 +63,67 @@ html {
 }
 
 body {
-  background: #0a0d14;
-  background-image:
-    radial-gradient(circle at top right, rgba(0, 229, 255, 0.03), transparent),
-    radial-gradient(circle at bottom left, rgba(255, 51, 51, 0.02), transparent);
-  color: #fff;
   min-height: 100vh;
+  font-family: var(--body);
+  line-height: 1.5;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at top, #172337 0%, transparent 55%),
+    var(--bg);
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 button {
   font: inherit;
 }
 
+:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
 .container {
-  width: min(1120px, 92%);
+  width: min(1040px, 92%);
   margin: 0 auto;
 }
 
-/* HEADER */
+/* Mantém ocultos os players não selecionados */
+.hidden,
+.video-frame.hidden,
+#player.hidden,
+#dplayer.hidden,
+#iframeContainer.hidden {
+  display: none !important;
+}
+
+/* ===== Cabeçalho ===== */
+
 .header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(13, 17, 28, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 229, 255, 0.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background: rgba(12, 17, 27, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: var(--band);
 }
 
 .header-content {
-  min-height: 76px;
+  min-height: 84px;
+  padding-bottom: 4px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,12 +131,49 @@ button {
 }
 
 .logo {
-  height: 52px;
-  width: auto;
   display: block;
+  width: auto;
+  height: 80px;
 }
 
-/* PÁGINAS */
+.social-links {
+  display: flex;
+  gap: 8px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.social-btn:hover {
+  color: #fff;
+  border-color: #71819a;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.social-btn.tabela {
+  color: var(--muted);
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+/* ===== Páginas ===== */
+
 .page {
   display: none;
 }
@@ -68,315 +182,401 @@ button {
   display: block;
 }
 
-/* HERO */
-.hero {
-  padding: 28px 0 14px;
-}
+/* ==========================================================
+   LISTA DE JOGOS
+   ========================================================== */
 
-.hero-content {
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 18px;
-  align-items: center;
-}
-
-.hero-text h1 {
-  font-family: 'Kanit', sans-serif;
-  font-size: 42px;
-  line-height: 1;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  letter-spacing: -1px;
-  background: linear-gradient(to right, #fff, #00e5ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 2px 10px rgba(0, 229, 255, 0.3));
-}
-
-.hero-text p {
-  font-size: 16px;
-  color: #aeb8c7;
-}
-
-.hero-box {
-  min-height: 180px;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #111827, #0b1120);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.5),
-    inset 0 0 20px rgba(0, 229, 255, 0.05);
-}
-
-.hero-logo {
-  width: min(100%, 250px);
-  filter: drop-shadow(0 12px 22px rgba(0,0,0,0.32));
-}
-
-/* TRANSMISSÕES */
 .matches-section {
-  padding: 18px 0 42px;
+  padding: 48px 0 24px;
 }
 
 .section-title {
-  font-family: 'Kanit', sans-serif;
-  text-align: center;
-  margin-bottom: 10px;
-  font-size: 30px;
-  text-transform: uppercase;
-  width: 100%;
-  display: block;
+  margin-bottom: 6px;
+  font-family: var(--display);
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.section-sub {
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-size: 15px;
 }
 
 .matches-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.match-card {
-  border-radius: 24px;
-  padding: 24px;
-  border: 1px solid rgba(255,255,255,0.07);
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  gap: 14px;
+}
+
+/* Card do jogo */
+
+.match-card {
   position: relative;
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) 190px;
+  align-items: center;
+  gap: 28px;
+  padding: 22px 28px 22px 40px;
+  overflow: hidden;
+  background: linear-gradient(
+    110deg,
+    #151d2a 0%,
+    #141b27 55%,
+    #111824 100%
+  );
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
 }
 
 .match-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  background: var(--panel-2);
+  border-color: #52647d;
+  transform: translateY(-2px);
 }
 
-.fortaleza-card {
-  background: linear-gradient(145deg, #0a1a3d, #1a3a8a);
-  border-color: rgba(255, 255, 255, 0.1);
+.match-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 7px;
 }
 
-.fortaleza-card .match-date {
-  color: #ff3333;
+.fortaleza-card::before {
+  background: repeating-linear-gradient(
+    180deg,
+    #1760b5 0 10px,
+    #e32636 10px 20px
+  );
 }
 
-.fortaleza-card .vs-badge {
-  background: #ffffff;
-  color: #0051ff;
-  border: none;
+.ceara-card::before {
+  background: var(--ceara);
 }
 
-.fortaleza-card .btn-watch-now {
-  background: #fff;
-  color: #0051ff;
+/* Data, status e horário */
+
+.match-details {
+  min-width: 0;
+  text-align: left;
 }
 
-.fortaleza-card:hover {
-  border-color: #ff3333;
-  box-shadow: 0 20px 40px rgba(255, 51, 51, 0.2);
+.match-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 9px;
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.7px;
 }
 
-.fortaleza-card:hover .btn-watch-now {
-  background: #ff3333;
+.match-status::before {
+  content: "";
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.status-upcoming {
+  color: #d7e3f4;
+  background: rgba(125, 155, 190, 0.12);
+}
+
+.status-live {
   color: #fff;
+  background: #b8172a;
+  border-color: #f04452;
+  animation: live-pulse 1.4s ease-in-out infinite;
 }
 
-.ceara-card {
-  background: linear-gradient(145deg, #121214, #2a2a2f);
+.status-ended {
+  color: #aab3c1;
+  background: rgba(120, 130, 145, 0.12);
 }
 
-.ceara-card .match-date {
-  color: #ffffff;
-  opacity: 0.8;
+@keyframes live-pulse {
+  50% {
+    opacity: 0.68;
+  }
 }
 
-.ceara-card .vs-badge {
-  background: #ffffff;
-  color: #000000;
-  border: none;
+.match-date {
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
-.ceara-card .btn-watch-now {
-  background: #ffffff;
-  color: #000000;
+.match-time {
+  color: #fff;
+  font-family: var(--display);
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1;
 }
 
-.ceara-card:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-}
-
-.ceara-card:hover .btn-watch-now,
-.ceara-card .btn-watch-now:hover {
-  background: #e0e0e0;
-  color: #000000;
-}
+/* Times e escudos */
 
 .teams-display {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  margin-bottom: 25px;
-  margin-top: 10px;
+  gap: 28px;
+  min-width: 0;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 110px;
 }
 
 .team-shield {
-  width: 90px;
-  height: 90px;
+  display: block;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
-  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.6));
-  transition: transform 0.4s ease;
 }
 
-.match-card:hover .team-shield {
-  transform: scale(1.15) rotate(2deg);
+.team-name {
+  color: #f5f7fb;
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
 }
 
 .vs-badge {
-  padding: 6px 14px;
-  border-radius: 10px;
-  font-family: 'Kanit', sans-serif;
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.match-details {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 16px 20px;
-  border-radius: 20px;
-  width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  margin-bottom: 15px;
-  backdrop-filter: blur(5px);
-}
-
-.match-date {
-  font-family: 'Kanit', sans-serif;
-  font-size: 14px;
-  margin-bottom: 2px;
+  flex-shrink: 0;
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 18px;
   font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
-.match-time {
-  font-family: 'Kanit', sans-serif;
-  font-size: 32px;
-  font-weight: 900;
-  color: #fff;
-  line-height: 1;
+/* Botão assistir */
+
+.card-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
 }
 
 .btn-watch-now {
-  width: 100%;
-  padding: 14px;
-  border-radius: 14px;
-  border: none;
-  font-family: 'Kanit', sans-serif;
-  font-size: 20px;
-  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #fff;
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
 }
 
-/* TELA DO PLAYER */
-#matchTitle {
-  font-family: 'Kanit', sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: -0.5px;
-  margin-bottom: 4px;
+.btn-watch-now:active {
+  transform: scale(0.97);
+}
+
+/* Cores dos botões por clube */
+
+.ceara-card .btn-watch-now {
+  background: #08090c;
+  border-color: #626873;
   color: #fff;
 }
 
-#matchMeta {
-  font-family: 'Kanit', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #ffffff;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+.ceara-card:hover .btn-watch-now {
+  background: #fff;
+  border-color: #fff;
+  color: #08090c;
 }
+
+
+.fortaleza-card .btn-watch-now {
+  background: #1760b5;
+  border-color: #1760b5;
+  color: #fff;
+}
+
+.fortaleza-card:hover .btn-watch-now {
+  background: #e32636;
+  border-color: #e32636;
+  color: #fff;
+}
+
+.ceara-card:hover {
+  border-color: #aeb6c2;
+}
+
+.fortaleza-card:hover {
+  border-color: #3479c9;
+}
+
+/* Texto de apresentação no final da página */
+
+.intro-bottom {
+  padding: 36px 0 56px;
+  text-align: center;
+}
+
+.intro-bottom h1 {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.intro-bottom p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ==========================================================
+   PÁGINAS DE TRANSMISSÃO
+   ========================================================== */
 
 .back-btn {
-  margin: 20px 0 14px;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.05);
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 12px;
-  cursor: pointer;
+  margin: 26px 0 16px;
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
   font-weight: 600;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
 }
+
+.back-btn:hover {
+  color: #fff;
+  border-color: #71819a;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Player à esquerda e canais à direita no computador */
 
 .watch-layout {
   display: grid;
-  grid-template-columns: 1.4fr 320px;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  align-items: start;
   gap: 16px;
-  padding-bottom: 34px;
-}
-
-.player-area,
-.players-panel {
-  border-radius: 20px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
-  padding: 16px;
-}
-
-.players-panel h3 {
-  text-align: center;
   width: 100%;
-  font-family: 'Kanit', sans-serif;
-  font-size: 25px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding-bottom: 44px;
+}
+
+.player-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.watch-top {
+  padding: 4px 0;
+}
+
+#matchTitle {
   color: #fff;
+  font-family: var(--display);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+#matchMeta {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .live-badge {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 8px;
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.2);
-  color: #ff6b6b;
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px 9px;
+  color: var(--muted);
   font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 15px;
+  font-weight: 500;
 }
 
-/* PLAYERS */
+/* Área do vídeo */
+
 .video-container {
+  position: relative;
   width: 100%;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+  border-radius: 9px;
 }
 
+.video-container .video-frame,
+.video-container iframe,
 .video-frame,
 #player,
 #dplayer {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
-  overflow: hidden;
+  height: 100%;
+  border: 0;
   background: #000;
-  border: none;
+}
+
+.video-frame {
+  display: block;
+}
+
+#player,
+#dplayer {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
 
 #player [data-player] {
-  border-radius: 16px !important;
+  border-radius: 8px !important;
 }
 
 #dplayer .dplayer {
@@ -384,61 +584,135 @@ button {
   height: 100%;
 }
 
-.player-btn {
-  width: 100%;
-  text-align: center;
-  padding: 14px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.03);
+/* Aviso de DNS */
+
+.dns-warning {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+  padding: 12px 16px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.dns-warning i {
+  flex-shrink: 0;
+  color: #dce6f5;
+  font-size: 18px;
+}
+
+.dns-warning p {
+  color: #d4dce8;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.dns-warning a {
   color: #fff;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Painel de canais */
+
+.players-panel {
+  width: 100%;
+  min-width: 0;
+  padding: 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.players-panel h3 {
+  margin-bottom: 12px;
+  color: #fff;
+  font-family: var(--display);
+  font-size: 21px;
+  font-weight: 800;
+}
+
+/* Canais: empilhados no computador */
+
+.channels-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.player-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  margin: 0;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #111824;
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    color 0.2s;
+}
+
+.player-btn:hover {
+  border-color: #71819a;
+  background: #1b2636;
 }
 
 .player-btn span {
-  font-family: 'Kanit', sans-serif;
-  font-size: 20px;
-  text-transform: uppercase;
   display: block;
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .player-btn small {
-  font-weight: 600;
-  color: #aeb8c7;
   display: block;
+  color: var(--muted);
+  font-weight: 600;
 }
 
+/* Canal selecionado: padrão neutro */
+
 .active-player {
-  border-color: #00e5ff;
-  background: rgba(0, 229, 255, 0.1);
+  background: #e9edf4;
+  border-color: #e9edf4;
 }
 
 .active-player span {
-  color: #00e5ff;
+  color: #111827;
 }
 
-/* BOTÕES SOCIAIS */
-.social-links {
-  display: flex;
-  gap: 10px;
+.active-player small {
+  color: #526075;
 }
 
-.social-btn {
+.active-player:hover {
+  background: #fff;
+  border-color: #fff;
+}
+
+/* Links sociais no painel */
+
+.contact-links {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 8px;
-  padding: 10px 15px;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  font-size: 13px;
-  font-weight: 600;
+  margin-top: 12px;
 }
 
 .contact-watch-btn {
@@ -446,231 +720,723 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px;
-  border-radius: 14px;
-  background: linear-gradient(90deg, #16a34a, #22c55e);
-  font-family: 'Kanit', sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-top: 10px;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
-}
-
-.instagram-btn {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
-  margin-top: 10px;
-  box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3) !important;
-}
-
-.instagram-btn:hover {
-  filter: brightness(1.1);
-}
-
-/* AVISO DNS */
-.dns-warning {
-  background: rgba(255, 165, 0, 0.1);
-  border: 1px solid rgba(255, 165, 0, 0.3);
-  border-radius: 12px;
-  padding: 12px 16px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.dns-warning i {
-  color: #ffa500;
-  font-size: 18px;
-}
-
-.dns-warning p {
-  font-size: 13px;
-  color: #eee;
+  width: 100%;
+  min-width: 0;
   margin: 0;
-  line-height: 1.4;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
 }
 
-.dns-warning a {
-  color: #00e5ff;
-  font-weight: 700;
+.contact-watch-btn:hover {
+  color: #fff;
+  border-color: #71819a;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* ==========================================================
+   TABELA
+   ========================================================== */
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  padding: 20px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.table-container .section-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.table-container iframe {
+  max-width: 100%;
+  border: 0;
+  border-radius: 6px;
+}
+
+.table-credit {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.table-credit a {
+  color: #fff;
   text-decoration: underline;
 }
 
-@media (min-width: 641px) {
-  .dns-warning {
-    flex-direction: row;
+/* ==========================================================
+   TEMA FORTALEZA
+   ========================================================== */
+
+.team-fortaleza {
+  --team-primary: #1760b5;
+  --team-secondary: #e32636;
+  --team-border: rgba(23, 96, 181, 0.65);
+  --team-glow: rgba(23, 96, 181, 0.12);
+}
+
+.team-fortaleza .player-area,
+.team-fortaleza .players-panel {
+  border-color: var(--team-border);
+}
+
+.team-fortaleza #matchTitle,
+.team-fortaleza .players-panel h3 {
+  color: #fff;
+  text-shadow: 0 0 18px var(--team-glow);
+}
+
+.team-fortaleza .back-btn {
+  border-color: #245a91;
+  color: #c7dfff;
+}
+
+.team-fortaleza .back-btn:hover {
+  background: rgba(23, 96, 181, 0.18);
+  border-color: var(--team-primary);
+  color: #fff;
+}
+
+.team-fortaleza .dns-warning {
+  border-color: rgba(23, 96, 181, 0.55);
+}
+
+.team-fortaleza .dns-warning i {
+  color: #65a9ff;
+}
+
+.team-fortaleza .dns-warning a {
+  color: #75b5ff;
+}
+
+
+/* Canais do Fortaleza: estilo neutro, igual ao Ceará */
+
+.team-fortaleza .player-btn {
+  background: #111824;
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.team-fortaleza .player-btn span {
+  color: var(--text);
+}
+
+.team-fortaleza .player-btn small {
+  color: var(--muted);
+}
+
+/* Hover discreto */
+.team-fortaleza .player-btn:hover {
+  border-color: #3479c9;
+  background: rgba(23, 96, 181, 0.16);
+}
+
+/* Canal selecionado: azul */
+body.team-fortaleza .player-btn.active-player,
+body.team-fortaleza .player-btn.active-player:hover {
+  background: #1760b5;
+  border: 1px solid #3479c9;
+  color: #fff;
+  filter: none;
+}
+
+body.team-fortaleza .player-btn.active-player span,
+body.team-fortaleza .player-btn.active-player small {
+  color: #fff;
+}
+
+
+.team-fortaleza .contact-watch-btn:hover {
+  border-color: var(--team-primary);
+  background: rgba(23, 96, 181, 0.14);
+}
+
+.team-fortaleza .live-badge::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 0 7px 1px 0;
+  border-radius: 50%;
+  background: var(--team-secondary);
+}
+
+/* ==========================================================
+   TEMA CEARÁ
+   ========================================================== */
+
+.team-ceara {
+  --team-primary: #08090c;
+  --team-secondary: #fff;
+  --team-border: rgba(210, 218, 230, 0.28);
+  --team-glow: rgba(255, 255, 255, 0.08);
+}
+
+.team-ceara .player-area,
+.team-ceara .players-panel {
+  border-color: var(--team-border);
+}
+
+.team-ceara #matchTitle,
+.team-ceara .players-panel h3 {
+  color: #fff;
+  text-shadow: 0 0 18px var(--team-glow);
+}
+
+.team-ceara .back-btn {
+  border-color: #5b626e;
+  color: #e0e4eb;
+}
+
+.team-ceara .back-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #fff;
+  color: #fff;
+}
+
+.team-ceara .dns-warning {
+  border-color: #414650;
+}
+
+.team-ceara .dns-warning i {
+  color: #fff;
+}
+
+.team-ceara .dns-warning a {
+  color: #fff;
+}
+
+.team-ceara .player-btn:hover {
+  border-color: #b9c0ca;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Canal ativo do Ceará: preto e branco */
+
+.team-ceara .active-player {
+  background: #fff;
+  border-color: #fff;
+}
+
+.team-ceara .active-player span,
+.team-ceara .active-player small {
+  color: #08090c;
+}
+
+.team-ceara .active-player:hover {
+  background: #e4e7ec;
+  border-color: #e4e7ec;
+}
+
+.team-ceara .contact-watch-btn:hover {
+  border-color: #c4cbd5;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.team-ceara .live-badge::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 0 7px 1px 0;
+  border-radius: 50%;
+  background: #fff;
+}
+
+/* ==========================================================
+   RESPONSIVIDADE — TABLETS
+   ========================================================== */
+
+@media (max-width: 900px) {
+  .match-card {
+    grid-template-columns: 125px minmax(0, 1fr) 155px;
+    gap: 16px;
+    padding: 20px 18px 20px 28px;
+  }
+
+  .match-time {
+    font-size: 44px;
+  }
+
+  .teams-display {
+    gap: 14px;
+  }
+
+  .team {
+    min-width: 0;
+  }
+
+  .team-shield {
+    width: 64px;
+    height: 64px;
+  }
+
+  .team-name {
+    font-size: 20px;
+  }
+
+  .btn-watch-now {
+    font-size: 21px;
+  }
+
+  .watch-layout {
+    grid-template-columns: minmax(0, 1fr) 230px;
     gap: 12px;
   }
 }
 
-/* BANNER */
-.promo-banner {
-  margin-top: 40px;
-  text-align: center;
-}
+/* ==========================================================
+   RESPONSIVIDADE — CELULARES
+   ========================================================== */
 
-.promo-banner img {
-  max-width: 450px;
-  width: 100%;
-  transition: transform 0.3s;
-}
-
-.promo-banner img:hover {
-  transform: scale(1.03);
-}
-
-/* TABELA */
-.table-container {
-  margin-top: 20px;
-  background: #1a1d23;
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid #2d323a;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-}
-
-.table-container iframe {
-  max-width: 100% !important;
-  border-radius: 8px;
-}
-
-.table-container div {
-  color: #888 !important;
-  margin-top: 10px;
-}
-
-.table-container a {
-  color: #3498db !important;
-  transition: 0.3s;
-}
-
-.table-container a:hover {
-  color: #2980b9 !important;
-}
-
-/* TEXTO CENTRAL ABAIXO DOS CARDS */
-.intro-bottom {
-  padding: 8px 0 24px;
-  text-align: center;
-}
-
-.intro-bottom h1 {
-  font-family: 'Kanit', sans-serif;
-  font-size: 34px;
-  line-height: 1;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-  letter-spacing: -1px;
-  background: linear-gradient(to right, #ffffff, #00e5ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.intro-bottom p {
-  font-size: 14px;
-  color: #aeb8c7;
-}
-
-.hidden {
-  display: none;
-}
-
-/* RESPONSIVO TABLET */
-@media (max-width: 980px) {
-  .hero-content,
-  .watch-layout {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 760px) {
+  /* Cabeçalho */
 
   .header-content {
-    flex-direction: column;
-    padding: 15px 0;
-    height: auto;
-  }
-}
-
-/* MENU / HEADER NO CELULAR */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 0 10px;
-    gap: 10px;
     min-height: auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 0 16px;
   }
 
   .logo {
-    height: 52px;
-    margin: 0 auto;
-    display: block;
+    height: 0px;
   }
 
   .social-links {
     width: 100%;
-    display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 7px;
   }
 
   .social-btn {
     flex: 1;
-    max-width: 140px;
-    justify-content: center;
-    padding: 11px 8px;
-    border-radius: 14px;
-    font-size: 14px;
+    max-width: 150px;
+    gap: 6px;
+    padding: 9px 6px;
+    font-size: 16px;
   }
 
-  .social-btn i {
-    font-size: 17px;
-    margin-right: 0;
-  }
-
-  .social-btn span {
-    display: inline;
-  }
-}
-
-/* CELULAR */
-@media (max-width: 640px) {
-  .team-shield {
-    width: 75px;
-    height: 75px;
-  }
-
-  .match-time {
-    font-size: 26px;
-  }
-
-  .hero-text h1 {
-    font-size: 32px;
-  }
+  /* Título da lista */
 
   .matches-section {
-    padding-bottom: 18px;
+    padding: 32px 0 20px;
   }
 
   .section-title {
-    font-size: 34px;
-    line-height: 1.05;
-  }
-
-  .intro-bottom {
-    padding: 0 0 24px;
-  }
-
-  .intro-bottom h1 {
     font-size: 32px;
   }
 
-  .intro-bottom p {
+  .section-sub {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  /* Cards mais compactos e organizados */
+
+  .matches-grid {
+    gap: 14px;
+    padding: 2px 0 16px;
+  }
+
+  .match-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 13px;
+    width: 100%;
+    padding: 19px 15px 17px;
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .match-card:hover {
+    transform: none;
+  }
+
+  .match-card::before {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    width: auto;
+    height: 5px;
+  }
+
+  .fortaleza-card::before {
+    background: repeating-linear-gradient(
+      90deg,
+      #1760b5 0 25px,
+      #e32636 25px 50px
+    );
+  }
+
+  .ceara-card::before {
+    background: repeating-linear-gradient(
+      90deg,
+      #fff 0 25px,
+      #08090c 25px 50px
+    );
+  }
+
+  /* Informações do jogo */
+
+  .match-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .match-status {
+    margin-bottom: 6px;
+    padding: 4px 9px;
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  .match-date {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .match-time {
+    margin-top: 2px;
+    font-size: 30px;
+    line-height: 1.05;
+  }
+
+  /* Times e escudos */
+
+  .teams-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 100%;
+    margin: 2px 0;
+  }
+
+  .team {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 0;
+  }
+
+  .team-shield {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+  }
+
+  .team-name {
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+  }
+
+  .vs-badge {
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+
+  /* Botão assistir: mais alto e menos largo */
+
+  .card-action {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2px;
+  }
+
+  .match-card .btn-watch-now {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 170px;
+    max-width: 220px;
+    min-height: 50px;
+    padding: 13px 25px;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-size: 17px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .match-card .btn-watch-now:active {
+    transform: scale(0.97);
+  }
+
+  /* Página de transmissão: vídeo, canais e aviso */
+
+  .back-btn {
+    margin: 18px 0 12px;
+    padding: 9px 12px;
     font-size: 13px;
   }
+
+  .watch-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    padding-bottom: 28px;
+  }
+
+  .player-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .watch-top {
+    padding: 2px 0 0;
+  }
+
+  #matchTitle {
+    font-size: 25px;
+    line-height: 1.15;
+  }
+
+  #matchMeta {
+    margin-top: 4px;
+    font-size: 16px;
+  }
+
+  .live-badge {
+    margin-bottom: 8px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+  }
+
+  /* Canais em três colunas */
+
+  .players-panel {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .players-panel h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .channels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .players-panel .player-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 46px;
+    margin: 0;
+    padding: 8px 3px;
+    border-radius: 7px;
+  }
+
+  .players-panel .player-btn span {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .players-panel .player-btn small {
+    font-size: 10px;
+  }
+
+  /* Links sociais em duas colunas */
+
+  .contact-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .contact-links .contact-watch-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-width: 0;
+    min-height: 58px;
+    margin: 0;
+    padding: 8px 5px;
+    font-size: 13px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-watch-btn i {
+    font-size: 17px;
+  }
+
+  /* Aviso DNS abaixo dos canais */
+
+  .watch-layout > .dns-warning {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 9px;
+    width: 100%;
+    margin: 0;
+    padding: 12px;
+    text-align: left;
+  }
+
+  .dns-warning i {
+    margin-top: 2px;
+    font-size: 16px;
+  }
+
+  .dns-warning p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* Tabela */
+
+  .table-container {
+    padding: 12px;
+  }
+}
+
+/* Celulares estreitos */
+
+@media (max-width: 380px) {
+  .container {
+    width: 94%;
+  }
+
+  .social-btn {
+    font-size: 14px;
+  }
+
+  .match-card {
+    gap: 11px;
+    padding: 17px 12px 15px;
+  }
+
+  .match-time {
+    font-size: 28px;
+  }
+
+  .team-shield {
+    width: 50px;
+    height: 50px;
+  }
+
+  .team-name {
+    font-size: 16px;
+  }
+
+  .match-card .btn-watch-now {
+    min-width: 160px;
+    min-height: 48px;
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+
+  #matchTitle {
+    font-size: 22px;
+  }
+
+  .channels-grid {
+    gap: 6px;
+  }
+
+  .players-panel .player-btn span {
+    font-size: 14px;
+  }
+
+  .contact-links .contact-watch-btn {
+    font-size: 12px;
+  }
+}
+
+/* Reduz animações para quem prefere movimento reduzido */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Corrige a altura dos players iframe */
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Faz o iframe preencher toda a área do vídeo */
+.video-container > iframe,
+.video-container #iframeContainer,
+.video-container #iframeContainer iframe {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0;
+  max-width: none;
+  border: 0;
+}
+
+/* Garante que os players HLS continuem preenchendo o espaço */
+.video-container > .video-frame,
+.video-container > #player,
+.video-container > #dplayer {
+  width: 100%;
+  height: 100%;
 }

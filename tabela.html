@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="https://i.imgur.com/GfxZJSo.png" type="image/png" />
-  <title>FutliveCE - Tabela Série B</title>
-  
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
+  <title>Tabela Série B</title>
+
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 <body>
@@ -30,27 +30,23 @@
   </header>
 
   <main class="container">
-    <div style="margin-top: 20px;">
-      <button class="back-btn" onclick="window.location.href='index.html'" type="button">← Voltar para o Início</button>
-    </div>
+    <button class="back-btn" onclick="window.location.href='index.html'" type="button">← Voltar para o Início</button>
 
-    <section class="table-container" style="margin-top: 20px; background: #1a1d23; padding: 15px; border-radius: 10px; display: flex; flex-direction: column; align-items: center;">
-      <h2 class="section-title" style="text-align: center; margin-bottom: 20px;">Classificação Série B 2026</h2>
-      
-      <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
-        <iframe 
-          id="sofa-standings-embed-1449-89840" 
-          src="https://widgets.sofascore.com/embed/tournament/1449/season/89840/standings/Brasileiro%20Serie%20B%202026?widgetTitle=Brasileiro%20Serie%20B%202026&showCompetitionLogo=true" 
-          style="height:1123px!important; max-width:768px!important; width:100%!important; border: 0;" 
-          frameborder="0" 
-          scrolling="no">
-        </iframe>
-        
-        <div style="font-size:12px; font-family:Arial,sans-serif; text-align:center; margin-top: 10px; color: #888;">
-          Standings provided by <a target="_blank" href="https://www.sofascore.com/football/tournament/brazil/brasileirao-serie-b/390#id:89840" style="color: #3498db; text-decoration: none;">Sofascore</a>
-        </div>
+    <section class="table-container">
+      <h2 class="section-title">Classificação Série B 2026</h2>
+
+      <iframe
+        id="sofa-standings-embed-1449-89840"
+        src="https://widgets.sofascore.com/embed/tournament/1449/season/89840/standings/Brasileiro%20Serie%20B%202026?widgetTitle=Brasileiro%20Serie%20B%202026&showCompetitionLogo=true"
+        style="height:1123px!important; max-width:768px!important; width:100%!important;"
+        frameborder="0"
+        scrolling="no">
+      </iframe>
+
+      <div class="table-credit">
+        Standings provided by <a target="_blank" href="https://www.sofascore.com/football/tournament/brazil/brasileirao-serie-b/390#id:89840">Sofascore</a>
       </div>
-      </section>
+    </section>
   </main>
 
   <script src="script.js"></script>
