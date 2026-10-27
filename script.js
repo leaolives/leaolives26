@@ -29,7 +29,7 @@ const matches = {
       {
         type: "hls",
         engine: "clappr",
-        url: "https://aws.s13-s1001604.lat/stream/17e6b9c2e114717d914df054fd0be77f/xsports.m3u8"
+        url: "https://aws.s13-s1001604.lat/stream/65e3ae0c34a6c64f78efad9f25b8ff16/espn.m3u8"
       },
       {
         type: "iframe",
@@ -39,7 +39,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2210.playerembcanais.com/xsports/"
+        url: "https://2210.playerembcanais.com/espn/"
       }
     ]
   }
