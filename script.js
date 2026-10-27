@@ -17,7 +17,7 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://taifood-blog.asia/embed/2026-ballon-dor-ceremony-31244"
+        url: "https://streamtp99a.sbs/global1.php?stream=premiere2"
       }
     ]
   },
@@ -29,17 +29,17 @@ const matches = {
       {
         type: "hls",
         engine: "clappr",
-        url: "https://86eb89e9b94c94323705944a729cf618.s25-cloudfront-net.lat/stream/e7fea5588e67dea17ab6e5da5678d896/error.txt"
+        url: "https://aws.s13-s1001604.lat/stream/17e6b9c2e114717d914df054fd0be77f/xsports.m3u8"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://1210.playerembcanais.com/espn/"
+        url: "https://www.youtube.com/embed/9AVl4tGTZjU?si=p0GFxY2sIAvkQ-b4"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://youtube.com/embed/xThY-JLsF7c?is=EJSChZ4-MOK_kVs1"
+        url: "https://2210.playerembcanais.com/xsports/"
       }
     ]
   }
