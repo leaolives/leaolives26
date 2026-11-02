@@ -5,19 +5,19 @@ const matches = {
     meta: "02/11 • 16:00",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://aws.s13-s1001604.lat/stream/0bdeb73f8edd3ee1edd71bfd008db844/espn.m3u8"
+        url: "https://ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2210.playerembcanais.com/espn/"
+        url: "https://belgas.tv/embed2.html?channel=canal1"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://streamtp99a.sbs/global1.php?stream=premiere2"
+        url: "https://esportesembed.org/fortaleza-x-atletico-go-1"
       }
     ]
   },
@@ -27,19 +27,19 @@ const matches = {
     meta: "02/11 • 18:00",
     players: [
       {
-        type: "hls",
+        type: "iframe",
         engine: "clappr",
-        url: "https://aws.s13-s1001604.lat/stream/65e3ae0c34a6c64f78efad9f25b8ff16/espn.m3u8"
+        url: "https://2910.playerembcanais.com/espn/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/9AVl4tGTZjU?si=p0GFxY2sIAvkQ-b4"
+        url: "https://www.youtube.com/embed/V93u0Vos_Aw?si=W6o3fdaT1VDTZVMc"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2210.playerembcanais.com/espn/"
+        url: "https://2910.playerembcanais.com/xsports/"
       }
     ]
   }
