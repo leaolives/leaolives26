@@ -7,17 +7,17 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://ok.ru/videoembed/15577454616074?nochat=1&autoplay=1"
+        url: "https://2910.playerembcanais.com/espn4/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://belgas.tv/embed2.html?channel=canal1"
+        url: "https://www.youtube.com/embed/ZLRTI_C7KfU?si=6Fq0J2V3Cq1mX2ic"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://esportesembed.org/fortaleza-x-atletico-go-1"
+        url: "https://2910.playerembcanais.com/redetv/"
       }
     ]
   },
