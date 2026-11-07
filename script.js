@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Novorizontino x Fortaleza",
-    meta: "07/11 • 16:10",
+    title: "Vila Nova x Fortaleza",
+    meta: "14/11 • 16:30",
     players: [
       {
         type: "iframe",
@@ -29,12 +29,12 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2910.playerembcanais.com/espn/"
+        url: "https://2910.playerembcanais.com/xsports/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/V93u0Vos_Aw?si=W6o3fdaT1VDTZVMc"
+        url: "https://www.youtube.com/embed/5-JkeP-ql30?si=i8SRWswuY39ct_oy"
       },
       {
         type: "iframe",
