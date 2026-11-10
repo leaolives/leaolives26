@@ -10,7 +10,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ1XEW3FZ3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer = window.dataLayer || []; gtag('js', new Date()); gtag('config', 'G-XZ1XEW3FZ3');}
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XZ1XEW3FZ3');
   </script>
 </head>
 <body>
@@ -29,6 +31,21 @@
       <div class="container">
         <h2 class="section-title">Próximas Transmissões</h2>
         <p class="section-sub">Escolha o jogo e assista ao vivo.</p>
+        <a href="multijogos.html" class="mosaico-cta">
+          <div class="mosaico-cta-preview" aria-hidden="true">
+            <span class="mini-screen" data-club="ceara"><i class="fa-solid fa-play"></i></span>
+            <span class="mini-screen" data-club="fortaleza"><i class="fa-solid fa-play"></i></span>
+            <span class="mini-screen" data-club="neutral"><i class="fa-solid fa-play"></i></span>
+          </div>
+          <div class="mosaico-cta-info">
+            <h3>Mosaico De Jogos</h3>
+            <p>Escolha quais jogos você quer acompanhar ao mesmo tempo.</p>
+            <div class="mosaico-cta-games">
+              <span>CRB x Ceará</span><span>Fortaleza x Vila Nova</span><span>América MG x Avaí</span>
+            </div>
+          </div>
+          <span class="mosaico-cta-btn">Assistir <i class="fa-solid fa-table-cells-large"></i></span>
+        </a>
         <div class="matches-grid">
           <a href="ceara.html" class="match-card ceara-card" data-match-start="2026-11-14T16:30:00" data-match-duration="100">
             <div class="match-details"><span class="match-status status-upcoming">EM BREVE</span><p class="match-date">Sábado • 14/11</p><p class="match-time">16:30</p></div>

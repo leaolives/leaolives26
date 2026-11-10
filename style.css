@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600;700;800&display=swap');
 
 /* ==========================================================
@@ -1439,4 +1438,123 @@ body.team-fortaleza .player-btn.active-player small {
 .video-container > #dplayer {
   width: 100%;
   height: 100%;
+}
+/* CHAMADA DO MOSAICO */
+.mosaico-cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 18px;
+  padding: 24px 26px 22px;
+  overflow: hidden;
+  background: var(--panel);
+  border: 2px solid #fff;
+  border-radius: 12px;
+  color: #fff;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.mosaico-cta::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 5px;
+  background: var(--band);
+}
+
+.mosaico-cta:hover {
+  background: var(--panel-2);
+  transform: translateY(-2px);
+}
+
+.mosaico-cta-preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 150px;
+}
+
+.mini-screen {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  background: #05070a;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 11px;
+}
+
+.mini-screen::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4px;
+  background: var(--club);
+}
+
+.mini-screen[data-club="fortaleza"] { --club: linear-gradient(90deg, var(--blue) 50%, var(--red) 50%); }
+.mini-screen[data-club="ceara"] { --club: repeating-linear-gradient(90deg, #fff 0 6px, #08090c 6px 12px); }
+.mini-screen[data-club="neutral"] { --club: #5b6b82; }
+
+.mosaico-cta-info h3 {
+  margin-bottom: 4px;
+  font-family: var(--display);
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.mosaico-cta-info p {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.mosaico-cta-games {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mosaico-cta-games span {
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.mosaico-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  background: #fbff00;
+  border-radius: 8px;
+  color: var(--black);
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+  .mosaico-cta {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 22px 16px 18px;
+  }
+
+  .mosaico-cta-preview { width: 120px; }
+  .mosaico-cta-info h3 { font-size: 27px; }
+  .mosaico-cta-btn { justify-content: center; }
 }

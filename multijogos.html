@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
+  <title>Mosaico de Jogos | FutLiveCE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="multijogos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container wide header-content">
+      <a href="index.html" class="brand"><img src="logo.png" alt="FutLive CE" class="logo"></a>
+      <div class="social-links">
+        <a href="index.html" class="social-btn"><i class="fa-solid fa-arrow-left"></i><span>Todos os jogos</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container wide mosaico-page">
+
+    
+
+    <div class="picker" role="group" aria-label="Escolha os jogos">
+
+      <label class="pick">
+        <input type="checkbox" value="crb-ceara" class="game-checkbox">
+        <span class="pick-teams">
+          <span class="badge" style="--bg:#c8102e;--fg:#fff">CRB</span>
+          <span class="pick-x">x</span>
+          <span class="badge" style="--bg:#08090c;--fg:#fff">CEA</span>
+        </span>
+        <span class="pick-name">CRB x Ceará</span>
+        <span class="pick-state"><i class="fa-solid fa-plus"></i><span>Adicionar</span></span>
+      </label>
+
+      <label class="pick">
+        <input type="checkbox" value="fortaleza-vila-nova" class="game-checkbox">
+        <span class="pick-teams">
+          <span class="badge" style="--bg:#1760b5;--fg:#fff">FOR</span>
+          <span class="pick-x">x</span>
+          <span class="badge" style="--bg:#d11f2d;--fg:#fff">VIL</span>
+        </span>
+        <span class="pick-name">Fortaleza x Vila Nova</span>
+        <span class="pick-state"><i class="fa-solid fa-plus"></i><span>Adicionar</span></span>
+      </label>
+
+      <label class="pick">
+        <input type="checkbox" value="america-avai" class="game-checkbox">
+        <span class="pick-teams">
+          <span class="badge" style="--bg:#0b8a3e;--fg:#fff">AME</span>
+          <span class="pick-x">x</span>
+          <span class="badge" style="--bg:#1e5fae;--fg:#fff">AVA</span>
+        </span>
+        <span class="pick-name">América MG x Avaí</span>
+        <span class="pick-state"><i class="fa-solid fa-plus"></i><span>Adicionar</span></span>
+      </label>
+
+    </div>
+
+    <div class="mosaico-bar">
+      <p id="mosaicoStatus" class="mosaico-status" aria-live="polite"></p>
+      <button type="button" id="clearAll" class="link-btn" hidden>Limpar tudo</button>
+    </div>
+
+    <div id="mosaicoGrid" class="mosaico-grid"></div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="multijogos.js"></script>
+</body>
+</html>
