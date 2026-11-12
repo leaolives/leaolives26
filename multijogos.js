@@ -9,7 +9,7 @@ const games = {
         club: "ceara",
         type: "hls",
         engine: "native",
-        url: "https://cache02rj.cdnsimba.com.br/bpk-token/1ab@1yresqzhhsicgqbzogjvldjebtgoerem1a1zhaca/REDETV_SP/tracks-v2a1/mono.ts.m3u8"
+        url: "https://www.youtube.com/embed/tbBHNdnt78A?si=Ym7JIF_TAMIjOGwn"
     },
 
     "fortaleza-vila-nova": {
@@ -17,7 +17,7 @@ const games = {
         club: "fortaleza",
         type: "hls",
         engine: "native",
-        url: "https://cdn-aovivo-atualplay.nxtv.com.br/ESPN_4/tracks-v1a1/mono.ts.m3u8?"
+        url: "https://cdn-aovivo-atualplay.nxtv.com.br/ESPN/tracks-v1a1/mono.ts.m3u8"
     },
 
     "america-avai": {
@@ -25,7 +25,7 @@ const games = {
         club: "neutral",
         type: "hls",
         engine: "native",
-        url: "https://cdn-aovivo-atualplay.nxtv.com.br/ESPN/tracks-v1a1/mono.ts.m3u8"
+        url: "https://www.youtube.com/embed/634HzfFlADc?si=3yEwQafkcB8KsQXi"
     }
 };
 
@@ -411,12 +411,44 @@ function updateMosaico() {
 
 mosaicoGrid.className = `mosaico-grid layout-${total}`;
 
-// Posiciona os botões de escolha
-if (total > 0) {
+
+// Posiciona o seletor conforme o dispositivo
+const isMobile = window.matchMedia("(max-width: 900px)").matches;
+
+if (total > 0 && isMobile) {
     mosaicoGrid.after(picker);
 } else {
     mosaicoBar.before(picker);
 }
+
+// Atualiza o estado visual dos cards
+checkboxes.forEach(checkbox => {
+
+    const card = checkbox.closest(".pick");
+    const state = card.querySelector(".pick-state");
+
+    card.classList.toggle("selected", checkbox.checked);
+
+    picker.classList.add("is-repositioning");
+
+    if (checkbox.checked) {
+        state.innerHTML = `
+            <i class="fa-solid fa-check"></i>
+            <span>Adicionado</span>
+        `;
+    } else {
+        state.innerHTML = `
+            <i class="fa-solid fa-plus"></i>
+            <span>Adicionar</span>
+        `;
+    }
+
+    requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+        picker.classList.remove("is-repositioning");
+    });
+});
+});
 
     // Remove os players desmarcados (inclusive iframes)
     mosaicoGrid.querySelectorAll(".mosaico-player").forEach(tile => {

@@ -5,9 +5,9 @@ const matches = {
     meta: "14/11 • 16:30",
     players: [
       {
-        type: "iframe",
+        type: "hls",
         engine: "clappr",
-        url: "https://2910.playerembcanais.com/espn4/"
+        url: "https://cdn-aovivo-atualplay.nxtv.com.br/ESPN/tracks-v1a1/mono.ts.m3u8"
       },
       {
         type: "iframe",
@@ -23,13 +23,13 @@ const matches = {
   },
 
   ceara: {
-    title: "Ceará x América MG",
-    meta: "08/11 • 19:15",
+    title: "Crb x Ceará",
+    meta: "14/11 • 16:30",
     players: [
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2910.playerembcanais.com/xsports/"
+        url: "https://www.youtube.com/embed/tbBHNdnt78A?si=Ym7JIF_TAMIjOGwn"
       },
       {
         type: "iframe",
