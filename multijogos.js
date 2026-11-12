@@ -7,7 +7,7 @@ const games = {
     "crb-ceara": {
         name: "CRB x Ceará",
         club: "ceara",
-        type: "hls",
+        type: "iframe",
         engine: "native",
         url: "https://www.youtube.com/embed/tbBHNdnt78A?si=Ym7JIF_TAMIjOGwn"
     },
@@ -23,7 +23,7 @@ const games = {
     "america-avai": {
         name: "América MG x Avaí",
         club: "neutral",
-        type: "hls",
+        type: "iframe",
         engine: "native",
         url: "https://www.youtube.com/embed/634HzfFlADc?si=3yEwQafkcB8KsQXi"
     }
