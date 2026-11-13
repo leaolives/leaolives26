@@ -12,12 +12,12 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/ZLRTI_C7KfU?si=6Fq0J2V3Cq1mX2ic"
+        url: "https://playerembedcanais.site/espn/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2910.playerembcanais.com/redetv/"
+        url: "https://playerembedcanais.site/espn/"
       }
     ]
   },
@@ -34,12 +34,12 @@ const matches = {
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://www.youtube.com/embed/5-JkeP-ql30?si=i8SRWswuY39ct_oy"
+        url: "https://playerembedcanais.site/redetv/"
       },
       {
         type: "iframe",
         engine: "clappr",
-        url: "https://2910.playerembcanais.com/xsports/"
+        url: "https://www.youtube.com/embed/tbBHNdnt78A?si=Ym7JIF_TAMIjOGwn"
       }
     ]
   }
