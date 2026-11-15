@@ -1,8 +1,8 @@
 // --- 1. CONFIGURAÇÃO DOS JOGOS ---
 const matches = {
   fortaleza: {
-    title: "Vila Nova x Fortaleza",
-    meta: "14/11 • 16:30",
+    title: "Criciuma x Fortaleza",
+    meta: "21/11 • 16:30",
     players: [
       {
         type: "hls",
