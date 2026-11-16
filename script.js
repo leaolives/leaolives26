@@ -2,7 +2,7 @@
 const matches = {
   fortaleza: {
     title: "Criciuma x Fortaleza",
-    meta: "21/11 • 16:30",
+    meta: "22/11 • 16:00",
     players: [
       {
         type: "hls",
